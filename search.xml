@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+    
+    <entry>
+      <title><![CDATA[小米4c刷机到最新版本RR_rom_ver_5_8_2]]></title>
+      <url>%2F2017%2F03%2F18%2F%E6%95%99%E7%A8%8B%2FAndroid%2F%E5%B0%8F%E7%B1%B34c%E5%88%B7%E6%9C%BA%E5%88%B0%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%ACRR_rom_ver_5_8_2%2F</url>
+      <content type="text"><![CDATA[缘今天为了把我的小米4c升级到最新的RR Rom（5.8.2版本）（全称为Resurrection Remix ROM），折腾了一天，最后无奈在谷歌中直接输入关键词：“libra rr rom 5.8.2”，居然答案就在第一条，无语…… 最终是成功了，解决问题的方法很简单，但是由于解决方案只有英文的版本，国内很少人去看，现在我把解决方案写在这篇文章里。 一切问题的答案来自这两篇论坛文稿： 链接1：https://forum.xda-developers.com/showpost.php?p=71114622&amp;postcount=1196 链接2：https://forum.xda-developers.com/mi-4c/development/official-resurrection-remix-libra-aqua-t3507773 1. 准备原材料 首先，链接1给出的是一个很重要的注意事项，在安装RR Rom 5.8.2之后的任何一个版本前，必需先安装一个新版的firmware！！！这个新版本的firmware作者给出了简化版，下载安装即可：新版firmware 其次，你可能需要谷歌服务，那么你还要去下载对应的Gapps，具体安装方法在这里：使用rec安装谷歌服务框架的正确方法 最后，也是最重要的，一个合适的第三方recovery！这个找的如果不对，将无法成功刷入rec！！！我就是这个没选对，害得我忙活了一天！！！下载地址在这里：此处适用的第三方rec：TWRP3.0.2 2. 安装步骤 Unlock bootloader ，确保已经解锁手机 Install 上文刚下载的TWRP（安装方法），进入rec 刷入上文下载的新版的firmware 刷入Rom（下载地址在这里） and Gapps（见上文） to storage Reboot 3. 后续 如果发现wifi图标有叉叉，网上一堆解决方案，不赘述。但是adb shell可能即使已经启用了adb调试但是依然没用无法成功，这时候启动刷机精灵，使用刷机精灵的adb工具即可成功。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[小米4c循环重启救砖办法]]></title>
+      <url>%2F2017%2F03%2F18%2F%E6%95%99%E7%A8%8B%2FAndroid%2F%E5%B0%8F%E7%B1%B34c%E5%BE%AA%E7%8E%AF%E9%87%8D%E5%90%AF%E6%95%91%E7%A0%96%E5%8A%9E%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[1. 线刷miui（安卓5.1.1版本）这一步用的资料和教程全在这里：http://www.miui.com/shuaji-393.html 开发版线刷包（只有中国版）：开发版下载地址 稳定版线刷包（也只有中国版）：稳定版下载地址 在安装线刷工具前，首先下载安装必要的.NET环境 然后下载：线刷工具 2. 解锁bootloader解锁工具：下载地址 下载下来解压缩，输入账户密码即可解锁。 3. 卡刷miui（安卓7.0版本）直接在“系统更新”里面卡刷即可。 4. 重新解锁bootloader为接下来开启root权限做准备。 5. 开启root权限进入“设置 - 权限管理 - 开启root权限”即可，重启后即可获得root权限。 结束至此，救砖且升级为miui最新国际开发版包任务完成]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[《成都》吉他谱 - 赵雷]]></title>
+      <url>%2F2017%2F03%2F16%2F%E9%9F%B3%E4%B9%90%2F%E5%90%89%E4%BB%96%2F%E5%90%89%E4%BB%96%E8%B0%B1%2F%E3%80%8A%E6%88%90%E9%83%BD%E3%80%8B%E5%90%89%E4%BB%96%E8%B0%B1-%E8%B5%B5%E9%9B%B7%2F</url>
+      <content type="text"><![CDATA[一、指弹谱]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Hexo-编辑：在日志中添加链接时显示点击按钮]]></title>
+      <url>%2F2017%2F02%2F15%2F%E6%95%99%E7%A8%8B%2FHexo%2FHexo-%E7%BC%96%E8%BE%91%EF%BC%9A%E5%9C%A8%E6%97%A5%E5%BF%97%E4%B8%AD%E6%B7%BB%E5%8A%A0%E9%93%BE%E6%8E%A5%E6%97%B6%E6%98%BE%E7%A4%BA%E7%82%B9%E5%87%BB%E6%8C%89%E9%92%AE%2F</url>
+      <content type="text"><![CDATA[源代码转自：http://notes.iissnan.com/2016/next-documentations-reload/ 最后的两个按钮，我把它们摘抄下来，下次可以自己改编使用，效果如下： .next-documentations-reload-help-button{ ;padding: 0 20px; ;border: 2px solid #555; ;text-decoration: none; ;display: inline-block; ;overflow: hidden; ;color: #555; ;font-size: 14px; ;background: #fff; ;border-radius: 2px; ;transition: all 0.3s ease; } {}.next-documentations-reload-help-button:hover { ;color: white; ;background-color: black; ;border-color: black; } {}.next-documentations-reload-help-button i {margin-right: 5px;} 访问 NexT 文档 NexT 文档源码 源代码如下： 123&lt;p&gt;&lt;style type="text/css"&gt;.next-documentations-reload-help-button&#123;&lt;br&gt; ;padding: 0 20px;&lt;br&gt; ;border: 2px solid #555;&lt;br&gt; ;text-decoration: none;&lt;br&gt; ;display: inline-block;&lt;br&gt; ;overflow: hidden;&lt;br&gt; ;color: #555;&lt;br&gt; ;font-size: 14px;&lt;br&gt; ;background: #fff;&lt;br&gt; ;border-radius: 2px;&lt;br&gt; ;transition: all 0.3s ease;&lt;br&gt; &#125;&lt;br&gt; &#123;&#125;.next-documentations-reload-help-button:hover &#123;&lt;br&gt; ;color: white;&lt;br&gt; ;background-color: black;&lt;br&gt; ;border-color: black;&lt;br&gt; &#125;&lt;br&gt; &#123;&#125;.next-documentations-reload-help-button i &#123;margin-right: 5px;&#125;&lt;br&gt;&lt;/style&gt;&lt;/p&gt;&lt;p class="text-center"&gt;&lt;a href="http://theme-next.iissnan.com/" class="next-documentations-reload-help-button" target="_blank" rel="external"&gt;&lt;i class="fa fa-globe"&gt;&lt;/i&gt; 访问 NexT 文档&lt;/a&gt;&lt;a href="https://github.com/iissnan/theme-next-docs" class="next-documentations-reload-help-button" style="margin-left: 10px;" target="_blank" rel="external"&gt;&lt;i class="fa fa-github-alt"&gt;&lt;/i&gt; NexT 文档源码&lt;/a&gt; 代码的第二段里面有class=”fa fa-globe”的字样，这是用来显示那个“互联网”的图标的，fa全称就是font-awesome，fa后面跟着什么代号，就显示什么图标；还有就是这个：class=”next-documentations-reload-help-button”里面的内容一定要有，不然没有button的效果。官网在这里（学以致用哈哈~）： .next-documentations-reload-help-button{ ;padding: 0 20px; ;border: 2px solid #555; ;text-decoration: none; ;display: inline-block; ;overflow: hidden; ;color: #555; ;font-size: 14px; ;background: #fff; ;border-radius: 2px; ;transition: all 0.3s ease; } {}.next-documentations-reload-help-button:hover { ;color: white; ;background-color: black; ;border-color: black; } {}.next-documentations-reload-help-button i {margin-right: 5px;} 访问 Font Awesome 官网 把上面这段源代码加换行后看得更清楚（尤其是对我这种没怎么学过前端开发的人。。。）展开如下： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061&lt;p&gt; &lt;style type="text/css"&gt; .next-documentations-reload-help-button &#123; &lt;br&gt; ; padding: 0 20px; &lt;br&gt; ; border: 2px solid #555; &lt;br&gt; ; text-decoration: none; &lt;br&gt; ; display: inline-block; &lt;br&gt; ; overflow: hidden; &lt;br&gt; ; color: #555; &lt;br&gt; ; font-size: 14px; &lt;br&gt; ; background: #fff; &lt;br&gt; ; border-radius: 2px; &lt;br&gt; ; transition: all 0.3s ease; &lt;br&gt; &#125; &lt;br&gt; &#123;&#125; .next-documentations-reload-help-button:hover &#123; &lt;br&gt; ; color: white; &lt;br&gt; ; background-color: black; &lt;br&gt; ; border-color: black; &lt;br&gt; &#125; &lt;br&gt; &#123;&#125; .next-documentations-reload-help-button i &#123; margin-right: 5px; &#125; &lt;br&gt; &lt;/style&gt;&lt;/p&gt;&lt;p class="text-center"&gt; &lt;a href="http://theme-next.iissnan.com/" class="next-documentations-reload-help-button" target="_blank" rel="external"&gt; &lt;i class="fa fa-globe"&gt;&lt;/i&gt;访问 NexT 文档&lt;/a&gt; &lt;a href="https://github.com/iissnan/theme-next-docs" class="next-documentations-reload-help-button" style="margin-left: 10px;" target="_blank" rel="external"&gt; &lt;i class="fa fa-github-alt"&gt;&lt;/i&gt;NexT 文档源码&lt;/a&gt;&lt;/p&gt;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Hexo-Next主题安装来必力社会化评论插件]]></title>
+      <url>%2F2017%2F02%2F10%2F%E6%95%99%E7%A8%8B%2FHexo%2FHexo-Next%E4%B8%BB%E9%A2%98%E5%AE%89%E8%A3%85%E6%9D%A5%E5%BF%85%E5%8A%9B%E7%A4%BE%E4%BC%9A%E5%8C%96%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6%2F</url>
+      <content type="text"><![CDATA[把官网上的代码复制下来，粘贴到hexo-client\themes\next\layout_partials\comments.swig文件中的end if前面即可。 官网链接在这里： .next-documentations-reload-help-button{ ;padding: 0 20px; ;border: 2px solid #555; ;text-decoration: none; ;display: inline-block; ;overflow: hidden; ;color: #555; ;font-size: 14px; ;background: #fff; ;border-radius: 2px; ;transition: all 0.3s ease; } {}.next-documentations-reload-help-button:hover { ;color: white; ;background-color: black; ;border-color: black; } {}.next-documentations-reload-help-button i {margin-right: 5px;} 访问 Livere(来必力) 官网]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[《祝星》E调吉他谱 - 陈粒]]></title>
+      <url>%2F2017%2F02%2F08%2F%E9%9F%B3%E4%B9%90%2F%E5%90%89%E4%BB%96%2F%E5%90%89%E4%BB%96%E8%B0%B1%2F%E3%80%8A%E7%A5%9D%E6%98%9F%E3%80%8BE%E8%B0%83%E5%90%89%E4%BB%96%E8%B0%B1%20-%20%E9%99%88%E7%B2%92%2F</url>
+      <content type="text"><![CDATA[第一个版本 第二个版本]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[《牵丝戏》C调吉他谱 - 银临、Aki阿杰]]></title>
+      <url>%2F2017%2F02%2F07%2F%E9%9F%B3%E4%B9%90%2F%E5%90%89%E4%BB%96%2F%E5%90%89%E4%BB%96%E8%B0%B1%2F%E3%80%8A%E7%89%B5%E4%B8%9D%E6%88%8F%E3%80%8BC%E8%B0%83%E5%90%89%E4%BB%96%E8%B0%B1%20-%20%E9%93%B6%E4%B8%B4%E3%80%81Aki%E9%98%BF%E6%9D%B0%2F</url>
+      <content type="text"><![CDATA[第一个版本牵丝戏吉他谱，银临阿杰的一首古风神曲，戏腔如梦呈现，歌曲原调F，选调C，夹五品变调夹。牵丝戏吉他六线谱编配，四张谱例弹唱图片谱高清版，曲谱归属于编配者SlimBoogie。 第二个版本首先声明作者：Ellen___乐爷 她的微博链接地址是：http://weibo.com/u/1728580537]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[《老鼠爱大米》C调吉他谱 - 杨臣刚]]></title>
+      <url>%2F2017%2F02%2F06%2F%E9%9F%B3%E4%B9%90%2F%E5%90%89%E4%BB%96%2F%E5%90%89%E4%BB%96%E8%B0%B1%2F%E3%80%8A%E8%80%81%E9%BC%A0%E7%88%B1%E5%A4%A7%E7%B1%B3%E3%80%8BC%E8%B0%83%E5%90%89%E4%BB%96%E8%B0%B1%20-%20%E6%9D%A8%E8%87%A3%E5%88%9A%2F</url>
+      <content type="text"><![CDATA[第一个版本 第二个版本]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[《欢乐颂》吉他谱]]></title>
+      <url>%2F2017%2F02%2F06%2F%E9%9F%B3%E4%B9%90%2F%E5%90%89%E4%BB%96%2F%E5%90%89%E4%BB%96%E8%B0%B1%2F%E3%80%8A%E6%AC%A2%E4%B9%90%E9%A2%82%E3%80%8B%E5%90%89%E4%BB%96%E8%B0%B1%2F</url>
+      <content type="text"><![CDATA[第一个版本]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[《小星星》吉他谱]]></title>
+      <url>%2F2017%2F02%2F06%2F%E9%9F%B3%E4%B9%90%2F%E5%90%89%E4%BB%96%2F%E5%90%89%E4%BB%96%E8%B0%B1%2F%E3%80%8A%E5%B0%8F%E6%98%9F%E6%98%9F%E3%80%8B%E5%90%89%E4%BB%96%E8%B0%B1%2F</url>
+      <content type="text"><![CDATA[第一个版本 第二个版本]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[《丁香花》G调吉他谱 - 唐磊]]></title>
+      <url>%2F2017%2F02%2F06%2F%E9%9F%B3%E4%B9%90%2F%E5%90%89%E4%BB%96%2F%E5%90%89%E4%BB%96%E8%B0%B1%2F%E3%80%8A%E4%B8%81%E9%A6%99%E8%8A%B1%E3%80%8BG%E8%B0%83%E5%90%89%E4%BB%96%E8%B0%B1%20-%20%E5%94%90%E7%A3%8A%2F</url>
+      <content type="text"><![CDATA[]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[《青花瓷》G调吉他谱 - 周杰伦]]></title>
+      <url>%2F2017%2F02%2F06%2F%E9%9F%B3%E4%B9%90%2F%E5%90%89%E4%BB%96%2F%E5%90%89%E4%BB%96%E8%B0%B1%2F%E3%80%8A%E9%9D%92%E8%8A%B1%E7%93%B7%E3%80%8BG%E8%B0%83%E5%90%89%E4%BB%96%E8%B0%B1%20-%20%E5%91%A8%E6%9D%B0%E4%BC%A6%2F</url>
+      <content type="text"><![CDATA[]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[《晴天》G调吉他谱 - 周杰伦]]></title>
+      <url>%2F2017%2F02%2F06%2F%E9%9F%B3%E4%B9%90%2F%E5%90%89%E4%BB%96%2F%E5%90%89%E4%BB%96%E8%B0%B1%2F%E3%80%8A%E6%99%B4%E5%A4%A9%E3%80%8BG%E8%B0%83%E5%90%89%E4%BB%96%E8%B0%B1%20-%20%E5%91%A8%E6%9D%B0%E4%BC%A6%2F</url>
+      <content type="text"><![CDATA[第一个版本 第二个版本]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[《星月神话》吉他谱 - 金莎]]></title>
+      <url>%2F2017%2F02%2F06%2F%E9%9F%B3%E4%B9%90%2F%E5%90%89%E4%BB%96%2F%E5%90%89%E4%BB%96%E8%B0%B1%2F%E3%80%8A%E6%98%9F%E6%9C%88%E7%A5%9E%E8%AF%9D%E3%80%8B%E5%90%89%E4%BB%96%E8%B0%B1%20-%20%E9%87%91%E8%8E%8E%2F</url>
+      <content type="text"><![CDATA[第一个版本 第二个版本]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[使用rec安装谷歌服务框架的正确方法]]></title>
+      <url>%2F2017%2F02%2F06%2F%E6%95%99%E7%A8%8B%2FAndroid%2F%E4%BD%BF%E7%94%A8rec%E5%AE%89%E8%A3%85%E8%B0%B7%E6%AD%8C%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%96%B9%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[1. 安装一个第三方Recovery（rec）我安装的是TWRP，在TWRP的设备选择界面找到自己的设备型号，下载相应的rec，进入fastboot使用工具刷入即可，在此就不详述了，比如小米4c的刷入方法在这里：https://alair.cn/logs/Mi4C-Unlock-and-TWRP-Recovery.html 2. 选择合适的GApps包（包含谷歌服务框架）有了刷入工具，我们接下来要面对的就是 GApps 的版本选择问题。网络上常见的 GApps 主要有 PA GApps （已停更，版本稍旧）、Kang GApps 、OpenGApps 、tk GApps 以及 bank GApps 等等，以 Open GApps 为例，该网站提供的 GApps 主要包含以下几个版本： stock ：最为贴近 Nexus 机型体验的 GApps 版本，包含了 Nexus 机型所预装的所有 Google 服务和 Google 应用。需要注意的是，这个版本会用 Chrome 、 Google Now Launcher 、 Google Keybord 等 Google 应用替换掉 CM 系 ROM 中那些基于 AOSP 代码的相关应用。 full ：与 stock 版所包含的内容相同，但不会替换 AOSP 应用。 mini ：包含了完整的 Google 服务框架和主流 Google 应用，去掉了 Google Docs 等文档处理应用 micro ：包含了完整的 Google 服务框架和少数 Google 应用，如 Gmail 、 Google Calender 、 Google Now Launcher 。 nano ：包含完整的 Google 服务框架但不包含多余的 Google 应用。 pico：包含了最基础的 Google 服务框架，体积最小，一些依赖完整 Google 框架的应用（如 Google Camera ）将无法运行。 Platform得看你的cpu来选择，见手机的“关于”界面一般都有。 值得一提的是， Open GApps 最近还放了一种叫做 aroma 的版本，该版本具备图形化安装界面，在刷入过程中可自行选择需要安装的 GApps 组件（反正我是什么都没选，就只是默认安装了最基础的一组谷歌服务包），十分好用。 3. 使用第三方Recovery安装 GApps 将 GApps 压缩包放在手机内置储存或是 SD 卡的根目录，无需解压。 关机，进入第三方 Recovery （进入 Recovery 的方式因机型而异）。 进入第三方 Recovery 后，选择「 install zip 」安装 zip 压缩包，然后选择「 choose zip from /sdcard 」找到刚才放入根目录的 GApps 压缩包选择安装即可。 需要注意的是，安装 GApps 的过程全程不需要清除数据或是恢复出厂的步骤，因而刷入 GApps 之后系统中原有数据也不会受到影响。 参考来源： 标题 链接 好马配好鞍，安装谷歌服务框架的正确姿势 http://sspai.com/30499]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[《家》C调吉他谱 - 许巍]]></title>
+      <url>%2F2017%2F01%2F24%2F%E9%9F%B3%E4%B9%90%2F%E5%90%89%E4%BB%96%2F%E5%90%89%E4%BB%96%E8%B0%B1%2F%E3%80%8A%E5%AE%B6%E3%80%8BD%E8%B0%83%E5%90%89%E4%BB%96%E8%B0%B1%20-%20%E8%AE%B8%E5%B7%8D%2F</url>
+      <content type="text"><![CDATA[第一个版本 第二个版本]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[《玫瑰》C调吉他谱 - 贰佰]]></title>
+      <url>%2F2017%2F01%2F24%2F%E9%9F%B3%E4%B9%90%2F%E5%90%89%E4%BB%96%2F%E5%90%89%E4%BB%96%E8%B0%B1%2F%E3%80%8A%E7%8E%AB%E7%91%B0%E3%80%8BC%E8%B0%83%E5%90%89%E4%BB%96%E8%B0%B1%20-%20%E8%B4%B0%E4%BD%B0%2F</url>
+      <content type="text"><![CDATA[]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Hexo-Next为文章添加文章阅读次数（仅适用于Next主题）]]></title>
+      <url>%2F2017%2F01%2F22%2F%E6%95%99%E7%A8%8B%2FHexo%2FHexo-Next%E4%B8%BA%E6%96%87%E7%AB%A0%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E9%98%85%E8%AF%BB%E6%AC%A1%E6%95%B0%EF%BC%88%E4%BB%85%E9%80%82%E7%94%A8%E4%BA%8ENext%E4%B8%BB%E9%A2%98%EF%BC%89%2F</url>
+      <content type="text"><![CDATA[转载自： https://notes.wanghao.work/2015-10-21-%E4%B8%BANexT%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E9%98%85%E8%AF%BB%E9%87%8F%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD.html#%E9%85%8D%E7%BD%AELeanCloud 注意，使用Next主题的只需要配置LeanCloud和配置_config.yml文件即可。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[历历万乡（现场+教学）视频合辑]]></title>
+      <url>%2F2017%2F01%2F21%2F%E9%9F%B3%E4%B9%90%2F%E5%90%89%E4%BB%96%2F%E8%A7%86%E9%A2%91%2F%E9%99%88%E7%B2%92%2F%E5%8E%86%E5%8E%86%E4%B8%87%E4%B9%A1%EF%BC%88%E7%8E%B0%E5%9C%BA%2B%E6%95%99%E5%AD%A6%EF%BC%89%E8%A7%86%E9%A2%91%E5%90%88%E8%BE%91%2F</url>
+      <content type="text"><![CDATA[1. 陈粒 - 历历万乡 如也巡演 最终场 杭州站 2. 陈粒 - 历历万乡 武汉live演出 饭拍版 2015_06_27 3. 陈粒 - 历历万乡 渣画质但最好听 扫弦看不懂 4. 历历万乡 - 悦音之声音乐工作室 橘子老师教你弹吉他 5. 历历万乡 - 孟大宝]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[《性空山》吉他谱 - 陈粒]]></title>
+      <url>%2F2017%2F01%2F21%2F%E9%9F%B3%E4%B9%90%2F%E5%90%89%E4%BB%96%2F%E5%90%89%E4%BB%96%E8%B0%B1%2F%E3%80%8A%E6%80%A7%E7%A9%BA%E5%B1%B1%E3%80%8B%E5%90%89%E4%BB%96%E8%B0%B1%20-%20%E9%99%88%E7%B2%92%2F</url>
+      <content type="text"><![CDATA[第一个版本 第二个版本 第三个版本]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[性空山现场视频_陈粒]]></title>
+      <url>%2F2017%2F01%2F20%2F%E9%9F%B3%E4%B9%90%2F%E5%90%89%E4%BB%96%2F%E8%A7%86%E9%A2%91%2F%E9%99%88%E7%B2%92%2F%E6%80%A7%E7%A9%BA%E5%B1%B1%E7%8E%B0%E5%9C%BA%E8%A7%86%E9%A2%91_%E9%99%88%E7%B2%92%2F</url>
+      <content type="text"><![CDATA[]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Hexo-Next的背景动态效果和心心]]></title>
+      <url>%2F2017%2F01%2F20%2F%E6%95%99%E7%A8%8B%2FHexo%2FHexo-Next%E7%9A%84%E8%83%8C%E6%99%AF%E5%8A%A8%E6%80%81%E6%95%88%E6%9E%9C%E5%92%8C%E5%BF%83%E5%BF%83%2F</url>
+      <content type="text"><![CDATA[博客背景动态效果图和点击小红心效果的相关设置。把 js 文件 love.js 和 particle.js 放在 \themes\next\source\js\src 文件目录下更新 \themes\next\layout\_layout.swig 文件，在末尾（在前面引用会出现找不到的bug）添加以下 js 引入代码： 1234&lt;!-- 背景动画 --&gt;&lt;script type="text/javascript" src="/js/src/particle.js"&gt;&lt;/script&gt;&lt;!-- 页面点击小红心 --&gt;&lt;script type="text/javascript" src="/js/src/love.js"&gt;&lt;/script&gt; 想设置动画线条颜色可改为： 1&lt;script type="text/javascript" color="255,0,0" opacity="0.3" count="99" src="particle.js"&gt;&lt;/script&gt; 就能显示红色。或者用： 1&lt;script type="text/javascript" src="/js/src/particles.js" count="50" zindex="-2" opacity="1" color="0,104,183"&gt;&lt;/script&gt; 两个JS下载为： 12http://7u2ss1.com1.z0.glb.clouddn.com/love.jshttp://7u2ss1.com1.z0.glb.clouddn.com/particle.js 或者我干脆在这里把它们代码贴出来： love.js文件 1!function(e,t,a)&#123;function n()&#123;c(".heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;"),o(),r()&#125;function r()&#123;for(var e=0;e&lt;d.length;e++)d[e].alpha&lt;=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText="left:"+d[e].x+"px;top:"+d[e].y+"px;opacity:"+d[e].alpha+";transform:scale("+d[e].scale+","+d[e].scale+") rotate(45deg);background:"+d[e].color+";z-index:99999");requestAnimationFrame(r)&#125;function o()&#123;var t="function"==typeof e.onclick&amp;&amp;e.onclick;e.onclick=function(e)&#123;t&amp;&amp;t(),i(e)&#125;&#125;function i(e)&#123;var a=t.createElement("div");a.className="heart",d.push(&#123;el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()&#125;),t.body.appendChild(a)&#125;function c(e)&#123;var a=t.createElement("style");a.type="text/css";try&#123;a.appendChild(t.createTextNode(e))&#125;catch(t)&#123;a.styleSheet.cssText=e&#125;t.getElementsByTagName("head")[0].appendChild(a)&#125;function s()&#123;return"rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"&#125;var d=[];e.requestAnimationFrame=function()&#123;return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e)&#123;setTimeout(e,1e3/60)&#125;&#125;(),n()&#125;(window,document); ​ particle.js文件 1!function()&#123;function n(n,e,t)&#123;return n.getAttribute(e)||t&#125;function e(n)&#123;return document.getElementsByTagName(n)&#125;function t()&#123;var t=e("script"),o=t.length,i=t[o-1];return&#123;l:o,z:n(i,"zIndex",-1),o:n(i,"opacity",.5),c:n(i,"color","0,0,0"),n:n(i,"count",99)&#125;&#125;function o()&#123;c=u.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,a=u.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight&#125;function i()&#123;l.clearRect(0,0,c,a);var n,e,t,o,u,d,x=[w].concat(y);y.forEach(function(i)&#123;for(i.x+=i.xa,i.y+=i.ya,i.xa*=i.x&gt;c||i.x&lt;0?-1:1,i.ya*=i.y&gt;a||i.y&lt;0?-1:1,l.fillRect(i.x-.5,i.y-.5,1,1),e=0;e&lt;x.length;e++)n=x[e],i!==n&amp;&amp;null!==n.x&amp;&amp;null!==n.y&amp;&amp;(o=i.x-n.x,u=i.y-n.y,d=o*o+u*u,d&lt;n.max&amp;&amp;(n===w&amp;&amp;d&gt;=n.max/2&amp;&amp;(i.x-=.03*o,i.y-=.03*u),t=(n.max-d)/n.max,l.beginPath(),l.lineWidth=t/2,l.strokeStyle="rgba("+m.c+","+(t+.2)+")",l.moveTo(i.x,i.y),l.lineTo(n.x,n.y),l.stroke()));x.splice(x.indexOf(i),1)&#125;),r(i)&#125;var c,a,u=document.createElement("canvas"),m=t(),d="c_n"+m.l,l=u.getContext("2d"),r=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(n)&#123;window.setTimeout(n,1e3/45)&#125;,x=Math.random,w=&#123;x:null,y:null,max:2e4&#125;;u.id=d,u.style.cssText="position:fixed;top:0;left:0;z-index:"+m.z+";opacity:"+m.o,e("body")[0].appendChild(u),o(),window.onresize=o,window.onmousemove=function(n)&#123;n=n||window.event,w.x=n.clientX,w.y=n.clientY&#125;,window.onmouseout=function()&#123;w.x=null,w.y=null&#125;;for(var y=[],s=0;m.n&gt;s;s++)&#123;var f=x()*c,h=x()*a,g=2*x()-1,p=2*x()-1;y.push(&#123;x:f,y:h,xa:g,ya:p,max:6e3&#125;)&#125;setTimeout(function()&#123;i()&#125;,100)&#125;(); 转载自：http://blog.ynxiu.com/2016/hexo-next-theme-optimize.html]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Hexo-Next主题宽度调节]]></title>
+      <url>%2F2017%2F01%2F20%2F%E6%95%99%E7%A8%8B%2FHexo%2FHexo-Next%E4%B8%BB%E9%A2%98%E5%AE%BD%E5%BA%A6%E8%B0%83%E8%8A%82%2F</url>
+      <content type="text"><![CDATA[有两种方法，第二种我没成功，只看第一种吧。 第一种方法：现在一般都用宽屏显示器，博客页面两侧留白太多，调整一下宽度。打开 \themes\next\source\css\_common\components\post\post-expand.styl 文件，找到 1@media (max-width: 767px) 改为 1@media (max-width: 1080px) 打开 \themes\next\source\css\ _variables\base.styl 文件，找到 123$main-desktop = 960px$main-desktop-large = 1200px$content-desktop = 700px 修改 $main-desktop 和 $content-desktop 的数值： 123$main-desktop = 1080px$main-desktop-large = 1200px$content-desktop = 810px Next.Mist 主题的文章宽度至此改完了。如果你用的是 Next.Pisces，还需要继续修改。打开 \themes\next\source\css\_schemes\Pisces\_layout.styl 文件，将第 4 行的 width改为1080px ，修改后如下： 1234.header &#123; position: relative; margin: 0 auto; width: 1080px; 第二种方法（Next文档中给出的方法，但我试了下，没用）编辑 themes/next/source/css/_variables/custom.styl 文件，新增变量： 12345// 修改成你期望的宽度$content-desktop = 700px// 当视窗超过 1600px 后的宽度$content-desktop-large = 900px 以上方法不适用 Pisces Scheme Pisces Scheme 编辑 themes/next/source/css/_schemes/Picses/_layout.styl 文件，更改以下 css 选项定义值： 123.header&#123; width: 1150px; &#125;.container .main-inner &#123; width: 1150px; &#125;.content-wrap &#123; width: calc(100% - 260px); &#125; 第一种方法转载自：http://blog.ynxiu.com/2016/hexo-next-theme-optimize.html]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[《历历万乡》G调吉他谱 - 陈粒]]></title>
+      <url>%2F2017%2F01%2F20%2F%E9%9F%B3%E4%B9%90%2F%E5%90%89%E4%BB%96%2F%E5%90%89%E4%BB%96%E8%B0%B1%2F%E3%80%8A%E5%8E%86%E5%8E%86%E4%B8%87%E4%B9%A1%E3%80%8BG%E8%B0%83%E5%90%89%E4%BB%96%E8%B0%B1%20-%20%E9%99%88%E7%B2%92%2F</url>
+      <content type="text"><![CDATA[]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[日志模板]]></title>
+      <url>%2F2017%2F01%2F20%2F%E6%97%A5%E5%BF%97%E6%A8%A1%E6%9D%BF%2F</url>
+      <content type="text"><![CDATA[每次使用记得更新下当前时间！！！ 时间的输入方法就是：输入法输入时间，然后按3，就是上面date里面的标准格式。 今天才发现开头那些信息前面，也就是文章开头就加三个-： 1--- 就可以达到分割区块的效果了。 在文章内部输入三个-只能产生一条分割线，比如 就酱。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[吉他谱上连起来的几个xx怎么弹]]></title>
+      <url>%2F2017%2F01%2F20%2F%E9%9F%B3%E4%B9%90%2F%E5%90%89%E4%BB%96%2F%E4%B9%90%E7%90%86%2F%E5%90%89%E4%BB%96%E8%B0%B1%E4%B8%8A%E8%BF%9E%E8%B5%B7%E6%9D%A5%E7%9A%84%E5%87%A0%E4%B8%AAxx%E6%80%8E%E4%B9%88%E5%BC%B9%2F</url>
+      <content type="text"><![CDATA[转自知乎：https://www.zhihu.com/question/28452129 秝围巾的回答]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[岗位实习软件程序阅读笔记]]></title>
+      <url>%2F2017%2F01%2F05%2F%E7%AC%94%E8%AE%B0%2F%E7%A8%8B%E5%BA%8F%E9%A1%B9%E7%9B%AE%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%2F%E5%B2%97%E4%BD%8D%E5%AE%9E%E4%B9%A0%E8%BD%AF%E4%BB%B6%E7%A8%8B%E5%BA%8F%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%2F</url>
+      <content type="text"><![CDATA[前言从main函数进入，注意阅读各行代码含义，理清逻辑顺序，弄明白相关代码。 main函数代码如下： 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253/** * @brief Main program. * @param None * @retval None */ int main(void)&#123; NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4); //WatchDog_Init(0xFF8); BSP_Init(); Init_RTC(); STM_LEDOff(); Backlight_Control_Init(); GUI_Init(); Read_Cablirate_Parameter(&amp;Current_XYCOFFSET_Para); /* Create background task */ xTaskCreate(Background_Task, (const char *)"BK_GND", Background_Task_STACK, NULL, Background_Task_PRIO, &amp;Bk_Task_Handle); xTaskCreate(RXTX_Task_Fun, (const char *)"RXTX_TASK", RXTX_TASK_STACK, NULL, RXTX_TASK_PRIO, &amp;RXTX_Task_Handle); /* Create demo task */ xTaskCreate(Main_Task_Fun, (const char *)"GUI_DEMO", Demo_Task_STACK, NULL, Demo_Task_PRIO, &amp;Main_Task_Handle); /* Launch Touchscreen Timer */ TouchScreenTimer = xTimerCreate ((const char *)"Timer", 50, pdTRUE, ( void * ) 1, vTimerCallback ); if( TouchScreenTimer != NULL ) &#123; if( xTimerStart( TouchScreenTimer, 0 ) != pdPASS ) &#123; /* The timer could not be set into the Active state. */ &#125; &#125; /* Start the FreeRTOS scheduler */ vTaskStartScheduler();&#125; 1. 设置中断优先级分组4主函数对应代码内容： 1NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4); 给每个中断分配：4位抢占优先级，0位响应优先级 2. 初始化BSP首先，BSP的含义是：Board Support Package，板载支持包。这段代码对它进行了初始化。 主函数对应代码内容： 1BSP_Init(); 展开： 1234567891011121314151617181920212223/* Private functions ---------------------------------------------------------*//*** @brief Initializes the target hardware.* @param None* @retval None*/uint32_t BSP_Init (void)&#123; /* Setup SysTick Timer for 1 msec interrupts */ SysTick_Config(SystemCoreClock / 1000); /* Initialize the LED */ STM_LEDInit(); /*Init Touchscreen */ BSP_TSC_Init(); /* Initialize the SDRAM */ SDRAM_Init(); /* Enable the CRC Module */ RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_CRC, ENABLE); return 0;&#125; 2.1 系统滴答计数器的配置2.2 对GPIO的初始化（GPIOA，PIN3，推挽输出，上拉，50MHz）123456789101112131415161718192021222324/** * @brief Configures LED GPIO. * @param Led: Specifies the Led to be configured. * This parameter can be one of following parameters: * @arg LED1 * @arg LED2 * @arg LED3 * @arg LED4 * @retval None */void STM_LEDInit(void)&#123; GPIO_InitTypeDef GPIO_InitStructure; /* Enable the GPIO_LED Clock */ RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE); /* Configure the GPIO_LED pin */ GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3; GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT; GPIO_InitStructure.GPIO_OType = GPIO_OType_PP; GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP; GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz; GPIO_Init(GPIOA, &amp;GPIO_InitStructure); GPIOA-&gt;BSRRL = GPIO_Pin_3;&#125; 2.3 对触摸屏的初始化123456789101112/** * @brief Initializes the IO Expander registers. * @param None * @retval - 0: if all initializations are OK.*/uint32_t BSP_TSC_Init(void)&#123; portENTER_CRITICAL(); IOE_Config(); portEXIT_CRITICAL (); return 0; /* Configuration is OK */ &#125; Initializes the IO Expander registers意思是初始化IO扩展寄存器，还并不是很懂这是在干什么，和触摸屏有啥子关系？ 2.4 初始化SDRAM123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657/** * @brief Configures the FMC and GPIOs to interface with the SDRAM memory. * This function must be called before any read/write operation * on the SDRAM. * @param None * @retval None */void SDRAM_Init(void)&#123; FMC_SDRAMInitTypeDef FMC_SDRAMInitStructure; FMC_SDRAMTimingInitTypeDef FMC_SDRAMTimingInitStructure; /* GPIO configuration for FMC SDRAM bank */ SDRAM_GPIOConfig(); /* Enable FMC clock */ RCC_AHB3PeriphClockCmd(RCC_AHB3Periph_FMC, ENABLE); /* FMC Configuration ---------------------------------------------------------*//* FMC SDRAM Bank configuration */ /* Timing configuration for 90 Mhz of SD clock frequency (180Mhz/2) */ /* TMRD: 2 Clock cycles */ FMC_SDRAMTimingInitStructure.FMC_LoadToActiveDelay = 2; /* TXSR: min=70ns (7x11.11ns) */ FMC_SDRAMTimingInitStructure.FMC_ExitSelfRefreshDelay = 7; /* TRAS: min=42ns (4x11.11ns) max=120k (ns) */ FMC_SDRAMTimingInitStructure.FMC_SelfRefreshTime = 4; /* TRC: min=70 (7x11.11ns) */ FMC_SDRAMTimingInitStructure.FMC_RowCycleDelay = 7; /* TWR: min=1+ 7ns (1+1x11.11ns) */ FMC_SDRAMTimingInitStructure.FMC_WriteRecoveryTime = 2; /* TRP: 20ns =&gt; 2x11.11ns */ FMC_SDRAMTimingInitStructure.FMC_RPDelay = 2; /* TRCD: 20ns =&gt; 2x11.11ns */ FMC_SDRAMTimingInitStructure.FMC_RCDDelay = 2;/* FMC SDRAM control configuration */ FMC_SDRAMInitStructure.FMC_Bank = FMC_Bank1_SDRAM; /* Row addressing: [7:0] */ FMC_SDRAMInitStructure.FMC_ColumnBitsNumber = FMC_ColumnBits_Number_9b;//FMC_ColumnBits_Number_8b; /* Column addressing: [10:0] */ FMC_SDRAMInitStructure.FMC_RowBitsNumber = FMC_RowBits_Number_12b;//FMC_RowBits_Number_11b; FMC_SDRAMInitStructure.FMC_SDMemoryDataWidth = SDRAM_MEMORY_WIDTH; FMC_SDRAMInitStructure.FMC_InternalBankNumber = FMC_InternalBank_Number_4; /* CL: Cas Latency = 3 clock cycles */ FMC_SDRAMInitStructure.FMC_CASLatency = FMC_CAS_Latency_3; FMC_SDRAMInitStructure.FMC_WriteProtection = FMC_Write_Protection_Disable; FMC_SDRAMInitStructure.FMC_SDClockPeriod = SDCLOCK_PERIOD; FMC_SDRAMInitStructure.FMC_ReadBurst = FMC_Read_Burst_Enable; FMC_SDRAMInitStructure.FMC_ReadPipeDelay = FMC_ReadPipe_Delay_0;//FMC_ReadPipe_Delay_1; FMC_SDRAMInitStructure.FMC_SDRAMTimingStruct = &amp;FMC_SDRAMTimingInitStructure; /* FMC SDRAM bank initialization */ FMC_SDRAMInit(&amp;FMC_SDRAMInitStructure); /* FMC SDRAM device initialization sequence */ SDRAM_InitSequence(); &#125; Configures the FMC and GPIOs to interface with the SDRAM memory. This function must be called before any read/write operation on the SDRAM. 配置FMC和GPIO来与SDRAM存储器实现接口。进行任何对SDRAM的读/写操作之前，这个函数必须被调用。 2.5 使能CRC模组CRC的含义是Cyclic Redundancy Check，循环冗余码校验。 1RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_CRC, ENABLE); 上面这行代码的含义：使能外设CRC的时钟。 3. ARM芯片实时时钟RTC的初始化主函数对应代码内容： 1Init_RTC(); 代码来源：RTC.c 展开： 1234567891011121314151617181920/*********************************************************************Init_RTC **ARM片上实时时钟初始化，仅在上电时调用。 *********************************************************************/void Init_RTC(void)&#123; RTC_InitTypeDef RTC_Init_Para; RCC_APB1PeriphClockCmd(RCC_APB1Periph_PWR, ENABLE); PWR_BackupAccessCmd(ENABLE); RCC_LSEConfig(RCC_LSE_ON); RCC_RTCCLKConfig(RCC_RTCCLKSource_LSE); RCC_RTCCLKCmd(ENABLE); RTC_Init_Para.RTC_HourFormat = RTC_HourFormat_24;//24小时制 RTC_Init_Para.RTC_AsynchPrediv = (unsigned int)0x7F;//127 RTC_Init_Para.RTC_SynchPrediv = (unsigned int)0xFF; //255。两个分频系数与LSE时钟源匹配 RTC_Init(&amp;RTC_Init_Para);&#125; 这段代码STM32基本都长这样，貌似没啥可看的，就算看懂了也记不大清楚…… 4. 关闭LED（操作GPIO）主函数对应代码内容： 1STM_LEDOff(); 代码来源： @file stm324x9i_eval.c @author MCD Application Team @version V1.0.3 @date 13-November-2013 @brief This file provides set of firmware functions to manage Leds, push-button and COM ports low level initialization functions for SD card (on SDIO) and EEPROM available on STM324x9I-EVAL evaluation board(MB1045) RevB from STMicroelectronics. 展开： 1234567891011121314/** * @brief Turns selected LED Off. * @param Led: Specifies the Led to be set off. * This parameter can be one of following parameters: * @arg LED1 * @arg LED2 * @arg LED3 * @arg LED4 * @retval None */void STM_LEDOff(void)&#123; GPIOA-&gt;BSRRL = GPIO_Pin_3; &#125; 这不就是刚才2.2那一段代码的最后一行吗，不懂为何还要再写一遍？ 于是我试了一下，把这行代码注释掉，运行效果还真的是一样的。。。 5. 背光控制初始化主函数对应代码： 1Backlight_Control_Init(); 代码来源：BackLight.c //这个文件很短，明显是他们自己写的 展开： 12345678910111213141516171819202122void Backlight_On(void)&#123; GPIOA-&gt;BSRRL = GPIO_Pin_8;&#125;void Backlight_Off(void)&#123; GPIOA-&gt;BSRRH = GPIO_Pin_8;&#125;void Backlight_Control_Init(void)&#123; GPIO_InitTypeDef GPIO_InitStructure; RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE); GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8; GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT; GPIO_InitStructure.GPIO_OType = GPIO_OType_PP; GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;//GPIO_PuPd_DOWN; GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz; GPIO_Init(GPIOA, &amp;GPIO_InitStructure); //Backlight_Off(); Backlight_On();&#125; 这段代码初始化了GPIOA的PIN8为推挽输出，上拉，50MHz。打开了背光。 6. GUI（图形用户界面）的初始化主函数对应代码： 1GUI_Init(); 代码来源：emWin固件库 这个函数折腾了好久才发现是一个以前没学过的东西：emWIN。这句话的意思就是初始化emWin内部数据结构和变量。 7. 读触摸屏校准参数主函数对应代码： 1Read_Cablirate_Parameter(&amp;Current_XYCOFFSET_Para); 代码来源：Touchscreen_Calibrate.c C-file generated by: GUI_Builder for emWin version 5.22 展开代码太长，贴出来也看不懂的。直接跳过，知道在干什么就行。 8. 创建后台任务(Background_Task)主函数对应代码： 1234567/* Create background task */xTaskCreate(Background_Task, (const char *)"BK_GND", Background_Task_STACK, NULL, Background_Task_PRIO, &amp;Bk_Task_Handle); 这是操作系统相关的内容，就是创建这么一个叫Background_Task的后台任务，Background_Task本身就是一个函数，函数底端是一个while死循环，死循环内容就是控制LED灯和喂狗。 代码来源：main.c 展开： 1234567891011121314151617181920212223242526272829/** * @brief Background task * @param pvParameters not used * @retval None */static void Background_Task(void * pvParameters)&#123;// int i = 0;// unsigned char CRC_Result[2]; /* Initilize the BSP layer */ //BSP_Init(); //Backlight_Control_Init(); /* Activate the use of memory device feature */ WM_SetCreateFlags(WM_CF_MEMDEV); /* Init the STemWin GUI Library */ // GUI_Init(); // NandFlash_Init(); // Read_Rated_Value_From_Flash(); /**/ WatchDog_Init(0xFF8); /* Run the background task */ while (1) &#123; /* toggle LED1 each 250ms */ STM_LEDToggle(); Feed_Dog(); vTaskDelay(500); &#125;&#125; 9. 创建串口收发任务(Recv_Task_Fun, Send_Task_Fun)主函数对应代码： 123456789101112xTaskCreate(Recv_Task_Fun, (const char *)"RECV_TASK", RECV_TASK_STACK, NULL, RECV_TASK_PRIO, &amp;RECV_Task_Handle); xTaskCreate(Send_Task_Fun, (const char *)"SEND_TASK", SEND_TASK_STACK, NULL, SEND_TASK_PRIO, &amp;SEND_Task_Handle); 这段代码从注释上来看，就是与串口1与串口2的接收(RECV)与发送(SEND)有关有关，具体代码我就不贴了，太长。 代码来源：main.c 10.创建主任务(Main_Task_Fun)主函数对应代码： 123456xTaskCreate(Main_Task_Fun, (const char *)"GUI_DEMO", Demo_Task_STACK, NULL, Demo_Task_PRIO, &amp;Main_Task_Handle); 这段代码实在太重要了，是整个执行部分的入口！ 先贴出这部分函数的展开代码： 123456789101112131415161718192021222324252627282930313233343536373839404142434445void Main_Task_Fun(void * pvParameters)&#123; FRAMEWIN_SKINFLEX_PROPS Framewin_Props; WM_SetCallback(WM_HBKWIN, _cbBk); BUTTON_SetReactOnLevel(); FRAMEWIN_GetSkinFlexProps(&amp;Framewin_Props, FRAMEWIN_SKINFLEX_PI_ACTIVE); Framewin_Props.Radius = 3; FRAMEWIN_SetSkinFlexProps(&amp;Framewin_Props, FRAMEWIN_SKINFLEX_PI_ACTIVE); FRAMEWIN_GetSkinFlexProps(&amp;Framewin_Props, FRAMEWIN_SKINFLEX_PI_INACTIVE); Framewin_Props.Radius = 1; FRAMEWIN_SetSkinFlexProps(&amp;Framewin_Props, FRAMEWIN_SKINFLEX_PI_INACTIVE); FRAMEWIN_SetDefaultSkin(_FRAMEWIN_DrawSkinFlex); BUTTON_SetDefaultSkin(BUTTON_SKIN_FLEX); CHECKBOX_SetDefaultSkin(CHECKBOX_SKIN_FLEX); DROPDOWN_SetDefaultSkin(DROPDOWN_SKIN_FLEX); HEADER_SetDefaultSkin(HEADER_SKIN_FLEX); MENU_SetDefaultSkin(MENU_SKIN_FLEX); MULTIPAGE_SetDefaultSkin(MULTIPAGE_SKIN_FLEX); PROGBAR_SetDefaultSkin(PROGBAR_SKIN_FLEX); RADIO_SetDefaultSkin(RADIO_SKIN_FLEX); SCROLLBAR_SetDefaultSkin(SCROLLBAR_SKIN_FLEX); SLIDER_SetDefaultSkin(SLIDER_SKIN_FLEX); SPINBOX_SetDefaultSkin(SPINBOX_SKIN_FLEX); //GUI_SetTextMode(GUI_TM_TRANS); hPageSwitchWin = GUI_CreateDialogBox(_aDialogCreate, GUI_COUNTOF(_aDialogCreate), _cbDialog, WM_HBKWIN, 0, 0); WM_HideWindow(hPageSwitchWin); GUI_Exec(); WM_SelectWindow(WM_HBKWIN); GUI_Clear(); WM_DisableMemdev(WM_HBKWIN); GUI_Exec(); WM_SetCreateFlags(WM_CF_MEMDEV); WM_EnableMemdev(WM_HBKWIN); while (1) &#123; GUI_Exec(); WM_SelectWindow(WM_HBKWIN); //GUI_Clear(); WM_DisableMemdev(WM_HBKWIN); GUI_Exec(); WM_SetCreateFlags(WM_CF_MEMDEV); WM_EnableMemdev(WM_HBKWIN); (Page_Array[Current_Page])(); &#125;&#125; 最关键的内容在while(1)的死循环里面，这里面的程序是一直循环执行的，正是这里面的代码真正让界面显示了起来。下面一行行地分析while循环里面的内容。 很重要的几个名词解释： 1. WM：代指Windows Manager，窗口管理器。 2. 句柄：创建新窗口后， WM 会分配一个称为句柄的唯一标识符。句柄用于在该特定窗口中执行其他任何操作。 3. 有效化/无效化：有效窗口是不需要重绘的完全更新窗口。无效窗口不会反映所有更新，因此需要完全或部分重绘。作出的更改影响了特定窗口时，WM 将该窗口标记为无效。下次窗口重绘时（手动或通过回调例程），将进行验证。 4. 桌面窗口：桌面窗口由窗口管理器自动创建，并且始终覆盖整个显示区域。它始终是最底层的窗口， 在没有定义其他窗口时，它是默认（活动）窗口。所有窗口都是桌面窗口的后代窗口 （子窗口、孙窗口等）。 5. 活动窗口：当前正用于绘制操作的窗口称为活动窗口，不一定就是最上面的窗口。 10.1 执行回调函数对应代码： 1GUI_Exec(); 回调函数解释： 回调例程（即回调函数）由用户程序定义，指示在特定事件出现时图形系统调用特定的函数。它们通常用于在窗口内容更改时自动重绘。 回调机制是 EmWin 的一个重要的特性和功能，WM 可在有或无回调例程（回调函数）时使用，大多情况下最好使用回调。EmWin 为窗口和窗口对象（小工具）提供回调机制的根本概念是一个事件驱动系统。因为在大多数窗口式系统中，其原理是控制流不仅仅是从用户程序到图形系统，还要再通过用户程序提供的回调例程返回用户程序。此机制通常称为 “好莱坞原则”（“不要打电话给我们，我们会给你打电话的！”），窗口管理器需要它的主要目的是触发窗口重绘。这与传统编程相反，但是它能利用窗口管理器的无效化逻辑。 10.2 设置桌面窗口为要用于绘制操作的活动窗口对应代码： 1WM_SelectWindow(WM_HBKWIN); 追根溯源： 1#define WM_HBKWIN WM_GetDesktopWindow() /* Handle of background window */ WM_HBKWIN被定义为WM_GetDesktopWindow()，就是返回的桌面窗口的句柄，WM_SelectWindow(WM_HBKWIN)函数的作用是是设置桌面窗口为要用于绘制操作的活动窗口。 10.3 禁止使用存储设备来重绘桌面窗口对应代码： 1WM_DisableMemdev(WM_HBKWIN); 也就是说，禁止使用存储设备来重绘WM_HBKWIN也就是桌面窗口。 10.4 再一次执行回调函数对应代码： 1GUI_Exec(); 10.5 设置在创建新窗口时用作默认的标记对应代码： 1WM_SetCreateFlags(WM_CF_MEMDEV); //Auto. use memory devices on all windows 展开： 1#define WM_CF_MEMDEV (1UL &lt;&lt; 2) /* Use memory device for redraws */ 10.6 （重新）启用使用存储设备来重绘桌面窗口对应代码： 1WM_EnableMemdev(WM_HBKWIN); 也就是说，启用使用存储设备来重绘WM_HBKWIN也就是桌面窗口。 10.7 选择窗口对应代码： 1(Page_Array[Current_Page])(); 展开：见10.7.1和10.7.2 10.7.1 Page_Array的定义1234567891011static void (*Page_Array[])(void) = &#123; Page_Startup, Page_System, Page_Analog, Page_DIDO, Page_Event_Fault,// Page_Misc_Setting, Page_Touch_Screen_Calibrate, Page_Input_DateTime, 0&#125;; Page_Startup表示启动页， 10.7.1.1 Page_Startup的定义1234567891011121314151617181920212223242526272829303132void Page_Startup(void)&#123; WM_CALLBACK * pcbPrev; int i = 0; WM_SelectWindow(WM_HBKWIN); //设置桌面窗口为要用于绘制操作的活动窗口 WM_HideWindow(hPageSwitchWin); //隐藏hPageSwitchWin对应的窗口，hPageSwitchWin是有符号的长整形数据 pcbPrev = WM_SetCallback(WM_HBKWIN, _cbWin);//设置窗口管理器要执行的回调例程 if(Flag_Startup_Finish == 0) &#123; GUI_Delay(3000); Flag_Startup_Finish = 1; &#125; else &#123; do &#123; GUI_Exec(); GUI_Delay(REFRESH_DELAY_TIME); &#125; while (Switch_Page == Current_Page); &#125; WM_SetCallback(WM_HBKWIN, pcbPrev); Previous_Page = Current_Page; if(Current_XYCOFFSET_Para.Flag_Calibrated &gt; 0) &#123; Switch_Page = Current_Page = INDEX_PAGE_SYSTEM;//这句话很关键，是用于切换界面的 WM_ShowWindow(hPageSwitchWin); &#125; else &#123; Switch_Page = Current_Page = INDEX_PAGE_CALIBRATE; &#125;&#125; 第6行代码追根溯源： 1WM_HideWindow(hPageSwitchWin); //隐藏hPageSwitchWin对应的窗口，hPageSwitchWin是有符号的长整形数据 ​ 1WM_HWIN hPageSwitchWin; 来源：SwitchPage_ToolBar.c ​ 1#define WM_HWIN GUI_HWIN 来源：WM.h ​ 1typedef GUI_HMEM GUI_HWIN; 来源：GUI_Type.h ​ 1234567/*********************************************************************** Memory management*/#ifndef GUI_HMEM #define GUI_HMEM I32#endif 来源：GUI_Type.h ​ 12#ifndef I32 #define I32 signed long 来源：Global.h 折腾这么久，就是说：hPageSwitchWin被定义为一个有符号的长整形数据。 ​ 第7行代码追根溯源： 1pcbPrev = WM_SetCallback(WM_HBKWIN, _cbWin);//设置窗口管理器要执行的回调例程 1234567/// &lt;summary&gt;/// WM_SetCallback的原型定义。给定窗口将变为无效，这确保窗口可进行重绘。/// &lt;/summary&gt;/// &lt;param name="hWin"&gt;窗口句柄&lt;/param&gt;/// &lt;param name="cb"&gt;指向回调例程的指针&lt;/param&gt;/// &lt;returns&gt;指向上一回调例程的指针&lt;/returns&gt;WM_CALLBACK* WM_SetCallback (WM_HWIN hWin, WM_CALLBACK* cb) ​ 10.7.1.2 Page_System的定义10.7.1.3 Page_Anolog的定义10.7.1.4 Page_DIDO的定义10.7.1.5 Page_Event_Fault的定义10.7.1.6 Page_Misc_Setting的定义10.7.1.7 Page_Touch_Screen_Calibrate的定义10.7.1.8 Page_Input_DateTime的定义10.7.2 Current_Page的定义1int Switch_Page = 0, Current_Page = 0, Previous_Page = 0;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[【资源共享】proteus8.3 sp1，win10可用，无闪退]]></title>
+      <url>%2F2017%2F01%2F05%2F%E8%B5%84%E6%BA%90%E5%85%B1%E4%BA%AB%2F%E3%80%90%E8%B5%84%E6%BA%90%E5%85%B1%E4%BA%AB%E3%80%91proteus8.3%20sp1%EF%BC%8Cwin10%E5%8F%AF%E7%94%A8%EF%BC%8C%E6%97%A0%E9%97%AA%E9%80%80%2F</url>
+      <content type="text"><![CDATA[话不多说，直接上链接，百度贴吧之前放一楼的链接过期了居然不能改，我就放自己博客里吧，至少这个网盘链接如果失效了我还可以永久更新（记得在下面评论里面提醒我哈~在评论时最好用你的邮箱登陆以后再评论，这样网盘链接更新以后我给你回复，系统会自动给你发提醒邮件的，否则如果只是匿名评论，我即使更新了也无法告诉你吖。。。当然直接在贴吧评论下面提醒我也行哈(●’◡’●)）： 链接：http://pan.baidu.com/s/1jIfpAx4 密码：xyb1 安装方法如下：http://jingyan.baidu.com/article/27fa73268b87ed46f8271fc2.html]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[从官网下载安装激活以后任何时候都是最新版本的Acrobat DC]]></title>
+      <url>%2F2017%2F01%2F04%2F%E6%95%99%E7%A8%8B%2FAdobe%2F%E4%BB%8E%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E6%BF%80%E6%B4%BB%E4%BB%A5%E5%90%8E%E4%BB%BB%E4%BD%95%E6%97%B6%E5%80%99%E9%83%BD%E6%98%AF%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC%E7%9A%84Acrobat%20DC%2F</url>
+      <content type="text"><![CDATA[1. 当前时间最新版本安装包下载地址https://helpx.adobe.com/cn/acrobat/kb/acrobat-downloads.html 2. 破解工具下载地址百度云链接：http://pan.baidu.com/s/1jHW3mg2 密码：3pbt 所以如果你看到这篇文章，发现百度云链接过期了的，评论下告诉我邮箱，我收到评论后尽快传给你。 或者你可以直接发送邮件向这位小伙伴（452516515@qq.com）直接索要~ 里面有两个exe，据说两个都行，我好像选的是那个带dc的，你要是试了不行，那就换个试试呗。 3. 破解方式：和Acrobat XI PRO一模一样 在安装之前，先手工修改host文件（建议用管理员身份打开记事本来编辑hosts文件，不然等你修改完了hosts文件你会发现依然没法保存hosts文件）： 在hosts文件（默认位置C:\windows\system32\drivers\etc\hosts）中添加如下几行内容： 123#Adobe Blocker127.0.0.1 lmlicenses.wip4.adobe.com127.0.0.1 lm.licenses.adobe.com 好了，保存一下； 禁用网络或拔出网线 使用注册机的序列号开始安装，不要关闭注册机；然后使用该序列号开始安装软件； 启动Acrobat XI，提示遇到连接问题，选择离线激活 确认遇到连接问题，进行离线激活 粘贴出现的第二个序列号/机器码，然后使用注册机生成最后的激活码 复制粘贴激活码，验证激活 启动后需要设置默认程序，然后把主程序关掉；那个破解程序也可以关掉了； 脱机激活后**在hosts文件里添加： 1234567891011121314151617127.0.0.1 lmlicenses.wip4.adobe.com127.0.0.1 lm.licenses.adobe.com127.0.0.1 3dns-2.adobe.com127.0.0.1 3dns-3.adobe.com127.0.0.1 activate.adobe.com127.0.0.1 activate-sea.adobe.com127.0.0.1 activate-sjc0.adobe.com127.0.0.1 adobe-dns.adobe.com127.0.0.1 adobe-dns-2.adobe.com127.0.0.1 adobe-dns-3.adobe.com127.0.0.1 ereg.adobe.com127.0.0.1 hl2rcv.adobe.com127.0.0.1 practivate.adobe.com127.0.0.1 wip3.adobe.com127.0.0.1 activate.wip3.adobe.com127.0.0.1 ereg.wip3.adobe.com127.0.0.1 wwis-dubc1-vip60.adobe.com 以上工作保存完成后，这时才可以联网。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Hexo-SE：将hexo收录至搜索引擎的注意事项]]></title>
+      <url>%2F2017%2F01%2F03%2F%E6%95%99%E7%A8%8B%2FHexo%2FHexo-SE%EF%BC%9A%E5%B0%86hexo%E6%94%B6%E5%BD%95%E8%87%B3%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%2F</url>
+      <content type="text"><![CDATA[完全正确可行的链接： http://dotdotcloud.cn/2016/05/09/hexo%E5%8D%9A%E5%AE%A2%E8%A2%AB%E7%99%BE%E5%BA%A6-google%E6%94%B6%E5%BD%95%E7%9A%84%E6%96%B9%E6%B3%95/ 最关键的地方在于这句话：我们的博客系统使用了hexo，部署在Github上，因此下载Google的验证文件之后，需要在文件开头添加layout: false来取消hexo对其进行的转换！！！ 123layout: false---google-site-verification: google6c91812b12cd004a.html 另外，还要在站点配置文件中添加以下几行代码： 12345# Sitemap Settingsitemap: path: sitemap.xmlbaidusitemap: path: baidusitemap.xml 注意，两个path前面至少有一个一定要加一个制表符！]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Hexo-插件：如何在Hexo上加载网易云插件]]></title>
+      <url>%2F2017%2F01%2F03%2F%E6%95%99%E7%A8%8B%2FHexo%2FHexo-%E6%8F%92%E4%BB%B6%EF%BC%9A%E5%A6%82%E4%BD%95%E5%8A%A0%E8%BD%BD%E7%BD%91%E6%98%93%E4%BA%91%E6%8F%92%E4%BB%B6%2F</url>
+      <content type="text"><![CDATA[第一种代码格式 首先打开浏览器在网易云音乐官网上（不是播放器！）搜索你想要生成外链播放器的歌曲，比如，我搜索的是《千百度》这首歌，仍旧是在浏览器中打开播放界面，点击“生成外链播放器”，只要歌曲版权支持，就都能生成外链的。 在你的md文件中插入它给出的html代码（建议使用iframe） 1&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=86 src=&quot;//music.163.com/outchain/player?type=2&amp;id=167732&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt; 其中auto=0表示不自动播放，auto=1表示自动播放 src前面和src后面的height值不一样大，并且你一定要保证前一个height要比后一个height大20！否则显示不全！！ 然后直接hexo g -d上传部署，效果如下： 另一种代码格式，效果就是看起来更大一些 代码如下： 1&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=110 src=&quot;https://music.163.com/outchain/player?type=2&amp;id=167732&amp;auto=0&amp;height=90&quot;&gt;&lt;/iframe&gt; 其中auto=0表示不自动播放，auto=1表示自动播放 src前面和src后面的height值不一样大，并且你一定要保证前一个height要比后一个height大20！否则显示不全！！ 效果如下：]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Hexo-Node js缺少所需DLL的解决办法]]></title>
+      <url>%2F2017%2F01%2F02%2F%E6%95%99%E7%A8%8B%2FHexo%2FHexo-Node%20js%E7%BC%BA%E5%B0%91%E6%89%80%E9%9C%80DLL%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[一、具体步骤 以管理员身份打开cmd 定位到你安装程序的位置 输入： 1start 安装包名称 ​ 二、我的吐槽主要思路就是要想方设法给这个msi安装程序以管理员权限（win10右键居然不能给msi管理员权限，只能给exe管理员权限我也是醉了）。 我不知道是不是win10的问题，google了好久居然很少有人和我一样的问题，关键我还是刚重装完的系统啊！绝对没问题的啊！害得我还得这么折腾。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Hexo-NexT主题'留言'页面增加最近访客]]></title>
+      <url>%2F2017%2F01%2F02%2F%E6%95%99%E7%A8%8B%2FHexo%2FHexo-NexT%E4%B8%BB%E9%A2%98'%E7%95%99%E8%A8%80'%E9%A1%B5%E9%9D%A2%E5%A2%9E%E5%8A%A0%E6%9C%80%E8%BF%91%E8%AE%BF%E5%AE%A2%2F</url>
+      <content type="text"><![CDATA[转载自：http://blog.ynxiu.com/2016/duoshuo-fangke.html 参考：http://www.arao.me/2015/hexo-next-theme-optimize-duoshuo/ 上面的这个参考链接有“如何扒别人多说自定义样式”的功能 1. 功能在NexT主题上增加留言板的功能。 2. 实现方法2.1 在菜单中添加guestbook修改主题配置文件_config.yml（要注意是NexT目录下的_config.yml，不是hexo站点目录下的_config.yml），即hexo初始化目录下的/themes/next/_config.yml，添加 guestbook 到 menu 中: 12345678menu: home: / #categories: /categories about: /about archives: /archives tags: /tags #commonweal: /404.html guestbook: /guestbook 这样就在网站menu中增加了一个菜单：guestbook，此时留言板还没有真的实现。 添加对应译文显示 修改NexT主题zh-Hans.yml文件（我用的是简体中文的，其他语言也是类似的），即hexo初始化目录下/themes/next/languages/zh-Hans.yml，添加 guestbook: 留言 到 menu 中 123456789menu: home: 首页 archives: 归档 categories: 分类 tags: 标签 about: 关于 search: 搜索 commonweal: 公益404 guestbook: 留言 这样在网站上就可以显示中文留言两个字。 2.2 新建guestbook页面新建guestbook页面，查看官方方法一样新建guestbook，在hexo初始化目录下，右键选择Git Bash Here。 执行hexo new page &quot;guestbook&quot;。此时会在hexo初始化目录下的/source中看到名为guestbook的文件夹，在index.md中添加comments: true如 12345---title: guestbookdate: 2016-03-11 22:42:56comments: true--- 2.3 添加最近访客（多说插件）修改guestbook目录下的index.md,在正文部分添加12&gt; 最近访客&lt;div class=&quot;ds-recent-visitors&quot; data-num-items=&quot;28&quot; data-avatar-size=&quot;42&quot; id=&quot;ds-recent-visitors&quot;&gt;&lt;/div&gt; 修改多说CSS登陆多说，点击后台管理，选择设置，向下找到自定义CSS，插入如下代码，滑到最底部点击保存即可。 12345678910111213141516171819#ds-reset .ds-avatar img,#ds-recent-visitors .ds-avatar img &#123; width: 54px; height: 54px; /*設置圖像的長和寬，這裏要根據自己的評論框情況更改*/ border-radius: 27px; /*設置圖像圓角效果,在這裏我直接設置了超過width/2的像素，即為圓形了*/ -webkit-border-radius: 27px; /*圓角效果：兼容webkit瀏覽器*/ -moz-border-radius: 27px; box-shadow: inset 0 -1px 0 #3333sf; /*設置圖像陰影效果*/ -webkit-box-shadow: inset 0 -1px 0 #3333sf;&#125;#ds-recent-visitors .ds-avatar &#123; float: left&#125;/*隱藏多說底部版權*/#ds-thread #ds-reset .ds-powered-by &#123; display: none;&#125;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Hexo-搭建教程：从一窍不通到部署成功]]></title>
+      <url>%2F2017%2F01%2F02%2F%E6%95%99%E7%A8%8B%2FHexo%2FHexo-%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B%EF%BC%9A%E4%BB%8E%E4%B8%80%E7%AA%8D%E4%B8%8D%E9%80%9A%E5%88%B0%E9%83%A8%E7%BD%B2%E6%88%90%E5%8A%9F%2F</url>
+      <content type="text"><![CDATA[前言在开始建站之前，我在Git技术和前端技术上基本算是个纯小白，但经过一天的试错，我终于把Hexo部署好了，走了很多弯路，于是写下这篇详细的使用教程，以及一些我在使用中出现的问题和走过的错路，希望和我一样零基础的Hexo使用者（尤其是对没接触过Git相关技术的用户）可以一步一步按照我的方法来做，保证成功！如果你在看这个教程的过程中发现有什么不正确或不理解的地方，欢迎在底下评论区一起讨论！^-^ 我的安装环境： Windows 10 专业版 64位 版本14393 注意每一步执行完后，把刚刚改动需要保存的文件保存一下再进行下一步操作！比如你修改了_config.yml文件之后，记得保存之后再进行下一步操作！ 1. 安装Node.js1.1 Steps 以管理员身份打开cmd 定位到你安装程序的位置 输入： 1start 安装包名称 1.2 注释安装之所以麻烦，是因为win10下msi安装程序无法以正常方法赋予管理员权限，而Node.js.msi恰恰又需要管理员权限才能正常安装，否则会报错（缺少DLL云云），只能用这种绕路的方法来给权限，使它得以正常安装。 参见： https://wanzhiyu.github.io/2017/01/02/Node.js%E7%BC%BA%E5%B0%91%E6%89%80%E9%9C%80DLL%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/ 2. 安装Github For Windows（可选）2.1 作用有一个图形化的界面，方便你日后同步自己的Hexo程序文件，免得丢失Hexo资料文件。其实你不装这个也没事。。。只是我自己需要装这个来方便自己的日常使用，熟悉git命令的完全可以就用命令操作…… 综上所述，本教程不需要安装Github For Windows就可以完成Hexo的部署！！！ 2.2 操作方法搜索引擎搜索Github for desktop，找到官网后下载。下载地址：https://desktop.github.com/ 这只是一个很小的用于下载真正的Github的程序，打开后还得下载主程序，最好挂着梯子下载，如果不成功（比如下着下着就出错停止），没事，重新开程序，多下几次，一次比一次下载的多，一般三四次之后就下载好啦。 3. 安装Git搜索引擎搜索Git，找到官网后下载。附下载地址：https://git-scm.com/ 这个下载起来就没那么多问题啦，直接迅雷下载，速度飞快。 下载好啦： 双击安装，这个应该都会吧。。。 win10下必须右键用管理员身份打开，否则会报错，Error5：拒绝访问。 其他版本系统我不知道，可能也需要吧。 一路“Next”，啥都别管。 安装完成。 4. 设置本地SSH Keys（这步一定要仔细！）4.1 Steps 启动开始菜单里面的Git Bash 在Git Bash输入以下指令（任意位置点击鼠标右键），检查是否已经存在了SSH keys。 1ls -al ~/.ssh 如果已经存在，全部删除为妙，这几个key的存放位置在C:\Users\你的用户名\.ssh，全部删除。 删除前和删除后是有区别的，看截图： 下面开始重新产生ssh keys，输入以下指令（邮箱就是你注册Github时候的邮箱）后，回车： 1ssh-keygen -t rsa -C &quot;youremail@xxx.com&quot; 注意，双引号这里面填写你自己的邮箱，如我填的是wanzhiyu@outlook.com 然后它会提示要你输入passphrase（如下图，我没有输入直接回车，如果你输入的话，要记得，到时候会用到）。之后，出现类似下图： 然后将这个新的key添加到ssh-agent中： 1ssh-agent -s 执行以下命令： 1sh-add ~/.ssh/id_rsa 输入之后，在我这里是出错了，不知道你的有没有出错，下面几步图在第12步走完之后一起贴。 如果你的也是这样子出错了的话，就输入以下指令： 1eval `ssh-agent -s` 重新执行刚才那条命令： 1ssh-add ~/.ssh/id_rsa 完成后大概样子是这样的，截图： 4.2 引用外部链接： 正确的操作方法来自这个网站：http://www.cnblogs.com/Security-Darren/p/4106328.html 我没能操作成功并且浪费很多时间的方法来自这个网站：http://m.paopaoche.net/new/85988 5. 将SSH key添加到你的GitHub账户5.1 Steps 首先将公钥复制到粘贴板，仍然是在Git Bash里面进行操作： 1clip &lt; ~/.ssh/id_rsa.pub 打开Github网站，然后在github的账户页的右上角，点击配置（settings, 齿轮图形）： 在sidebar中点击“SSH keys”，接着点击“Add SSH key”，在”title”栏输入一个自己喜欢的标题，也可以不写，默认用邮箱名称，“key”栏中粘贴刚刚复制的公钥内容，最后点击“Add key”按钮，添加成功。 三个截图： 检查SSH key是否成功设置 1ssh -T git@github.com 注意，这里就是输入git@github.com，别自作主张替换成你的邮箱什么的，这里不需要。 过程中问你yes还是no，肯定输入yes。 最后，如果你的结果也出现了这样一句话： 1Hi 你的名字! You&apos;ve successfully authenticated, but GitHub does not provide shell access. 说明你也成功啦！ 见截图： 5.2 引用外部链接 正确的操作方法来自这个网站：http://www.cnblogs.com/Security-Darren/p/4106328.html 这一步，网上大部分做法都是对的，不容易出错。 6. 在Github上建立自己的网站6.1 Steps 打开Github网站，右上角点击新建一个仓库。 在Repository name中输入：你的用户名.github.io 注意这里必须是你的用户名！！！ 不要自作主张填其他名字！！！ 7. 安装Hexo7.1 注释其实这一部分就相对简单多啦，网上的教程基本都能实现，没有太大问题。 7.2 Steps 在自己认为合适的地方创建一个文件夹，我是打算创建在F:\softwares\GitHub\hexo-client里面，于是我在Git Bash里面输入： 1234cd f:*cd so*cd G*cd he* 效果如图所示： 其中注意，Git Bash是区分大小写的，*是通配符，表示省略。 这样我们进入F:\softwares\GitHub\hexo-client里面了 输入： 1npm install hexo-cli -g 效果如图所示： 会看到有WARN，没事，不影响你安装使用。 输入： 1npm install hexo --save 效果如下面两张图所示： 会看到还有WARN，没事的，不影响安装成功。 下面我们来看一看Hexo是不是已经安装好了。 在命令行中输入： 1hexo -v 效果如下图所示： 8. 初始化Hexo8.1 Steps 接着上面的操作，输入： 1hexo init 注意！执行这一步前首先你得保证你要装的那个目录是空的，没东西的！对我而言就是 这个目录：F:\softwares\GitHub\hexo-client，它里面必须是没东西的！！！ 否则会报fatal（致命错误）！见截图： init初始化成功后大致是这样：一个截图： 当你看到： 1INFO Start blogging with Hexo! 说明你也成功啦！ 注意需要提前安装一个扩展： 1npm install hexo-deployer-git --save 这个扩展必须要装！有的老的教程不写！要是不装这个你之后是没法部署到网站的！ 打开F:\softwares\GitHub\hexo-client（就是你自己设定的hexo安装位置）里面的_config.yml文件，我这里用的是Visual Code来打开的，其他编辑器应该也可以，都差不多。 翻到文件的最低端，如图所示，找到这几行： 像这样修改： 1234deploy: type: git repo: git@github.com:yourname/yourname.github.io.git branch: master 注意这里必须是你的用户名！！！ 不要自作主张填其他名字！！！ 我填的就是： 1234deploy: type: git repo: git@github.com:wanzhiyu/wanzhiyu.github.io.git branch: master 9. 正式部署9.1 Steps 其实一步就可以完成，仍然是在Git Bash中输入： 1hexo clean;hexo g -d 如下面三行代码所示，其实这一步里面包含了三步： 分别代指清空缓存（这个用词不准确，但你可以就这么理解） 生成待上传文件 部署到Github 123hexo cleanhexo generatehexo deploy 在浏览器打开你的网站：你的用户名.github.io 比如我打开的就是：wanzhiyu.github.io 你会看到成功啦！ ​]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[致《Friends》（待续）]]></title>
+      <url>%2F2016%2F09%2F03%2F%E9%9A%8F%E7%AC%94%2F%E8%87%B4%E3%80%8AFriends%E3%80%8B%2F</url>
+      <content type="text"><![CDATA[历时八个多月，终于在今天，把整整十季的《Friends》一点点看完了，不知道真的要说什么，但是心里却好像有着千言万语，就好像自己要真的和多好多好的几个老友离别了一样。 缘由作为一个九零后，我没能跟着这部剧一路长大，初知《Friends》是因为在知乎上偶然看到了，吧。里面几个上世纪的美国人看起来还挺有意思，就开始陆陆续续地看起这部剧，从一月到现在的九月。这大半年来，《Friends》是我在吃晚饭时候必看的一部剧，看看笑笑，笑笑看看，顺便吃吃。经常吃完了之后守着空盘子盯着屏幕继续看，视力不太好头会往前凑得比较近，时间长了脖子会酸，说实话这是个不好的习惯，我现在正在改。 舍友和朋友总拿这个笑话我：哟，今天吃饭怎么没看老友记哇？要么就是：你又在看老友记啦，难怪你变得越来越污。 多去食堂吃吃饭就好了，食堂饭菜现在变得好吃多了，看起来也比原来宽敞多了，因为确实未删减版的有点污，在大庭广众之下看的话会有点……你懂的😄 我以前从没主动打算写出接下来这么一个长篇的文章，而且我也好久没有提笔写过文章了，只是这部剧，这部陪伴了我八个月却让我感觉像经历了十年光阴的剧，让我想起了好多好多关于我自己和我周围人的事，还有我这几年迷茫无比的时光，时而开怀大笑，时而黯然神伤。我不能也无法用多华丽的文字来描述我的经历和内心，也不想花上大把的时间来讲剧本里的故事，我只能就这样写写看，也许写着写着就会写了呢，就好比生活，或许活着活着就明亮了呢。 初识我一时竟然想不起来这剧开始的第一幕是什么了，只记得当初一共六个主角，对于轻微脸盲症的我，记得够累。现在当然是倒背如流：Ross、Rachel、Chandler、Monica、Joey、Phoebe，每个人的个性都太鲜明了，或活泼，或幽默，或严肃，或洒脱。 那刚开始的时候啊， Ross，古生物学家，刚刚离婚，原因是妻子和另一个女的结婚了…… Rachel，富家女，刚逃婚出来投靠高中时的好朋友Monica，原因是自己好像不爱自己的未婚夫…… Chandler，一直在做一份大家都说上来的工作，他似乎永远是最喜欢讲笑话的那个，虽然很多时候会讲得不合时宜…… Monica，强迫症严重，不容许家里有一丁点不干净和不符合她心意的家具布置，哪怕一张椅子的位置都不能随便挪开…… Joey，找了个虽然很负责但看起来很不靠谱的经纪人，演艺生涯刚开始没多久，动不动就和陌生女子flirt，交往的女朋友没有超过一个礼拜的…… Pheobe，在咖啡馆里弹着她自己创作的吉他曲，虽然大部分曲子连她的朋友都觉得很难听，但她依然自信地投入地弹奏每一曲…… 走近走进离别最近又被问到：你怎么不看老友记啦。 我看看他：快看完了。很快很快就快结束了。 我也许没有那么深厚的感情和内心，但我还是很不舍的。生活再美好，却也没有不散的筵席。 再聚？我也想要不孤独的时光。 我一直是个喜欢看喜剧的人，以前有一部八十几集的电视剧，忘记了名字，好长好长，是个悲剧，我都看到快最后两集了，我最后还是没能看下去，没什么别的原因，仅仅因为不忍，不忍相信世上会有如此的不幸。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[穿越星际的安魂曲]]></title>
+      <url>%2F2016%2F08%2F20%2F%E9%9F%B3%E4%B9%90%2F%E7%BA%AF%E9%9F%B3%E4%B9%90%2F%E7%A9%BF%E8%B6%8A%E6%98%9F%E9%99%85%E7%9A%84%E5%AE%89%E9%AD%82%E6%9B%B2%2F</url>
+      <content type="text"><![CDATA[Astral Requiem。 Astral既有星光的意思，也有精神世界的含义；Requiem则是安魂曲之意。 像是听完一个老者诉说：“我这一生有悲壮，有平淡，有遗憾，有精彩，如今我带不走了，就留给你们，愿你们在我的故事里找到离开或继续的理由。” —— Gez1 九分钟的曲子，将众多乐器发挥得淋漓尽致，特别是长笛那一段，仿若置身星际整个世界变得与我们无关。然后提琴、鼓…恢弘激昂的演奏仿佛要冲破我们大脑的极限，却又被清脆的钢琴声拉回现实；让我长久陷入过去，烦躁的心变得平静，再被音乐拨乱，最终再次恢复平静。祝一切安好。—— hanjiee 躺在床上。戴着耳机。闭上眼睛。出生时，父母的眼神，学校的事，快乐的事，不快乐的事，那些年那些天那些事那几个人都已在我前行的路上丢了。等回头再也找不到了……静静地，静静地，泪水无声滑落。 —— 朱莹颜 整曲时而欢快，时而悲戚，时而壮阔，时而渺小，好比人的一生，卸掉了一身的担子和角色之后，无畏无求，只想在这星际长眠。 最后， 愿你眼中总有光芒，愿你活成你想要的模样。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[罗马尼亚的一首老歌“Ce frumoasa e iubirea”，真的挺好听~]]></title>
+      <url>%2F2016%2F08%2F19%2F%E9%9F%B3%E4%B9%90%2F%E5%B0%8F%E8%AF%AD%E7%A7%8D%2F%E6%9D%A5%E8%87%AA%E7%BD%97%E9%A9%AC%E5%B0%BC%E4%BA%9A%E7%9A%84%E4%B8%80%E9%A6%96%E8%80%81%E6%AD%8C%2F</url>
+      <content type="text"><![CDATA[这首歌是由罗马尼亚歌手Giulia演唱，收录于她的专辑《PrimulPas》中，歌曲语言是罗马尼亚语。 Giulia Anghelescu是罗马尼亚著名歌手。前罗马尼亚Candy乐队的一员，现为罗马尼亚舞曲乐队DJ Project的主唱。 小语种唱起来骨子里就透着股倔强和美丽，歌词收录如下： Fiecare clipa pictata-n roz, 每一分每一秒都涂成了玫瑰色 Tre’sa recunosc,iti apartine 我必须得承认，这属于你 Si nici macar eu nu ma cunosc 我已无法认识自己 Asa cum ma stii pe mine 只有你了解真正的我 Ma tem uneori ca ai sa pleci 有时候我担心你将离去 Si nu vreau sa ma lasi fara tine 不要留下孤单的我 Iar eu nu sunt eu 而我已不是我 De fapt,fara tine,sunt nimeni 事实上，没有你，我也将无法存在 Ce frumoasa e iubirea 爱情多美呀 Cand ma alinti cu zambetul tau curat 当你用纯洁的微笑爱抚我时 Ce frumoasa e iubirea 爱情多美呀 Cand tot ce spui devine adevarat 当你说的话成真的那一刻 Ce frumoasa e iubirea 爱情多美呀 Cand ma alinti cu zambetul tau curat 当你用纯洁的微笑爱抚我时 Ce frumoasa e iubirea 爱情多美呀 Cand tot ce spui devine adevarat 当你说的话成真的那一刻 Ficare clipa trecuta-n alb 白日里度过的每一刻 A insemna ca tu fost departe 告诉你已走远 Uneori ma intreb daca esti real 有时候我问自己你是否真的存在 Sau inchipuit din printr-o carte 也许你只是书中的虚幻 Ma tem uneori ca ai sa pleci 有时担心你会离去 Si nu vreau sa ma lasi fara tine 不要留下孤单的我 Iar eu nu sunt eu 而我已不是我 De fapt,fara tine,sunt nimeni 没有你，我也将不再存在 Ce frumoasa e iubirea 爱情多美呀 Cand ma alinti cu zambetul tau curat! 当你用纯洁的微笑爱抚我时 Ce frumoasa e iubirea 爱情多美呀 Cand tot ce spui devine adevarat! 当你的话语成真时 Ce frumoasa e iubirea 爱情多美呀 Cand ma alinti cu zambetul tau curat! 当你用纯洁的微笑爱抚我时 Ce frumoasa e iubirea 爱情多美呀 Cand tot ce spui devine adevarat! 当你的话语成真时 Ma cuprinzi incet..ma stangi la piept 慢慢将我拥入怀中 Imi spui ca nu..n-ai sa pleci prea curand 对我说不 不要马上离开我 Ma cuprinzi incet..ma stangi la piept 慢慢将我拥入怀中 Imi spui ca nu..n-ai sa pleci prea curand 对我说不 不要马上离开我 Ce frumoasa e iubirea 爱情多美呀 Cand ma alinti cu zambetul tau curat! 当你用纯洁的微笑爱抚我时 Ce frumoasa e iubirea 爱情多美呀 Cand tot ce spui devine adevarat! 当你的话语成真时 Ce frumoasa e iubirea 爱情多美呀 Cand ma alinti cu zambetul tau curat! 当你用纯洁的微笑爱抚我时 Ce frumoasa e iubirea 爱情多美呀 Cand tot ce spui devine adevarat! 当你的话语成真时]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Matlab自定义折叠代码]]></title>
+      <url>%2F2016%2F08%2F18%2F%E6%95%99%E7%A8%8B%2FMatlab%2FMatlab%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8A%98%E5%8F%A0%E4%BB%A3%E7%A0%81%2F</url>
+      <content type="text"><![CDATA[先放在这，以后再详细地写。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[我的第一篇博客日志！]]></title>
+      <url>%2F2016%2F08%2F18%2F%E9%9A%8F%E7%AC%94%2F%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%BF%97%EF%BC%81%E6%AC%A2%E8%BF%8E%E5%9C%A8%E8%BF%99%E9%87%8C%E7%95%99%E8%A8%80%E5%93%A6%2F</url>
+      <content type="text"><![CDATA[其实也不知道写些什么好，为了搭这个博客，并且做到一次建站，处处可用的功能，把Github比较深度地实践了一遍，没用过这东西的时候觉得这Github是啥玩意，我怎么完全看不懂它在干嘛……后来一点点摸索，总算搞懂了这里面运行的原理，发现这玩意在版本控制方面真的做的不错，值得学习，以后生活也能用到，是个很不错的工具。日后我会出一篇详细的讲解文，用我理解的语言来和大家解释建站的全过程，每一步到底在做什么有可能遇到哪些问题。 下面是我的Github地址，也欢迎大家打开右侧栏进入我的微博和知乎哦~ http://github.com/wanzhiyu]]></content>
+    </entry>
+
+    
+  
+  
+</search>
