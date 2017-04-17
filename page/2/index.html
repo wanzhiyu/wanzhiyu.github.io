@@ -337,6 +337,217 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://wanzhiyu.github.io/2017/02/15/教程/Hexo/Hexo-编辑：在日志中添加链接时显示点击按钮/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="一萬个为什麽呀">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/pic_admin.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ce Frumoasa E Iubirea">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/02/15/教程/Hexo/Hexo-编辑：在日志中添加链接时显示点击按钮/" itemprop="url">
+                  Hexo-编辑：在日志中添加链接时显示点击按钮
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-15T10:17:27+08:00">
+                2017-02-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/教程/" itemprop="url" rel="index">
+                    <span itemprop="name">教程</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/教程/Hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">Hexo</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/02/15/教程/Hexo/Hexo-编辑：在日志中添加链接时显示点击按钮/" class="leancloud_visitors" data-flag-title="Hexo-编辑：在日志中添加链接时显示点击按钮">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  502字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  3分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>源代码转自：<a href="http://notes.iissnan.com/2016/next-documentations-reload/">http://notes.iissnan.com/2016/next-documentations-reload/</a> 最后的两个按钮，我把它们摘抄下来，下次可以自己改编使用，效果如下：</p>
+<p><style type="text/css">.next-documentations-reload-help-button{<br>      ;padding: 0 20px;<br>      ;border: 2px solid #555;<br>      ;text-decoration: none;<br>      ;display: inline-block;<br>      ;overflow: hidden;<br>      ;color: #555;<br>      ;font-size: 14px;<br>      ;background: #fff;<br>      ;border-radius: 2px;<br>      ;transition: all 0.3s ease;<br>    }<br>    {}.next-documentations-reload-help-button:hover {<br>      ;color: white;<br>      ;background-color: black;<br>      ;border-color: black;<br>    }<br>    {}.next-documentations-reload-help-button i {margin-right: 5px;}<br></style></p>
+
+<p class="text-center"><a href="http://theme-next.iissnan.com/" class="next-documentations-reload-help-button" target="_blank" rel="external"><i class="fa fa-globe"></i> 访问 NexT 文档</a><a href="https://github.com/iissnan/theme-next-docs" class="next-documentations-reload-help-button" style="margin-left: 10px;" target="_blank" rel="external"><i class="fa fa-github-alt"></i> NexT 文档源码</a></p>
+
+<p>源代码如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="xml">.next-documentations-reload-help-button&#123;<span class="tag">&lt;<span class="name">br</span>&gt;</span>      ;padding: 0 20px;<span class="tag">&lt;<span class="name">br</span>&gt;</span>      ;border: 2px solid #555;<span class="tag">&lt;<span class="name">br</span>&gt;</span>      ;text-decoration: none;<span class="tag">&lt;<span class="name">br</span>&gt;</span>      ;display: inline-block;<span class="tag">&lt;<span class="name">br</span>&gt;</span>      ;overflow: hidden;<span class="tag">&lt;<span class="name">br</span>&gt;</span>      ;color: #555;<span class="tag">&lt;<span class="name">br</span>&gt;</span>      ;font-size: 14px;<span class="tag">&lt;<span class="name">br</span>&gt;</span>      ;background: #fff;<span class="tag">&lt;<span class="name">br</span>&gt;</span>      ;border-radius: 2px;<span class="tag">&lt;<span class="name">br</span>&gt;</span>      ;transition: all 0.3s ease;<span class="tag">&lt;<span class="name">br</span>&gt;</span>    &#125;<span class="tag">&lt;<span class="name">br</span>&gt;</span>    &#123;&#125;.next-documentations-reload-help-button:hover &#123;<span class="tag">&lt;<span class="name">br</span>&gt;</span>      ;color: white;<span class="tag">&lt;<span class="name">br</span>&gt;</span>      ;background-color: black;<span class="tag">&lt;<span class="name">br</span>&gt;</span>      ;border-color: black;<span class="tag">&lt;<span class="name">br</span>&gt;</span>    &#125;<span class="tag">&lt;<span class="name">br</span>&gt;</span>    &#123;&#125;.next-documentations-reload-help-button i &#123;margin-right: 5px;&#125;<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"text-center"</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://theme-next.iissnan.com/"</span> <span class="attr">class</span>=<span class="string">"next-documentations-reload-help-button"</span> <span class="attr">target</span>=<span class="string">"_blank"</span> <span class="attr">rel</span>=<span class="string">"external"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-globe"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> 访问 NexT 文档<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"https://github.com/iissnan/theme-next-docs"</span> <span class="attr">class</span>=<span class="string">"next-documentations-reload-help-button"</span> <span class="attr">style</span>=<span class="string">"margin-left: 10px;"</span> <span class="attr">target</span>=<span class="string">"_blank"</span> <span class="attr">rel</span>=<span class="string">"external"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-github-alt"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> NexT 文档源码<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>代码的第二段里面有class=”fa fa-globe”的字样，这是用来显示那个“互联网”的图标的，fa全称就是font-awesome，fa后面跟着什么代号，就显示什么图标；还有就是这个：class=”next-documentations-reload-help-button”里面的内容一定要有，不然没有button的效果。官网在这里（学以致用哈哈~）：</p>
+<p><style type="text/css">.next-documentations-reload-help-button{<br>      ;padding: 0 20px;<br>      ;border: 2px solid #555;<br>      ;text-decoration: none;<br>      ;display: inline-block;<br>      ;overflow: hidden;<br>      ;color: #555;<br>      ;font-size: 14px;<br>      ;background: #fff;<br>      ;border-radius: 2px;<br>      ;transition: all 0.3s ease;<br>    }<br>    {}.next-documentations-reload-help-button:hover {<br>      ;color: white;<br>      ;background-color: black;<br>      ;border-color: black;<br>    }<br>    {}.next-documentations-reload-help-button i {margin-right: 5px;}<br></style></p>
+
+<p class="text-center"><a href="http://fontawesome.dashgame.com/" class="next-documentations-reload-help-button" target="_blank" rel="external"><i class="fa fa-flag"></i> 访问 Font Awesome 官网</a></p>
+
+<p>把上面这段源代码加换行后看得更清楚（尤其是对我这种没怎么学过前端开发的人。。。）展开如下：</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/02/15/教程/Hexo/Hexo-编辑：在日志中添加链接时显示点击按钮/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://wanzhiyu.github.io/2017/02/10/教程/Hexo/Hexo-Next主题安装来必力社会化评论插件/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1157,217 +1368,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://wanzhiyu.github.io/2017/02/06/音乐/吉他/吉他谱/《欢乐颂》吉他谱/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="一萬个为什麽呀">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/pic_admin.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ce Frumoasa E Iubirea">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/02/06/音乐/吉他/吉他谱/《欢乐颂》吉他谱/" itemprop="url">
-                  《欢乐颂》吉他谱
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-06T21:14:17+08:00">
-                2017-02-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/音乐/" itemprop="url" rel="index">
-                    <span itemprop="name">音乐</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/音乐/吉他/" itemprop="url" rel="index">
-                    <span itemprop="name">吉他</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/音乐/吉他/吉他谱/" itemprop="url" rel="index">
-                    <span itemprop="name">吉他谱</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/02/06/音乐/吉他/吉他谱/《欢乐颂》吉他谱/" class="leancloud_visitors" data-flag-title="《欢乐颂》吉他谱">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计</span>
-                
-                <span title="字数统计">
-                  5字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长</span>
-                
-                <span title="阅读时长">
-                  1分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="第一个版本"><a href="#第一个版本" class="headerlink" title="第一个版本"></a>第一个版本</h1><p><img src="http://data.17jita.com/attachment/portal/201509/12/223711vqk39sfk193qnq39.png" alt="1"></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1412,7 +1417,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">40</span>
+                <span class="site-state-item-count">41</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
