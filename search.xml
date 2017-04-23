@@ -292,7 +292,7 @@
     <entry>
       <title><![CDATA[Matlab自定义折叠代码]]></title>
       <url>%2F2016%2F08%2F18%2F%E6%95%99%E7%A8%8B%2FMatlab%2FMatlab%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8A%98%E5%8F%A0%E4%BB%A3%E7%A0%81%2F</url>
-      <content type="text"><![CDATA[先放在这，以后再详细地写。]]></content>
+      <content type="text"><![CDATA[首先，在这些代码前面加一行注释， 注释用两个%，也就是“%% ”注释， 注意%%后面有空格； 然后在code folding里选上enable code folding，下面的复选框中把section这一行的enable也选上应该就可以了。]]></content>
     </entry>
 
     
