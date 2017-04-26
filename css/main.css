@@ -1812,7 +1812,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #7c7fff;
+  background: #ffcdff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2665,13 +2665,4 @@ embed {
   padding: 10px;
   -webkit-box-shadow: 0 0 14px rgba(202,203,203,0.5);
   -moz-box-shadow: 0 0 14px rgba(202,203,204,0.5);
-}
-p code,
-li code {
-  padding: 1px 3px;
-  margin: 0 3px;
-  background: #f1f1f1;
-  border: 1px solid #ccc;
-  font-family: font-mono;
-  word-wrap: break-word;
 }
