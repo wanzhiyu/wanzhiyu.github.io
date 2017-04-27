@@ -1280,7 +1280,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  133字
+                  223字
                 </span>
               
 
@@ -1324,9 +1324,12 @@
 <p class="text-center"><a href="https://livere.com/" class="next-documentations-reload-help-button" target="_blank" rel="external"><i class="fa fa-globe"></i> 访问 Livere(来必力) 官网</a></p>
 
 <hr>
-<p>2017-04-27 更新：</p>
+<p>2017-04-20 更新：</p>
 <p>其实在next主题中已经集成了这个评论插件，只要在config文件中输入你的来必力id即可。</p>
 <p>后来发现这个评论系统有个奇葩的地方，就是用ie/edge内核的浏览器似乎没法看到chrome的评论，反之亦然，不懂为啥。。。</p>
+<hr>
+<p>2017-04-27 更新：</p>
+<p>后来发现原因了，hexo的next主题对来必力的处理有问题，所以不推荐采用“在config文件中输入你的来必力id”这种方法，而是直接粘贴代码到comments.swig文件中的最后一个end if前面，这样ie/edge与chrome之间的评论内容才可以实现互通。</p>
 
           
         
