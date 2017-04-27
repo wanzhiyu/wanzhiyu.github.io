@@ -68,7 +68,7 @@
     <entry>
       <title><![CDATA[Hexo-Next主题安装来必力社会化评论插件]]></title>
       <url>%2F2017%2F02%2F10%2F%E6%95%99%E7%A8%8B%2FHexo%2FHexo-Next%E4%B8%BB%E9%A2%98%E5%AE%89%E8%A3%85%E6%9D%A5%E5%BF%85%E5%8A%9B%E7%A4%BE%E4%BC%9A%E5%8C%96%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6%2F</url>
-      <content type="text"><![CDATA[把官网上的代码复制下来，粘贴到hexo-client\themes\next\layout_partials\comments.swig文件中的end if前面即可。 官网链接在这里： .next-documentations-reload-help-button{ ;padding: 0 20px; ;border: 2px solid #555; ;text-decoration: none; ;display: inline-block; ;overflow: hidden; ;color: #555; ;font-size: 14px; ;background: #fff; ;border-radius: 2px; ;transition: all 0.3s ease; } {}.next-documentations-reload-help-button:hover { ;color: white; ;background-color: black; ;border-color: black; } {}.next-documentations-reload-help-button i {margin-right: 5px;} 访问 Livere(来必力) 官网 2017-04-27 更新： 其实在next主题中已经集成了这个评论插件，只要在config文件中输入你的来必力id即可。 后来发现这个评论系统有个奇葩的地方，就是用ie/edge内核的浏览器似乎没法看到chrome的评论，反之亦然，不懂为啥。。。]]></content>
+      <content type="text"><![CDATA[把官网上的代码复制下来，粘贴到hexo-client\themes\next\layout_partials\comments.swig文件中的最后一个end if前面即可。 官网链接在这里： .next-documentations-reload-help-button{ ;padding: 0 20px; ;border: 2px solid #555; ;text-decoration: none; ;display: inline-block; ;overflow: hidden; ;color: #555; ;font-size: 14px; ;background: #fff; ;border-radius: 2px; ;transition: all 0.3s ease; } {}.next-documentations-reload-help-button:hover { ;color: white; ;background-color: black; ;border-color: black; } {}.next-documentations-reload-help-button i {margin-right: 5px;} 访问 Livere(来必力) 官网 2017-04-27 更新： 其实在next主题中已经集成了这个评论插件，只要在config文件中输入你的来必力id即可。 后来发现这个评论系统有个奇葩的地方，就是用ie/edge内核的浏览器似乎没法看到chrome的评论，反之亦然，不懂为啥。。。]]></content>
     </entry>
 
     
