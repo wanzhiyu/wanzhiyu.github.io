@@ -451,7 +451,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  320字
+                  493字
                 </span>
               
 
@@ -467,7 +467,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  1分钟
+                  2分钟
                 </span>
               
             </div>
@@ -489,14 +489,11 @@
         
           <h1 id="1-视频教程学习"><a href="#1-视频教程学习" class="headerlink" title="1 视频教程学习"></a>1 视频教程学习</h1><p>以下是根据<a href="https://www.mathworks.com/videos/monte-carlo-method-made-easy-92783.html">轻松实现MATLAB蒙特卡洛方法建模——Fen Wei，MathWorks</a>这一视频整理的内容。可以在手机上完成对该视频的下载，详见<a href="https://www.zhihu.com/question/40058881">matlab官方学习视频如何下载下来？</a> 。</p>
 <h2 id="1-1-MATLAB随机数的产生-Uniform-Normal-amp-Custom-distributions"><a href="#1-1-MATLAB随机数的产生-Uniform-Normal-amp-Custom-distributions" class="headerlink" title="1.1 MATLAB随机数的产生 - Uniform, Normal &amp; Custom distributions"></a>1.1 MATLAB随机数的产生 - Uniform, Normal &amp; Custom distributions</h2><p>蒙特卡洛方法依赖于随机数的生成。</p>
-<p>matlab（不含工具箱）自带的有三个生成随机数的函数：</p>
-<ul>
-<li>rand：用于生成 平均分布 的随机数</li>
-<li>randn：用于生成 正态分布 的随机数</li>
-<li>randi：用于生成 整数 的随机数</li>
-</ul>
+<p><blockquote class="blockquote-center">MATLAB（不含工具箱）自带的有三个生成随机数的函数：<br><br><em> rand：用于生成 平均分布 的随机数
+</em> randn：用于生成 正态分布 的随机数<br>* randi：用于生成 整数 的随机数</blockquote></p>
+
 <p>测试代码如下：</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">% 以下代码虽然只生成了极少的随机数，直方图的参数也只设置得和随机数数目一样，但是可以比较清楚的看出这两个函数的用法。</span></div><div class="line">rN = <span class="built_in">rand</span>(<span class="number">1</span>,<span class="number">10</span>);</div><div class="line">histogram(rN,<span class="number">10</span>); <span class="comment">% 绘出直方图</span></div></pre></td></tr></table></figure>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">% 以下代码虽然只生成了极少的随机数，直方图的参数也只设置得和随机数数目一样，但是可以比较清楚的看出这两个函数的用法。</span></div><div class="line">r = <span class="built_in">rand</span>(<span class="number">1</span>,<span class="number">10</span>);</div><div class="line">histogram(rN,<span class="number">10</span>); <span class="comment">% 绘出直方图</span></div></pre></td></tr></table></figure>
 <p><blockquote class="blockquote-center">使用“doc”命令可以方便地查看函数文档，如：doc rng</blockquote></p>
           <!--noindex-->
           <div class="post-button text-center">
