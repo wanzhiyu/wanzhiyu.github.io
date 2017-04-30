@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[蒙特卡洛方法]]></title>
       <url>%2F2017%2F04%2F30%2F%E7%AC%94%E8%AE%B0%2F%E7%AE%97%E6%B3%95%2F%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%96%B9%E6%B3%95%2F</url>
-      <content type="text"><![CDATA[1 视频教程学习以下是根据轻松实现MATLAB蒙特卡洛方法建模——Fen Wei，MathWorks这一视频整理的内容。可以在手机上完成对该视频的下载，详见matlab官方学习视频如何下载下来？ 。 1.1 MATLAB随机数的产生 - Uniform, Normal &amp; Custom distributions蒙特卡洛方法依赖于随机数的生成。 matlab（不含工具箱）自带的有三个生成随机数的函数： rand：用于生成 平均分布 的随机数 randn：用于生成 正太分布 的随机数 randi：用于生成 整数 的随机数 测试代码如下： 12rN = rand(1,1000);histogram(rN,1000); % 绘出直方图 1.2 蒙特卡洛仿真1.3 产生股票价格路径1.4 期权定价1.4.1 经典公式1.4.2 和蒙特卡洛方法比较1.4.3 方差减小技巧1.4.4 Exotic Options1.5 多变量仿真1.5.1 Basket Options1.5.2 Portfolio Value at Risk]]></content>
+      <content type="text"><![CDATA[1 视频教程学习以下是根据轻松实现MATLAB蒙特卡洛方法建模——Fen Wei，MathWorks这一视频整理的内容。可以在手机上完成对该视频的下载，详见matlab官方学习视频如何下载下来？ 。 1.1 MATLAB随机数的产生 - Uniform, Normal &amp; Custom distributions蒙特卡洛方法依赖于随机数的生成。 matlab（不含工具箱）自带的有三个生成随机数的函数： rand：用于生成 平均分布 的随机数 randn：用于生成 正态分布 的随机数 randi：用于生成 整数 的随机数 测试代码如下： 12rN = rand(1,1000);histogram(rN,1000); % 绘出直方图 1.2 蒙特卡洛仿真1.3 产生股票价格路径1.4 期权定价1.4.1 经典公式1.4.2 和蒙特卡洛方法比较1.4.3 方差减小技巧1.4.4 Exotic Options1.5 多变量仿真1.5.1 Basket Options1.5.2 Portfolio Value at Risk]]></content>
     </entry>
 
     
