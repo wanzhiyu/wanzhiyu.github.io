@@ -1812,7 +1812,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #5efcff;
+  background: #6c60b1;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2666,16 +2666,15 @@ embed {
   -webkit-box-shadow: 0 0 14px rgba(202,203,203,0.5);
   -moz-box-shadow: 0 0 14px rgba(202,203,204,0.5);
 }
-#main {
+.header {
   background-image: url("http://oj9456ckj.bkt.clouddn.com/image/header_bg/%E5%8E%9F%E6%B5%86%E7%BA%B8%E5%BC%A0%E7%B2%97%E7%BA%B8%E7%BA%B9%E7%90%86%20.jpg");
   background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
 }
-.footer-inner {
-  background: rgba(255,255,255,0.75);
-}
 .posts-expand .post {
-  background: #e0e0e0;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding: 25px;
+  -webkit-box-shadow: 0 0 5px rgba(200,210,220,0.75);
+  -moz-box-shadow: 0 0 5px rgba(200,210,220,0.75);
 }
