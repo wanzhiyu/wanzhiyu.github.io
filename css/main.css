@@ -1812,7 +1812,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ba598c;
+  background: #ffffb3;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2679,7 +2679,7 @@ embed {
   -moz-box-shadow: 0 0 5px rgba(200,210,220,0.75);
 }
 #main {
-  background-image: url("http://oj9456ckj.bkt.clouddn.com/image/header_bg/three_bears_white_bg.jpeg");
+  background-image: url("");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
