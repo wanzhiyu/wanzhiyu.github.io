@@ -1812,7 +1812,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #142bc4;
+  background: #60264f;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2677,4 +2677,99 @@ embed {
   padding: 25px;
   -webkit-box-shadow: 0 0 5px rgba(200,210,220,0.75);
   -moz-box-shadow: 0 0 5px rgba(200,210,220,0.75);
+}
+span.inline-span {
+  display: inline;
+  padding: 0.3em 0.4em;
+  font-size: 80%;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.2em;
+  margin: auto 0.5em;
+}
+span.yellow {
+  background-color: #f0ad4e;
+}
+span.green {
+  background-color: #5cb85c;
+}
+span.blue {
+  background-color: #2780e3;
+}
+span.purple {
+  background-color: #9954bb;
+}
+span.red {
+  background-color: #df3e3e;
+}
+span.div-border {
+  display: block;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+span.left-red {
+  border-left-width: 5px;
+  border-left-color: #df3e3e;
+}
+span.left-yellow {
+  border-left-width: 5px;
+  border-left-color: #f0ad4e;
+}
+span.left-green {
+  border-left-width: 5px;
+  border-left-color: #5cb85c;
+}
+span.left-blue {
+  border-left-width: 5px;
+  border-left-color: #2780e3;
+}
+span.left-purple {
+  border-left-width: 5px;
+  border-left-color: #9954bb;
+}
+span.right-red {
+  border-right-width: 5px;
+  border-right-color: #df3e3e;
+}
+span.right-yellow {
+  border-right-width: 5px;
+  border-right-color: #f0ad4e;
+}
+span.right-green {
+  border-right-width: 5px;
+  border-right-color: #5cb85c;
+}
+span.right-blue {
+  border-right-width: 5px;
+  border-right-color: #2780e3;
+}
+span.right-purple {
+  border-right-width: 5px;
+  border-right-color: #9954bb;
+}
+span.top-red {
+  border-top-width: 5px;
+  border-top-color: #df3e3e;
+}
+span.top-yellow {
+  border-top-width: 5px;
+  border-top-color: #f0ad4e;
+}
+span.top-green {
+  border-top-width: 5px;
+  border-top-color: #5cb85c;
+}
+span.top-blue {
+  border-top-width: 5px;
+  border-top-color: #2780e3;
+}
+span.top-purple {
+  border-top-width: 5px;
+  border-top-color: #9954bb;
 }
