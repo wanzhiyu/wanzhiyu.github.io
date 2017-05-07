@@ -945,7 +945,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://wanzhiyu.github.io/2017/05/06/教程/MATLAB/MATLAB：hist函数的使用方法/">
+    <link itemprop="mainEntityOfPage" href="http://wanzhiyu.github.io/2017/05/06/教程/MATLAB/MATLAB：hist()函数的使用方法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="一萬个为什麽呀">
@@ -967,8 +967,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/05/06/教程/MATLAB/MATLAB：hist函数的使用方法/" itemprop="url">
-                  MATLAB：hist函数的使用方法
+                <a class="post-title-link" href="/2017/05/06/教程/MATLAB/MATLAB：hist()函数的使用方法/" itemprop="url">
+                  MATLAB：hist()函数的使用方法
                 </a>
               
             
@@ -1035,7 +1035,7 @@
 
           
           
-             <span id="/2017/05/06/教程/MATLAB/MATLAB：hist函数的使用方法/" class="leancloud_visitors" data-flag-title="MATLAB：hist函数的使用方法">
+             <span id="/2017/05/06/教程/MATLAB/MATLAB：hist()函数的使用方法/" class="leancloud_visitors" data-flag-title="MATLAB：hist()函数的使用方法">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1059,7 +1059,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  0字
+                  296字
                 </span>
               
 
@@ -1096,7 +1096,22 @@
       
         
           
-            
+            <p>$hist()$是绘制直方图函数</p>
+<h1 id="语法："><a href="#语法：" class="headerlink" title="语法："></a>语法：</h1><figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">n = hist(Y)</div><div class="line">n = hist(Y,x)</div><div class="line">n = hist(Y,nbins)</div><div class="line">[n,xout] = hist(...)</div><div class="line">hist(...)</div><div class="line">hist(axes_handle,...)</div></pre></td></tr></table></figure>
+<h1 id="描述："><a href="#描述：" class="headerlink" title="描述："></a>描述：</h1><p>直方图显示了数据值的分布情况。</p>
+<ul>
+<li>n = hist(Y)<br>将向量Y中的元素分到10个等间隔的范围内，并返回每个范围内元素的个数作为一行向量。<br>如果Y是一个m x p的矩阵，hist将Y的每一列作为一个向量，并返回一个10 x p的矩阵n。n的每一列的值对应Y的该列。</li>
+</ul>
+<ul>
+<li>n = hist(Y, x)<br>x是一个向量，返回x的长度个以x为中心的，Y的分布情况。<br>例如：如果x是一个5元素的向量，返回Y在以x为中心的，x长度个范围内数据直方分布。<br>注：如果更需要制定数值边界而不是中心，可以使用histc。</li>
+<li>n = hist(Y, nbins)<br>nbins是一个范围，使用nbins间隔数。</li>
+</ul>
+<ul>
+<li>[n,xout] = hist(…)<br>返回n和xout，包含有数目频率和间隔位置。可以使用bar(xout, n)来绘制直方图。</li>
+<li>hist(…)<br>使用上述方法绘制没有输出的直方图。</li>
+<li>hist(axes_handle)<br>使用axes_handle轴绘制，代替目前的轴（gca）。</li>
+</ul>
+
           
         
       
