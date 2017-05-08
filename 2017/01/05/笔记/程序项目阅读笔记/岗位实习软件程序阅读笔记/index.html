@@ -1,0 +1,1412 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="https://cdn.staticfile.org/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+  
+
+<link href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="笔记,程序项目阅读笔记," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="前言从main函数进入，注意阅读各行代码含义，理清逻辑顺序，弄明白相关代码。 main函数代码如下： 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253/**  * @brief  Main program.  * @param  None  * @ret">
+<meta name="keywords" content="笔记,程序项目阅读笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="岗位实习软件程序阅读笔记">
+<meta property="og:url" content="http://wanzhiyu.github.io/2017/01/05/笔记/程序项目阅读笔记/岗位实习软件程序阅读笔记/index.html">
+<meta property="og:site_name" content="Ce Frumoasa E Iubirea">
+<meta property="og:description" content="前言从main函数进入，注意阅读各行代码含义，理清逻辑顺序，弄明白相关代码。 main函数代码如下： 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253/**  * @brief  Main program.  * @param  None  * @ret">
+<meta property="og:updated_time" content="2017-03-29T04:17:53.582Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="岗位实习软件程序阅读笔记">
+<meta name="twitter:description" content="前言从main函数进入，注意阅读各行代码含义，理清逻辑顺序，弄明白相关代码。 main函数代码如下： 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253/**  * @brief  Main program.  * @param  None  * @ret">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 'undefined',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://wanzhiyu.github.io/2017/01/05/笔记/程序项目阅读笔记/岗位实习软件程序阅读笔记/"/>
+
+
+
+
+
+  <title> 岗位实习软件程序阅读笔记 | Ce Frumoasa E Iubirea </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-90938432-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?2d34cd1e38f833c0602fe976ed6cd59e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Ce Frumoasa E Iubirea</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-guestbook">
+          <a href="/guestbook" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br />
+            
+            留言
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://wanzhiyu.github.io/2017/01/05/笔记/程序项目阅读笔记/岗位实习软件程序阅读笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="一萬个为什麽呀">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/pic_admin.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ce Frumoasa E Iubirea">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                岗位实习软件程序阅读笔记
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-01-05T12:14:05+08:00">
+                2017-01-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/程序项目阅读笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">程序项目阅读笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/01/05/笔记/程序项目阅读笔记/岗位实习软件程序阅读笔记/" class="leancloud_visitors" data-flag-title="岗位实习软件程序阅读笔记">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  2,965字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  13分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>从main函数进入，注意阅读各行代码含义，理清逻辑顺序，弄明白相关代码。</p>
+<p><strong>main函数代码如下：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line">  * @brief  Main program.</div><div class="line">  * @param  None</div><div class="line">  * @retval None</div><div class="line">  */ </div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">&#123;</div><div class="line">	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);</div><div class="line">	<span class="comment">//WatchDog_Init(0xFF8);</span></div><div class="line">  	BSP_Init();</div><div class="line">	Init_RTC();</div><div class="line">	STM_LEDOff();</div><div class="line">	Backlight_Control_Init();</div><div class="line">  	GUI_Init();</div><div class="line">	Read_Cablirate_Parameter(&amp;Current_XYCOFFSET_Para);</div><div class="line">	<span class="comment">/* Create background task */</span></div><div class="line">	xTaskCreate(Background_Task,</div><div class="line">			  (<span class="keyword">const</span> <span class="keyword">char</span> *)<span class="string">"BK_GND"</span>,</div><div class="line">			  Background_Task_STACK,</div><div class="line">			  <span class="literal">NULL</span>,</div><div class="line">			  Background_Task_PRIO,</div><div class="line">			  &amp;Bk_Task_Handle);</div><div class="line">	</div><div class="line">	xTaskCreate(RXTX_Task_Fun,</div><div class="line">              (<span class="keyword">const</span> <span class="keyword">char</span> *)<span class="string">"RXTX_TASK"</span>,</div><div class="line">              RXTX_TASK_STACK,</div><div class="line">              <span class="literal">NULL</span>,</div><div class="line">              RXTX_TASK_PRIO,</div><div class="line">              &amp;RXTX_Task_Handle);</div><div class="line">			  </div><div class="line">    <span class="comment">/* Create demo task */</span></div><div class="line">	xTaskCreate(Main_Task_Fun,</div><div class="line">			  (<span class="keyword">const</span> <span class="keyword">char</span> *)<span class="string">"GUI_DEMO"</span>,</div><div class="line">			  Demo_Task_STACK,</div><div class="line">			  <span class="literal">NULL</span>,</div><div class="line">			  Demo_Task_PRIO,</div><div class="line">			  &amp;Main_Task_Handle);</div><div class="line"></div><div class="line">	<span class="comment">/* Launch Touchscreen Timer */</span></div><div class="line">	TouchScreenTimer = xTimerCreate ((<span class="keyword">const</span> <span class="keyword">char</span> *)<span class="string">"Timer"</span>, <span class="number">50</span>, pdTRUE, ( <span class="keyword">void</span> * ) <span class="number">1</span>, vTimerCallback );</div><div class="line"></div><div class="line">	<span class="keyword">if</span>( TouchScreenTimer != <span class="literal">NULL</span> )</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">if</span>( xTimerStart( TouchScreenTimer, <span class="number">0</span> ) != pdPASS )</div><div class="line">		&#123;</div><div class="line">			<span class="comment">/* The timer could not be set into the Active state. */</span></div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">/* Start the FreeRTOS scheduler */</span></div><div class="line">	vTaskStartScheduler();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="1-设置中断优先级分组4"><a href="#1-设置中断优先级分组4" class="headerlink" title="1. 设置中断优先级分组4"></a>1. 设置中断优先级分组4</h1><p><strong>主函数对应代码内容：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);</div></pre></td></tr></table></figure>
+<p>给每个中断分配：4位抢占优先级，0位响应优先级</p>
+<a id="more"></a>
+<h1 id="2-初始化BSP"><a href="#2-初始化BSP" class="headerlink" title="2. 初始化BSP"></a>2. 初始化BSP</h1><p>首先，BSP的含义是：Board Support Package，板载支持包。这段代码对它进行了初始化。</p>
+<p><strong>主函数对应代码内容：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">BSP_Init();</div></pre></td></tr></table></figure>
+<p><strong>展开：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* Private functions ---------------------------------------------------------*/</span></div><div class="line"><span class="comment">/**</span></div><div class="line">* @brief  Initializes the target hardware.</div><div class="line">* @param  None</div><div class="line">* @retval None</div><div class="line">*/</div><div class="line"><span class="keyword">uint32_t</span> BSP_Init (<span class="keyword">void</span>)</div><div class="line">&#123;</div><div class="line">	<span class="comment">/* Setup SysTick Timer for 1 msec interrupts */</span></div><div class="line">	SysTick_Config(SystemCoreClock / <span class="number">1000</span>);</div><div class="line"></div><div class="line">	<span class="comment">/* Initialize the LED */</span></div><div class="line">	STM_LEDInit();</div><div class="line">	<span class="comment">/*Init Touchscreen */</span></div><div class="line">	BSP_TSC_Init();</div><div class="line"></div><div class="line">	<span class="comment">/* Initialize the SDRAM */</span></div><div class="line">	SDRAM_Init();</div><div class="line"></div><div class="line">	<span class="comment">/* Enable the CRC Module */</span></div><div class="line">	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_CRC, ENABLE);  </div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="2-1-系统滴答计数器的配置"><a href="#2-1-系统滴答计数器的配置" class="headerlink" title="2.1 系统滴答计数器的配置"></a>2.1 系统滴答计数器的配置</h2><h2 id="2-2-对GPIO的初始化（GPIOA，PIN3，推挽输出，上拉，50MHz）"><a href="#2-2-对GPIO的初始化（GPIOA，PIN3，推挽输出，上拉，50MHz）" class="headerlink" title="2.2 对GPIO的初始化（GPIOA，PIN3，推挽输出，上拉，50MHz）"></a>2.2 对GPIO的初始化（GPIOA，PIN3，推挽输出，上拉，50MHz）</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line">  * @brief  Configures LED GPIO.</div><div class="line">  * @param  Led: Specifies the Led to be configured. </div><div class="line">  *   This parameter can be one of following parameters:</div><div class="line">  *     @arg LED1</div><div class="line">  *     @arg LED2</div><div class="line">  *     @arg LED3</div><div class="line">  *     @arg LED4</div><div class="line">  * @retval None</div><div class="line">  */</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">STM_LEDInit</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">&#123;</div><div class="line">  GPIO_InitTypeDef  GPIO_InitStructure;  </div><div class="line">  <span class="comment">/* Enable the GPIO_LED Clock */</span></div><div class="line">  RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);</div><div class="line">  <span class="comment">/* Configure the GPIO_LED pin */</span></div><div class="line">  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3;</div><div class="line">  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;</div><div class="line">  GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;</div><div class="line">  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;</div><div class="line">  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;</div><div class="line">  GPIO_Init(GPIOA, &amp;GPIO_InitStructure);</div><div class="line">  GPIOA-&gt;BSRRL = GPIO_Pin_3;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="2-3-对触摸屏的初始化"><a href="#2-3-对触摸屏的初始化" class="headerlink" title="2.3 对触摸屏的初始化"></a>2.3 对触摸屏的初始化</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line">  * @brief  Initializes the IO Expander registers.</div><div class="line">  * @param  None</div><div class="line">  * @retval - 0: if all initializations are OK.</div><div class="line">*/</div><div class="line"><span class="keyword">uint32_t</span> BSP_TSC_Init(<span class="keyword">void</span>)</div><div class="line">&#123;</div><div class="line">  portENTER_CRITICAL();</div><div class="line">  IOE_Config();</div><div class="line">  portEXIT_CRITICAL ();</div><div class="line">  <span class="keyword">return</span> <span class="number">0</span>; <span class="comment">/* Configuration is OK */</span>  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Initializes the IO Expander registers意思是初始化IO扩展寄存器，还并不是很懂这是在干什么，和触摸屏有啥子关系？</p>
+<h2 id="2-4-初始化SDRAM"><a href="#2-4-初始化SDRAM" class="headerlink" title="2.4 初始化SDRAM"></a>2.4 初始化SDRAM</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line">  * @brief  Configures the FMC and GPIOs to interface with the SDRAM memory.</div><div class="line">  *         This function must be called before any read/write operation</div><div class="line">  *         on the SDRAM.</div><div class="line">  * @param  None</div><div class="line">  * @retval None</div><div class="line">  */</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">SDRAM_Init</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">&#123;</div><div class="line">  FMC_SDRAMInitTypeDef  FMC_SDRAMInitStructure;</div><div class="line">  FMC_SDRAMTimingInitTypeDef  FMC_SDRAMTimingInitStructure; </div><div class="line">  </div><div class="line">  <span class="comment">/* GPIO configuration for FMC SDRAM bank */</span></div><div class="line">  SDRAM_GPIOConfig();</div><div class="line">  </div><div class="line">  <span class="comment">/* Enable FMC clock */</span></div><div class="line">  RCC_AHB3PeriphClockCmd(RCC_AHB3Periph_FMC, ENABLE);</div><div class="line"> </div><div class="line"><span class="comment">/* FMC Configuration ---------------------------------------------------------*/</span></div><div class="line"><span class="comment">/* FMC SDRAM Bank configuration */</span>   </div><div class="line">  <span class="comment">/* Timing configuration for 90 Mhz of SD clock frequency (180Mhz/2) */</span></div><div class="line">  <span class="comment">/* TMRD: 2 Clock cycles */</span></div><div class="line">  FMC_SDRAMTimingInitStructure.FMC_LoadToActiveDelay    = <span class="number">2</span>;      </div><div class="line">  <span class="comment">/* TXSR: min=70ns (7x11.11ns) */</span></div><div class="line">  FMC_SDRAMTimingInitStructure.FMC_ExitSelfRefreshDelay = <span class="number">7</span>;</div><div class="line">  <span class="comment">/* TRAS: min=42ns (4x11.11ns) max=120k (ns) */</span></div><div class="line">  FMC_SDRAMTimingInitStructure.FMC_SelfRefreshTime      = <span class="number">4</span>;</div><div class="line">  <span class="comment">/* TRC:  min=70 (7x11.11ns) */</span>        </div><div class="line">  FMC_SDRAMTimingInitStructure.FMC_RowCycleDelay        = <span class="number">7</span>;         </div><div class="line">  <span class="comment">/* TWR:  min=1+ 7ns (1+1x11.11ns) */</span></div><div class="line">  FMC_SDRAMTimingInitStructure.FMC_WriteRecoveryTime    = <span class="number">2</span>;      </div><div class="line">  <span class="comment">/* TRP:  20ns =&gt; 2x11.11ns */</span></div><div class="line">  FMC_SDRAMTimingInitStructure.FMC_RPDelay              = <span class="number">2</span>;                </div><div class="line">  <span class="comment">/* TRCD: 20ns =&gt; 2x11.11ns */</span></div><div class="line">  FMC_SDRAMTimingInitStructure.FMC_RCDDelay             = <span class="number">2</span>;</div><div class="line"></div><div class="line"><span class="comment">/* FMC SDRAM control configuration */</span></div><div class="line">  FMC_SDRAMInitStructure.FMC_Bank               = FMC_Bank1_SDRAM;</div><div class="line">  <span class="comment">/* Row addressing: [7:0] */</span></div><div class="line">  FMC_SDRAMInitStructure.FMC_ColumnBitsNumber   = FMC_ColumnBits_Number_9b;<span class="comment">//FMC_ColumnBits_Number_8b;</span></div><div class="line">  <span class="comment">/* Column addressing: [10:0] */</span></div><div class="line">  FMC_SDRAMInitStructure.FMC_RowBitsNumber      = FMC_RowBits_Number_12b;<span class="comment">//FMC_RowBits_Number_11b;</span></div><div class="line">  FMC_SDRAMInitStructure.FMC_SDMemoryDataWidth  = SDRAM_MEMORY_WIDTH;</div><div class="line">  FMC_SDRAMInitStructure.FMC_InternalBankNumber = FMC_InternalBank_Number_4;</div><div class="line">  <span class="comment">/* CL: Cas Latency = 3 clock cycles */</span></div><div class="line">  FMC_SDRAMInitStructure.FMC_CASLatency         = FMC_CAS_Latency_3; </div><div class="line">  FMC_SDRAMInitStructure.FMC_WriteProtection    = FMC_Write_Protection_Disable;</div><div class="line">  FMC_SDRAMInitStructure.FMC_SDClockPeriod      = SDCLOCK_PERIOD;  </div><div class="line">  FMC_SDRAMInitStructure.FMC_ReadBurst          = FMC_Read_Burst_Enable;</div><div class="line">  FMC_SDRAMInitStructure.FMC_ReadPipeDelay      = FMC_ReadPipe_Delay_0;<span class="comment">//FMC_ReadPipe_Delay_1;</span></div><div class="line">  FMC_SDRAMInitStructure.FMC_SDRAMTimingStruct  = &amp;FMC_SDRAMTimingInitStructure;  </div><div class="line">  <span class="comment">/* FMC SDRAM bank initialization */</span></div><div class="line">  FMC_SDRAMInit(&amp;FMC_SDRAMInitStructure);  </div><div class="line">  <span class="comment">/* FMC SDRAM device initialization sequence */</span></div><div class="line">  SDRAM_InitSequence(); </div><div class="line">  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Configures the FMC and GPIOs to interface with the SDRAM memory. This function must be called before any read/write operation on the SDRAM.</p>
+<p>配置FMC和GPIO来与SDRAM存储器实现接口。进行任何对SDRAM的读/写操作之前，这个函数必须被调用。</p>
+<h2 id="2-5-使能CRC模组"><a href="#2-5-使能CRC模组" class="headerlink" title="2.5 使能CRC模组"></a>2.5 使能CRC模组</h2><p>CRC的含义是Cyclic Redundancy Check，循环冗余码校验。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_CRC, ENABLE);</div></pre></td></tr></table></figure>
+<p>上面这行代码的含义：使能外设CRC的时钟。</p>
+<h1 id="3-ARM芯片实时时钟RTC的初始化"><a href="#3-ARM芯片实时时钟RTC的初始化" class="headerlink" title="3. ARM芯片实时时钟RTC的初始化"></a>3. ARM芯片实时时钟RTC的初始化</h1><p><strong>主函数对应代码内容：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Init_RTC();</div></pre></td></tr></table></figure>
+<blockquote>
+<p>代码来源：RTC.c</p>
+</blockquote>
+<p><strong>展开：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/********************************************************************</span></div><div class="line">*Init_RTC															*</div><div class="line">*ARM片上实时时钟初始化，仅在上电时调用。							*</div><div class="line">********************************************************************/</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">Init_RTC</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">&#123;</div><div class="line">	RTC_InitTypeDef RTC_Init_Para;</div><div class="line"></div><div class="line">	RCC_APB1PeriphClockCmd(RCC_APB1Periph_PWR, ENABLE);</div><div class="line">	PWR_BackupAccessCmd(ENABLE);</div><div class="line">	RCC_LSEConfig(RCC_LSE_ON);</div><div class="line">	</div><div class="line">	RCC_RTCCLKConfig(RCC_RTCCLKSource_LSE);</div><div class="line">	RCC_RTCCLKCmd(ENABLE);</div><div class="line">	</div><div class="line">	RTC_Init_Para.RTC_HourFormat = RTC_HourFormat_24;<span class="comment">//24小时制</span></div><div class="line">   	RTC_Init_Para.RTC_AsynchPrediv = (<span class="keyword">unsigned</span> <span class="keyword">int</span>)<span class="number">0x7F</span>;<span class="comment">//127</span></div><div class="line">	RTC_Init_Para.RTC_SynchPrediv = (<span class="keyword">unsigned</span> <span class="keyword">int</span>)<span class="number">0xFF</span>; <span class="comment">//255。两个分频系数与LSE时钟源匹配</span></div><div class="line">	RTC_Init(&amp;RTC_Init_Para);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这段代码STM32基本都长这样，貌似没啥可看的，就算看懂了也记不大清楚……</p>
+<h1 id="4-关闭LED（操作GPIO）"><a href="#4-关闭LED（操作GPIO）" class="headerlink" title="4. 关闭LED（操作GPIO）"></a>4. 关闭LED（操作GPIO）</h1><p><strong>主函数对应代码内容：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">STM_LEDOff();</div></pre></td></tr></table></figure>
+<blockquote>
+<p>代码来源：</p>
+<p>@file    stm324x9i_eval.c</p>
+<p>@author  MCD Application Team</p>
+<p>@version V1.0.3</p>
+<p>@date    13-November-2013</p>
+<p>@brief   This file provides</p>
+<ul>
+<li>set of firmware functions to manage Leds, push-button and COM ports</li>
+</ul>
+<ul>
+<li><p>low level initialization functions for SD card (on SDIO) and EEPROM</p>
+<p>available on STM324x9I-EVAL evaluation board(MB1045) RevB from STMicroelectronics.</p>
+</li>
+</ul>
+</blockquote>
+<p><strong>展开：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line">  * @brief  Turns selected LED Off.</div><div class="line">  * @param  Led: Specifies the Led to be set off. </div><div class="line">  *   This parameter can be one of following parameters:</div><div class="line">  *     @arg LED1</div><div class="line">  *     @arg LED2</div><div class="line">  *     @arg LED3</div><div class="line">  *     @arg LED4 </div><div class="line">  * @retval None</div><div class="line">  */</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">STM_LEDOff</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">&#123;</div><div class="line">  GPIOA-&gt;BSRRL = GPIO_Pin_3;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这不就是刚才2.2那一段代码的最后一行吗，不懂为何还要再写一遍？</p>
+<p><strong>于是我试了一下，把这行代码注释掉，运行效果还真的是一样的。。。</strong></p>
+<h1 id="5-背光控制初始化"><a href="#5-背光控制初始化" class="headerlink" title="5. 背光控制初始化"></a>5. 背光控制初始化</h1><p><strong>主函数对应代码：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Backlight_Control_Init();</div></pre></td></tr></table></figure>
+<blockquote>
+<p>代码来源：BackLight.c        //这个文件很短，明显是他们自己写的</p>
+</blockquote>
+<p><strong>展开：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">Backlight_On</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">&#123;</div><div class="line">	GPIOA-&gt;BSRRL =  GPIO_Pin_8;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">Backlight_Off</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">&#123;</div><div class="line">	GPIOA-&gt;BSRRH =  GPIO_Pin_8;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">Backlight_Control_Init</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">&#123;</div><div class="line">	GPIO_InitTypeDef  GPIO_InitStructure;  </div><div class="line">  	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);	</div><div class="line">  	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8;</div><div class="line">  	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;</div><div class="line">  	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;</div><div class="line">  	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;<span class="comment">//GPIO_PuPd_DOWN;</span></div><div class="line">  	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;</div><div class="line">  	GPIO_Init(GPIOA, &amp;GPIO_InitStructure);</div><div class="line">	<span class="comment">//Backlight_Off();</span></div><div class="line">	Backlight_On();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这段代码初始化了GPIOA的PIN8为推挽输出，上拉，50MHz。<strong>打开了背光。</strong></p>
+<h1 id="6-GUI（图形用户界面）的初始化"><a href="#6-GUI（图形用户界面）的初始化" class="headerlink" title="6. GUI（图形用户界面）的初始化"></a>6. GUI（图形用户界面）的初始化</h1><p><strong>主函数对应代码：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">GUI_Init();</div></pre></td></tr></table></figure>
+<blockquote>
+<p>代码来源：emWin固件库</p>
+<p>这个函数折腾了好久才发现是一个以前没学过的东西：emWIN。这句话的意思就是初始化emWin内部数据结构和变量。</p>
+</blockquote>
+<h1 id="7-读触摸屏校准参数"><a href="#7-读触摸屏校准参数" class="headerlink" title="7. 读触摸屏校准参数"></a>7. 读触摸屏校准参数</h1><p><strong>主函数对应代码：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Read_Cablirate_Parameter(&amp;Current_XYCOFFSET_Para);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>代码来源：Touchscreen_Calibrate.c</p>
+<p>C-file generated by:   GUI_Builder for emWin version 5.22 </p>
+</blockquote>
+<p>展开代码太长，贴出来也看不懂的。直接跳过，知道在干什么就行。</p>
+<h1 id="8-创建后台任务-Background-Task"><a href="#8-创建后台任务-Background-Task" class="headerlink" title="8. 创建后台任务(Background_Task)"></a>8. 创建后台任务(Background_Task)</h1><p><strong>主函数对应代码：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* Create background task */</span></div><div class="line">xTaskCreate(Background_Task,</div><div class="line">			(<span class="keyword">const</span> <span class="keyword">char</span> *)<span class="string">"BK_GND"</span>,</div><div class="line">			Background_Task_STACK,</div><div class="line">			<span class="literal">NULL</span>,</div><div class="line">			Background_Task_PRIO,</div><div class="line">			&amp;Bk_Task_Handle);</div></pre></td></tr></table></figure>
+<p>这是操作系统相关的内容，就是创建这么一个叫Background_Task的后台任务，Background_Task本身就是一个函数，函数底端是一个while死循环，死循环内容就是控制LED灯和喂狗。</p>
+<blockquote>
+<p>代码来源：main.c</p>
+</blockquote>
+<p><strong>展开：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line">  * @brief  Background task</div><div class="line">  * @param  pvParameters not used</div><div class="line">  * @retval None</div><div class="line">  */</div><div class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Background_Task</span><span class="params">(<span class="keyword">void</span> * pvParameters)</span></span></div><div class="line">&#123;</div><div class="line"><span class="comment">//    int i = 0;</span></div><div class="line"><span class="comment">//    unsigned char CRC_Result[2];</span></div><div class="line">    <span class="comment">/* Initilize the BSP layer */</span></div><div class="line">    <span class="comment">//BSP_Init(); </span></div><div class="line">	<span class="comment">//Backlight_Control_Init();</span></div><div class="line">    <span class="comment">/* Activate the use of memory device feature */</span></div><div class="line">    WM_SetCreateFlags(WM_CF_MEMDEV);</div><div class="line">    <span class="comment">/* Init the STemWin GUI Library */</span></div><div class="line">    <span class="comment">//	GUI_Init();</span></div><div class="line">	<span class="comment">//	NandFlash_Init();</span></div><div class="line">	<span class="comment">//	Read_Rated_Value_From_Flash();</span></div><div class="line">	<span class="comment">/**/</span></div><div class="line">	WatchDog_Init(<span class="number">0xFF8</span>);</div><div class="line">    <span class="comment">/* Run the background task */</span></div><div class="line">    <span class="keyword">while</span> (<span class="number">1</span>)</div><div class="line">    &#123;</div><div class="line">        <span class="comment">/* toggle LED1 each 250ms */</span></div><div class="line">        STM_LEDToggle();</div><div class="line">		Feed_Dog();</div><div class="line">		vTaskDelay(<span class="number">500</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="9-创建串口收发任务-Recv-Task-Fun-Send-Task-Fun"><a href="#9-创建串口收发任务-Recv-Task-Fun-Send-Task-Fun" class="headerlink" title="9. 创建串口收发任务(Recv_Task_Fun, Send_Task_Fun)"></a>9. 创建串口收发任务(Recv_Task_Fun, Send_Task_Fun)</h1><p><strong>主函数对应代码：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">xTaskCreate(Recv_Task_Fun,</div><div class="line">            (<span class="keyword">const</span> <span class="keyword">char</span> *)<span class="string">"RECV_TASK"</span>,</div><div class="line">            RECV_TASK_STACK,</div><div class="line">            <span class="literal">NULL</span>,</div><div class="line">            RECV_TASK_PRIO,</div><div class="line">            &amp;RECV_Task_Handle);	</div><div class="line">xTaskCreate(Send_Task_Fun,</div><div class="line">            (<span class="keyword">const</span> <span class="keyword">char</span> *)<span class="string">"SEND_TASK"</span>,</div><div class="line">            SEND_TASK_STACK,</div><div class="line">            <span class="literal">NULL</span>,</div><div class="line">            SEND_TASK_PRIO,</div><div class="line">            &amp;SEND_Task_Handle);</div></pre></td></tr></table></figure>
+<p>这段代码从注释上来看，就是与串口1与串口2的接收(RECV)与发送(SEND)有关有关，具体代码我就不贴了，太长。</p>
+<blockquote>
+<p>代码来源：main.c</p>
+</blockquote>
+<h1 id="10-创建主任务-Main-Task-Fun"><a href="#10-创建主任务-Main-Task-Fun" class="headerlink" title="10.创建主任务(Main_Task_Fun)"></a>10.<strong>创建主任务(Main_Task_Fun)</strong></h1><p><strong>主函数对应代码：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">xTaskCreate(Main_Task_Fun,</div><div class="line">            (<span class="keyword">const</span> <span class="keyword">char</span> *)<span class="string">"GUI_DEMO"</span>,</div><div class="line">            Demo_Task_STACK,</div><div class="line">            <span class="literal">NULL</span>,</div><div class="line">            Demo_Task_PRIO,</div><div class="line">            &amp;Main_Task_Handle);</div></pre></td></tr></table></figure>
+<p><strong>这段代码实在太重要了，是整个执行部分的入口！</strong></p>
+<p>先贴出这部分函数的展开代码：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">Main_Task_Fun</span><span class="params">(<span class="keyword">void</span> * pvParameters)</span></span></div><div class="line">&#123; </div><div class="line">    FRAMEWIN_SKINFLEX_PROPS Framewin_Props;</div><div class="line">    WM_SetCallback(WM_HBKWIN, _cbBk);</div><div class="line">    BUTTON_SetReactOnLevel();</div><div class="line">    FRAMEWIN_GetSkinFlexProps(&amp;Framewin_Props, FRAMEWIN_SKINFLEX_PI_ACTIVE);</div><div class="line">    Framewin_Props.Radius = <span class="number">3</span>;</div><div class="line">    FRAMEWIN_SetSkinFlexProps(&amp;Framewin_Props, FRAMEWIN_SKINFLEX_PI_ACTIVE);</div><div class="line">    FRAMEWIN_GetSkinFlexProps(&amp;Framewin_Props, FRAMEWIN_SKINFLEX_PI_INACTIVE);</div><div class="line">    Framewin_Props.Radius = <span class="number">1</span>;</div><div class="line">    FRAMEWIN_SetSkinFlexProps(&amp;Framewin_Props, FRAMEWIN_SKINFLEX_PI_INACTIVE);</div><div class="line">    FRAMEWIN_SetDefaultSkin(_FRAMEWIN_DrawSkinFlex);    </div><div class="line">    BUTTON_SetDefaultSkin(BUTTON_SKIN_FLEX);</div><div class="line">	CHECKBOX_SetDefaultSkin(CHECKBOX_SKIN_FLEX);</div><div class="line">	DROPDOWN_SetDefaultSkin(DROPDOWN_SKIN_FLEX);</div><div class="line">	HEADER_SetDefaultSkin(HEADER_SKIN_FLEX);</div><div class="line">	MENU_SetDefaultSkin(MENU_SKIN_FLEX);</div><div class="line">	MULTIPAGE_SetDefaultSkin(MULTIPAGE_SKIN_FLEX);	</div><div class="line">	PROGBAR_SetDefaultSkin(PROGBAR_SKIN_FLEX);</div><div class="line">	RADIO_SetDefaultSkin(RADIO_SKIN_FLEX);</div><div class="line">    SCROLLBAR_SetDefaultSkin(SCROLLBAR_SKIN_FLEX);</div><div class="line">    SLIDER_SetDefaultSkin(SLIDER_SKIN_FLEX);</div><div class="line">    SPINBOX_SetDefaultSkin(SPINBOX_SKIN_FLEX);</div><div class="line">	<span class="comment">//GUI_SetTextMode(GUI_TM_TRANS);</span></div><div class="line">	hPageSwitchWin = GUI_CreateDialogBox(_aDialogCreate, GUI_COUNTOF(_aDialogCreate), _cbDialog, WM_HBKWIN, <span class="number">0</span>, <span class="number">0</span>);</div><div class="line">    WM_HideWindow(hPageSwitchWin);</div><div class="line">	GUI_Exec();</div><div class="line">	WM_SelectWindow(WM_HBKWIN);</div><div class="line">	GUI_Clear();</div><div class="line">	WM_DisableMemdev(WM_HBKWIN);</div><div class="line">	GUI_Exec();</div><div class="line">	WM_SetCreateFlags(WM_CF_MEMDEV);</div><div class="line">	WM_EnableMemdev(WM_HBKWIN);</div><div class="line">	<span class="keyword">while</span> (<span class="number">1</span>)</div><div class="line">    &#123;</div><div class="line">		GUI_Exec();</div><div class="line">		WM_SelectWindow(WM_HBKWIN);</div><div class="line">		<span class="comment">//GUI_Clear();</span></div><div class="line">		WM_DisableMemdev(WM_HBKWIN);</div><div class="line">		GUI_Exec();</div><div class="line">		WM_SetCreateFlags(WM_CF_MEMDEV);</div><div class="line">		WM_EnableMemdev(WM_HBKWIN);</div><div class="line">        (Page_Array[Current_Page])();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>最关键的内容在while(1)的死循环里面，这里面的程序是一直循环执行的，正是这里面的代码<strong>真正让界面显示了起来。</strong>下面一行行地分析while循环里面的内容。</p>
+<p><strong>很重要的几个名词解释：</strong></p>
+<p><strong>1. WM：</strong>代指Windows Manager，窗口管理器。</p>
+<p><strong>2. 句柄：</strong>创建新窗口后， WM 会分配一个称为句柄的唯一标识符。句柄用于在该特定窗口中执行其他任何操作。</p>
+<p><strong>3. 有效化/无效化：</strong>有效窗口是不需要重绘的完全更新窗口。无效窗口不会反映所有更新，因此需要完全或部分重绘。作出的更改影响了特定窗口时，WM 将该窗口标记为无效。下次窗口重绘时（手动或通过回调例程），将进行验证。</p>
+<p><strong>4. 桌面窗口：</strong>桌面窗口由窗口管理器自动创建，并且始终覆盖整个显示区域。它始终是最底层的窗口， 在没有定义其他窗口时，它是默认（活动）窗口。所有窗口都是桌面窗口的后代窗口 （子窗口、孙窗口等）。</p>
+<p><strong>5. 活动窗口：</strong>当前正用于绘制操作的窗口称为活动窗口，<strong>不一定就是最上面的窗口</strong>。</p>
+<h2 id="10-1-执行回调函数"><a href="#10-1-执行回调函数" class="headerlink" title="10.1 执行回调函数"></a>10.1 执行回调函数</h2><p><strong>对应代码：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">GUI_Exec();</div></pre></td></tr></table></figure>
+<p><strong>回调函数解释：</strong></p>
+<blockquote>
+<p><strong>回调例程（即回调函数）</strong>由用户程序定义，指示在特定事件出现时图形系统调用特定的函数。它们通常用于在窗口内容更改时自动重绘。</p>
+<p><strong>回调机制</strong>是 EmWin 的一个重要的特性和功能，WM 可在有或无回调例程（回调函数）时使用，大多情况下最好使用回调。EmWin 为窗口和窗口对象（小工具）提供回调机制的根本概念是一个事件驱动系统。因为在大多数窗口式系统中，其原理是控制流不仅仅是从用户程序到图形系统，还要再通过用户程序提供的回调例程返回用户程序。此机制通常称为 “好莱坞原则”（“不要打电话给我们，我们会给你打电话的！”），窗口管理器需要它的主要目的是触发窗口重绘。这与传统编程相反，但是它能利用窗口管理器的无效化逻辑。</p>
+</blockquote>
+<h2 id="10-2-设置桌面窗口为要用于绘制操作的活动窗口"><a href="#10-2-设置桌面窗口为要用于绘制操作的活动窗口" class="headerlink" title="10.2 设置桌面窗口为要用于绘制操作的活动窗口"></a>10.2 设置<strong>桌面窗口</strong>为要用于绘制操作的<strong>活动窗口</strong></h2><p><strong>对应代码：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">WM_SelectWindow(WM_HBKWIN);</div></pre></td></tr></table></figure>
+<p><strong>追根溯源：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> WM_HBKWIN      WM_GetDesktopWindow()                <span class="comment">/* Handle of background window */</span></span></div></pre></td></tr></table></figure>
+<p><strong>WM_HBKWIN被定义为</strong>WM_GetDesktopWindow()，就是返回的<strong>桌面窗口</strong>的<strong>句柄</strong>，WM_SelectWindow(WM_HBKWIN)函数的作用是是设置<strong>桌面窗口</strong>为要用于绘制操作的<strong>活动窗口</strong>。</p>
+<h2 id="10-3-禁止使用存储设备来重绘桌面窗口"><a href="#10-3-禁止使用存储设备来重绘桌面窗口" class="headerlink" title="10.3 禁止使用存储设备来重绘桌面窗口"></a>10.3 禁止使用存储设备来重绘<strong>桌面窗口</strong></h2><p><strong>对应代码：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">WM_DisableMemdev(WM_HBKWIN);</div></pre></td></tr></table></figure>
+<p>也就是说，禁止使用存储设备来重绘WM_HBKWIN也就是<strong>桌面窗口</strong>。</p>
+<h2 id="10-4-再一次执行回调函数"><a href="#10-4-再一次执行回调函数" class="headerlink" title="10.4 再一次执行回调函数"></a>10.4 再一次执行回调函数</h2><p><strong>对应代码：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">GUI_Exec();</div></pre></td></tr></table></figure>
+<h2 id="10-5-设置在创建新窗口时用作默认的标记"><a href="#10-5-设置在创建新窗口时用作默认的标记" class="headerlink" title="10.5 设置在创建新窗口时用作默认的标记"></a>10.5 设置在创建新窗口时用作默认的标记</h2><p><strong>对应代码：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">WM_SetCreateFlags(WM_CF_MEMDEV);	<span class="comment">//Auto. use memory devices on all windows</span></div></pre></td></tr></table></figure>
+<p><strong>展开：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> WM_CF_MEMDEV           (1UL &lt;&lt; 2)  <span class="comment">/* Use memory device for redraws */</span></span></div></pre></td></tr></table></figure>
+<h2 id="10-6-（重新）启用使用存储设备来重绘桌面窗口"><a href="#10-6-（重新）启用使用存储设备来重绘桌面窗口" class="headerlink" title="10.6 （重新）启用使用存储设备来重绘桌面窗口"></a>10.6 （重新）启用使用存储设备来重绘<strong>桌面窗口</strong></h2><p><strong>对应代码：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">WM_EnableMemdev(WM_HBKWIN);</div></pre></td></tr></table></figure>
+<p>也就是说，启用使用存储设备来重绘WM_HBKWIN也就是<strong>桌面窗口</strong>。</p>
+<h2 id="10-7-选择窗口"><a href="#10-7-选择窗口" class="headerlink" title="10.7 选择窗口"></a>10.7 选择窗口</h2><p><strong>对应代码：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(Page_Array[Current_Page])();</div></pre></td></tr></table></figure>
+<p><strong>展开：见10.7.1和10.7.2</strong></p>
+<h3 id="10-7-1-Page-Array的定义"><a href="#10-7-1-Page-Array的定义" class="headerlink" title="10.7.1 Page_Array的定义"></a>10.7.1 Page_Array的定义</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">static</span> <span class="title">void</span> <span class="params">(*Page_Array[])</span><span class="params">(<span class="keyword">void</span>)</span> </span>= &#123;</div><div class="line">    Page_Startup,</div><div class="line">    Page_System,</div><div class="line">    Page_Analog,</div><div class="line">	Page_DIDO,</div><div class="line">    Page_Event_Fault,<span class="comment">//</span></div><div class="line">    Page_Misc_Setting,</div><div class="line">    Page_Touch_Screen_Calibrate,</div><div class="line">	Page_Input_DateTime,</div><div class="line">	<span class="number">0</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>Page_Startup表示<strong>启动页</strong>，</p>
+<h4 id="10-7-1-1-Page-Startup的定义"><a href="#10-7-1-1-Page-Startup的定义" class="headerlink" title="10.7.1.1 Page_Startup的定义"></a>10.7.1.1 Page_Startup的定义</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">Page_Startup</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">&#123;</div><div class="line">    WM_CALLBACK     * pcbPrev;</div><div class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</div><div class="line">  	WM_SelectWindow(WM_HBKWIN);	<span class="comment">//设置桌面窗口为要用于绘制操作的活动窗口</span></div><div class="line">    WM_HideWindow(hPageSwitchWin);	<span class="comment">//隐藏hPageSwitchWin对应的窗口，hPageSwitchWin是有符号的长整形数据</span></div><div class="line">    pcbPrev = WM_SetCallback(WM_HBKWIN, _cbWin);<span class="comment">//设置窗口管理器要执行的回调例程</span></div><div class="line">    <span class="keyword">if</span>(Flag_Startup_Finish == <span class="number">0</span>)</div><div class="line">    &#123;</div><div class="line">      GUI_Delay(<span class="number">3000</span>);</div><div class="line">      Flag_Startup_Finish = <span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span></div><div class="line">    &#123;</div><div class="line">      <span class="keyword">do</span></div><div class="line">      &#123;</div><div class="line">        GUI_Exec();</div><div class="line">        GUI_Delay(REFRESH_DELAY_TIME);</div><div class="line">      &#125; <span class="keyword">while</span> (Switch_Page == Current_Page);</div><div class="line">    &#125;</div><div class="line">    WM_SetCallback(WM_HBKWIN, pcbPrev);</div><div class="line">    Previous_Page = Current_Page;</div><div class="line">    <span class="keyword">if</span>(Current_XYCOFFSET_Para.Flag_Calibrated &gt; <span class="number">0</span>)</div><div class="line">    &#123;</div><div class="line">      Switch_Page = Current_Page = INDEX_PAGE_SYSTEM;<span class="comment">//这句话很关键，是用于切换界面的</span></div><div class="line">      WM_ShowWindow(hPageSwitchWin);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span></div><div class="line">    &#123;</div><div class="line">      Switch_Page = Current_Page = INDEX_PAGE_CALIBRATE;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ol>
+<li><p>第6行代码追根溯源：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">WM_HideWindow(hPageSwitchWin);	<span class="comment">//隐藏hPageSwitchWin对应的窗口，hPageSwitchWin是有符号的长整形数据</span></div></pre></td></tr></table></figure>
+<p>​</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">WM_HWIN hPageSwitchWin;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>来源：SwitchPage_ToolBar.c</p>
+</blockquote>
+<p>​</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> WM_HWIN        GUI_HWIN</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>来源：WM.h</p>
+</blockquote>
+<p>​</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typedef</span>     GUI_HMEM      GUI_HWIN;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>来源：GUI_Type.h</p>
+</blockquote>
+<p>​</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*********************************************************************</span></div><div class="line">*</div><div class="line">*       Memory management</div><div class="line">*/</div><div class="line"><span class="meta">#<span class="meta-keyword">ifndef</span>     GUI_HMEM</span></div><div class="line">  <span class="meta">#<span class="meta-keyword">define</span>     GUI_HMEM        I32</span></div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>来源：GUI_Type.h</p>
+</blockquote>
+<p>​</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">ifndef</span>   I32</span></div><div class="line">  <span class="meta">#<span class="meta-keyword">define</span> I32 signed long</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>来源：Global.h</p>
+</blockquote>
+<p>折腾这么久，就是说：<strong>hPageSwitchWin被定义为一个有符号的长整形数据。</strong></p>
+<p>​</p>
+</li>
+<li><p>第7行代码追根溯源：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pcbPrev = WM_SetCallback(WM_HBKWIN, _cbWin);<span class="comment">//设置窗口管理器要执行的回调例程</span></div></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/// &lt;summary&gt;</span></div><div class="line"><span class="comment">/// WM_SetCallback的原型定义。给定窗口将变为无效，这确保窗口可进行重绘。</span></div><div class="line"><span class="comment">/// &lt;/summary&gt;</span></div><div class="line"><span class="comment">/// &lt;param name="hWin"&gt;窗口句柄&lt;/param&gt;</span></div><div class="line"><span class="comment">/// &lt;param name="cb"&gt;指向回调例程的指针&lt;/param&gt;</span></div><div class="line"><span class="comment">/// &lt;returns&gt;指向上一回调例程的指针&lt;/returns&gt;</span></div><div class="line"><span class="function">WM_CALLBACK* <span class="title">WM_SetCallback</span> <span class="params">(WM_HWIN hWin, WM_CALLBACK* cb)</span></span></div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ol>
+<h4 id="10-7-1-2-Page-System的定义"><a href="#10-7-1-2-Page-System的定义" class="headerlink" title="10.7.1.2 Page_System的定义"></a>10.7.1.2 Page_System的定义</h4><h4 id="10-7-1-3-Page-Anolog的定义"><a href="#10-7-1-3-Page-Anolog的定义" class="headerlink" title="10.7.1.3 Page_Anolog的定义"></a>10.7.1.3 Page_Anolog的定义</h4><h4 id="10-7-1-4-Page-DIDO的定义"><a href="#10-7-1-4-Page-DIDO的定义" class="headerlink" title="10.7.1.4 Page_DIDO的定义"></a>10.7.1.4 Page_DIDO的定义</h4><h4 id="10-7-1-5-Page-Event-Fault的定义"><a href="#10-7-1-5-Page-Event-Fault的定义" class="headerlink" title="10.7.1.5 Page_Event_Fault的定义"></a>10.7.1.5 Page_Event_Fault的定义</h4><h4 id="10-7-1-6-Page-Misc-Setting的定义"><a href="#10-7-1-6-Page-Misc-Setting的定义" class="headerlink" title="10.7.1.6 Page_Misc_Setting的定义"></a>10.7.1.6 Page_Misc_Setting的定义</h4><h4 id="10-7-1-7-Page-Touch-Screen-Calibrate的定义"><a href="#10-7-1-7-Page-Touch-Screen-Calibrate的定义" class="headerlink" title="10.7.1.7 Page_Touch_Screen_Calibrate的定义"></a>10.7.1.7 Page_Touch_Screen_Calibrate的定义</h4><h4 id="10-7-1-8-Page-Input-DateTime的定义"><a href="#10-7-1-8-Page-Input-DateTime的定义" class="headerlink" title="10.7.1.8 Page_Input_DateTime的定义"></a>10.7.1.8 Page_Input_DateTime的定义</h4><h3 id="10-7-2-Current-Page的定义"><a href="#10-7-2-Current-Page的定义" class="headerlink" title="10.7.2 Current_Page的定义"></a>10.7.2 Current_Page的定义</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span>  Switch_Page = <span class="number">0</span>, Current_Page = <span class="number">0</span>, Previous_Page = <span class="number">0</span>;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>「真诚赞赏，手留余香」</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="http://oj9456ckj.bkt.clouddn.com/image/Money/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E6%94%B6%E6%AC%BE.png" alt="一萬个为什麽呀 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="http://oj9456ckj.bkt.clouddn.com/image/Money/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%B6%E6%AC%BE.jpg" alt="一萬个为什麽呀 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      一萬个为什麽呀
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://wanzhiyu.github.io/2017/01/05/笔记/程序项目阅读笔记/岗位实习软件程序阅读笔记/" title="岗位实习软件程序阅读笔记">http://wanzhiyu.github.io/2017/01/05/笔记/程序项目阅读笔记/岗位实习软件程序阅读笔记/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/笔记/" rel="tag"># 笔记</a>
+          
+            <a href="/tags/程序项目阅读笔记/" rel="tag"># 程序项目阅读笔记</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/01/20/音乐/吉他/乐理/吉他谱上连起来的几个xx怎么弹/" rel="next" title="吉他谱上连起来的几个xx怎么弹">
+                <i class="fa fa-chevron-left"></i> 吉他谱上连起来的几个xx怎么弹
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/01/05/资源共享/【资源共享】proteus8_3，sp1，win10可用，无闪退/" rel="prev" title="【资源共享】proteus8_3，sp1，win10可用，无闪退">
+                【资源共享】proteus8_3，sp1，win10可用，无闪退 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yNzQ3NC80MDU0"></div>
+    
+
+    
+  </div>
+  
+  
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/pic_admin.png"
+               alt="一萬个为什麽呀" />
+          <p class="site-author-name" itemprop="name">一萬个为什麽呀</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+           
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">26</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/wanzhiyu" target="_blank" title="GitHub">
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/5316199945" target="_blank" title="微博">
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://douban.com/people/135209551" target="_blank" title="豆瓣">
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/wan-zhi-yu-16" target="_blank" title="知乎">
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://notes.wanghao.work/" title="Doublemine" target="_blank">Doublemine</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.arao.me/" title="ARAO" target="_blank">ARAO</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cduyzh.com/" title="YangZiHao" target="_blank">YangZiHao</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://liubaichuan.tk" title="刘百川" target="_blank">刘百川</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.junyu.io/" title="浚宇" target="_blank">浚宇</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.alanice.cn/" title="AlanZou" target="_blank">AlanZou</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-设置中断优先级分组4"><span class="nav-text">1. 设置中断优先级分组4</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-初始化BSP"><span class="nav-text">2. 初始化BSP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-系统滴答计数器的配置"><span class="nav-text">2.1 系统滴答计数器的配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-对GPIO的初始化（GPIOA，PIN3，推挽输出，上拉，50MHz）"><span class="nav-text">2.2 对GPIO的初始化（GPIOA，PIN3，推挽输出，上拉，50MHz）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-对触摸屏的初始化"><span class="nav-text">2.3 对触摸屏的初始化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-初始化SDRAM"><span class="nav-text">2.4 初始化SDRAM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-使能CRC模组"><span class="nav-text">2.5 使能CRC模组</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-ARM芯片实时时钟RTC的初始化"><span class="nav-text">3. ARM芯片实时时钟RTC的初始化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-关闭LED（操作GPIO）"><span class="nav-text">4. 关闭LED（操作GPIO）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-背光控制初始化"><span class="nav-text">5. 背光控制初始化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-GUI（图形用户界面）的初始化"><span class="nav-text">6. GUI（图形用户界面）的初始化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-读触摸屏校准参数"><span class="nav-text">7. 读触摸屏校准参数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-创建后台任务-Background-Task"><span class="nav-text">8. 创建后台任务(Background_Task)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#9-创建串口收发任务-Recv-Task-Fun-Send-Task-Fun"><span class="nav-text">9. 创建串口收发任务(Recv_Task_Fun, Send_Task_Fun)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#10-创建主任务-Main-Task-Fun"><span class="nav-text">10.创建主任务(Main_Task_Fun)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#10-1-执行回调函数"><span class="nav-text">10.1 执行回调函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-2-设置桌面窗口为要用于绘制操作的活动窗口"><span class="nav-text">10.2 设置桌面窗口为要用于绘制操作的活动窗口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-3-禁止使用存储设备来重绘桌面窗口"><span class="nav-text">10.3 禁止使用存储设备来重绘桌面窗口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-4-再一次执行回调函数"><span class="nav-text">10.4 再一次执行回调函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-5-设置在创建新窗口时用作默认的标记"><span class="nav-text">10.5 设置在创建新窗口时用作默认的标记</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-6-（重新）启用使用存储设备来重绘桌面窗口"><span class="nav-text">10.6 （重新）启用使用存储设备来重绘桌面窗口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-7-选择窗口"><span class="nav-text">10.7 选择窗口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#10-7-1-Page-Array的定义"><span class="nav-text">10.7.1 Page_Array的定义</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#10-7-1-1-Page-Startup的定义"><span class="nav-text">10.7.1.1 Page_Startup的定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10-7-1-2-Page-System的定义"><span class="nav-text">10.7.1.2 Page_System的定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10-7-1-3-Page-Anolog的定义"><span class="nav-text">10.7.1.3 Page_Anolog的定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10-7-1-4-Page-DIDO的定义"><span class="nav-text">10.7.1.4 Page_DIDO的定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10-7-1-5-Page-Event-Fault的定义"><span class="nav-text">10.7.1.5 Page_Event_Fault的定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10-7-1-6-Page-Misc-Setting的定义"><span class="nav-text">10.7.1.6 Page_Misc_Setting的定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10-7-1-7-Page-Touch-Screen-Calibrate的定义"><span class="nav-text">10.7.1.7 Page_Touch_Screen_Calibrate的定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10-7-1-8-Page-Input-DateTime的定义"><span class="nav-text">10.7.1.8 Page_Input_DateTime的定义</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-7-2-Current-Page的定义"><span class="nav-text">10.7.2 Current_Page的定义</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">一萬个为什麽呀</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"> 本站访客数</i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"> 本站总访问量</i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+
+  
+  <script type="text/javascript" src="https://cdn.staticfile.org/fastclick/1.0.6/fastclick.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+
+  
+  <script type="text/javascript" src="https://cdn.staticfile.org/velocity/1.4.1/velocity.min.js"></script>
+
+  
+  <script type="text/javascript" src="https://cdn.staticfile.org/velocity/1.4.1/velocity.ui.min.js"></script>
+
+  
+  <script type="text/javascript" src="https://cdn.staticfile.org/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("7LLA5gs13yTnPiyQkC9ktQ1q-gzGzoHsz", "po4CVH0M7uw8nxU2tpYndhgn");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+
+  
+
+  
+  
+  <script type="text/javascript">var line_limit = 10</script>
+  <script type="text/javascript" src="/js/src/collapse-code.js"></script>
+
+
+
+
+
+</body>
+</html>
