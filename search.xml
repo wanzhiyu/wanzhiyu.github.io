@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[Hexo-编辑：带背景颜色的文字和边框带颜色的段落的输入方法]]></title>
       <url>%2F2017%2F05%2F08%2F%E6%95%99%E7%A8%8B%2FHexo%2FHexo-%E7%BC%96%E8%BE%91%EF%BC%9A%E5%B8%A6%E8%83%8C%E6%99%AF%E9%A2%9C%E8%89%B2%E7%9A%84%E6%96%87%E5%AD%97%E5%92%8C%E8%BE%B9%E6%A1%86%E5%B8%A6%E9%A2%9C%E8%89%B2%E7%9A%84%E6%AE%B5%E8%90%BD%E7%9A%84%E8%BE%93%E5%85%A5%E6%96%B9%E6%B3%95%2F</url>
-      <content type="text"><![CDATA[我这个只是用于自己的记录，并不能实现功能，如果要能实现功能，请看Alan Zou的博客文章（hexo博客搭建过程）-%E5%85%B6%E4%BB%96/) 这是边框带颜色的文本段落位置可选: left | right | top颜色可选: red | blue | yellow | green | purple 的代码如下： 1234&lt;span class="div-border left-red"&gt;这是边框带颜色的文本段落位置可选: left | right | top颜色可选: red | blue | yellow | green | purple&lt;/span&gt; red 的代码如下： 1&lt;span class="inline-span red"&gt;red&lt;/span&gt;]]></content>
+      <content type="text"><![CDATA[我这个只是用于自己的记录，并不能实现功能，如果要能实现功能，请看Alan Zou的博客文章（hexo博客搭建过程一）-%E5%85%B6%E4%BB%96/) 这是边框带颜色的文本段落位置可选: left | right | top颜色可选: red | blue | yellow | green | purple 的代码如下： 1234&lt;span class="div-border left-red"&gt;这是边框带颜色的文本段落位置可选: left | right | top颜色可选: red | blue | yellow | green | purple&lt;/span&gt; red 的代码如下： 1&lt;span class="inline-span red"&gt;red&lt;/span&gt;]]></content>
     </entry>
 
     
