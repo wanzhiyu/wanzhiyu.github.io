@@ -1812,7 +1812,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffffb6;
+  background: #ffff45;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2772,4 +2772,22 @@ span.top-blue {
 span.top-purple {
   border-top-width: 5px;
   border-top-color: #9954bb;
+}
+figure>h6 {
+  margin: 0;
+  padding: 8px !important;
+  cursor: pointer;
+}
+figure>h6>i {
+  margin-left: 30px;
+  margin-right: 10px;
+  transition: all 0.4s ease;
+}
+figure>h6>i.close {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  color: #b63b4d;
 }
