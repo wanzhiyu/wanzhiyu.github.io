@@ -4,6 +4,31 @@
 
     
   <url>
+    <loc>http://wanzhiyu.tk/2017/01/03/%E6%95%99%E7%A8%8B/Hexo/Hexo-SE%EF%BC%9A%E5%B0%86hexo%E6%94%B6%E5%BD%95%E8%87%B3%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</loc>
+    <lastmod>2017-05-09T02:13:50.752Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo-SE：将hexo收录至搜索引擎的注意事项</title>
+        <pubTime>2017-01-03T11:30:15.000Z</pubTime>
+        
+        <tag>教程</tag>
+         
+        <tag>Hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程" url="http://wanzhiyu.tk/categories/%E6%95%99%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="Hexo" url="http://wanzhiyu.tk/categories/%E6%95%99%E7%A8%8B/Hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://wanzhiyu.tk/2017/05/06/%E6%95%99%E7%A8%8B/MATLAB/MATLAB%EF%BC%9Ahist()%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2017-05-09T00:50:11.434Z</lastmod>
     <data>
@@ -1036,11 +1061,11 @@
         <title>我的第一篇博客日志！</title>
         <pubTime>2016-08-18T01:44:33.000Z</pubTime>
         
+        <tag>随笔</tag>
+         
         <tag>日志</tag>
          
         <tag>博客</tag>
-         
-        <tag>随笔</tag>
          
          
            
@@ -1134,31 +1159,6 @@
         <display>
         <title>Hexo-Node js缺少所需DLL的解决办法</title>
         <pubTime>2017-01-02T13:36:44.000Z</pubTime>
-        
-        <tag>教程</tag>
-         
-        <tag>Hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="教程" url="http://wanzhiyu.tk/categories/%E6%95%99%E7%A8%8B/"/>
-          
-             
-              <breadCrumb title="Hexo" url="http://wanzhiyu.tk/categories/%E6%95%99%E7%A8%8B/Hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://wanzhiyu.tk/2017/01/03/%E6%95%99%E7%A8%8B/Hexo/Hexo-SE%EF%BC%9A%E5%B0%86hexo%E6%94%B6%E5%BD%95%E8%87%B3%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</loc>
-    <lastmod>2017-03-29T04:17:53.563Z</lastmod>
-    <data>
-        <display>
-        <title>Hexo-SE：将hexo收录至搜索引擎的注意事项</title>
-        <pubTime>2017-01-03T11:30:15.000Z</pubTime>
         
         <tag>教程</tag>
          
