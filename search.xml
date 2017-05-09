@@ -561,9 +561,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Hexo-SE：将hexo收录至搜索引擎的注意事项]]></title>
-    <url>%2F2017%2F01%2F03%2F%E6%95%99%E7%A8%8B%2FHexo%2FHexo-SE%EF%BC%9A%E5%B0%86hexo%E6%94%B6%E5%BD%95%E8%87%B3%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%2F</url>
-    <content type="text"><![CDATA[完全正确可行的链接： http://dotdotcloud.cn/2016/05/09/hexo%E5%8D%9A%E5%AE%A2%E8%A2%AB%E7%99%BE%E5%BA%A6-google%E6%94%B6%E5%BD%95%E7%9A%84%E6%96%B9%E6%B3%95/ 最关键的地方在于这句话：我们的博客系统使用了hexo，部署在Github上，因此下载Google的验证文件之后，需要在文件开头添加layout: false来取消hexo对其进行的转换！！！ 123layout: false---google-site-verification: google6c91812b12cd004a.html 另外，还要在站点配置文件中添加以下几行代码： 12345# Sitemap Settingsitemap: path: sitemap.xmlbaidusitemap: path: baidusitemap.xml 注意，两个path前面至少有一个一定要加一个制表符！ 如果在Google提交站点地图时出现：“This URL is not allowed for a Sitemap at this location”，那么你要修改一下hexo-client（即站点配置文件）下的_config.yml文件中的“url“这一项（大约在第15行）为你的域名（可能是github.io域名，也可能是你的cn、com域名等等，得看你自己用的是哪个）。]]></content>
+    <title><![CDATA[Hexo-SE：将你的Hexo个人小站收录至搜索引擎的注意事项]]></title>
+    <url>%2F2017%2F01%2F03%2F%E6%95%99%E7%A8%8B%2FHexo%2FHexo-SE%EF%BC%9A%E5%B0%86%E4%BD%A0%E7%9A%84Hexo%E4%B8%AA%E4%BA%BA%E5%B0%8F%E7%AB%99%E6%94%B6%E5%BD%95%E8%87%B3%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%2F</url>
+    <content type="text"><![CDATA[完全正确可行的链接： http://dotdotcloud.cn/2016/05/09/hexo%E5%8D%9A%E5%AE%A2%E8%A2%AB%E7%99%BE%E5%BA%A6-google%E6%94%B6%E5%BD%95%E7%9A%84%E6%96%B9%E6%B3%95/ 最关键的地方在于这句话：我们的博客系统使用了hexo，部署在Github上，因此下载Google的验证文件之后，需要在文件开头添加layout: false来取消hexo对其进行的转换！！！ 123layout: false---google-site-verification: google6c91812b12cd004a.html 另外，还要在站点配置文件中添加以下几行代码： 12345# Sitemap Settingsitemap: path: sitemap.xmlbaidusitemap: path: baidusitemap.xml 注意，两个path前面至少有一个一定要加一个制表符！ 如果在Google提交站点地图时出现：“This URL is not allowed for a Sitemap at this location”，出现这个错误的原因通常在于：”error usually means that you have an URL pointing to a different Domain from yours.“，也就是说你的URL指向不对！那么你要修改一下hexo-client（即站点配置文件）下的_config.yml文件中的“url“这一项（大约在第15行）为你的域名（可能是github.io域名，也可能是你的cn、com域名等等，得看你自己用的是哪个）。]]></content>
       <categories>
         <category>教程</category>
         <category>Hexo</category>
@@ -685,9 +685,9 @@
         <category>随笔</category>
       </categories>
       <tags>
-        <tag>随笔</tag>
         <tag>日志</tag>
         <tag>博客</tag>
+        <tag>随笔</tag>
       </tags>
   </entry>
 </search>
