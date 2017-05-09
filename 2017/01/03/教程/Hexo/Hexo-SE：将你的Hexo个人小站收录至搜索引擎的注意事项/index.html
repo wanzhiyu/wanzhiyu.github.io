@@ -98,7 +98,7 @@
 <meta property="og:url" content="http://wanzhiyu.tk/2017/01/03/教程/Hexo/Hexo-SE：将你的Hexo个人小站收录至搜索引擎的注意事项/index.html">
 <meta property="og:site_name" content="Ce Frumoasa E Iubirea">
 <meta property="og:description" content="完全正确可行的链接： http://dotdotcloud.cn/2016/05/09/hexo%E5%8D%9A%E5%AE%A2%E8%A2%AB%E7%99%BE%E5%BA%A6-google%E6%94%B6%E5%BD%95%E7%9A%84%E6%96%B9%E6%B3%95/ 最关键的地方在于这句话：我们的博客系统使用了hexo，部署在Github上，因此下载Google的验证文件">
-<meta property="og:updated_time" content="2017-05-09T02:16:05.489Z">
+<meta property="og:updated_time" content="2017-05-09T02:17:36.988Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo-SE：将你的Hexo个人小站收录至搜索引擎的注意事项">
 <meta name="twitter:description" content="完全正确可行的链接： http://dotdotcloud.cn/2016/05/09/hexo%E5%8D%9A%E5%AE%A2%E8%A2%AB%E7%99%BE%E5%BA%A6-google%E6%94%B6%E5%BD%95%E7%9A%84%E6%96%B9%E6%B3%95/ 最关键的地方在于这句话：我们的博客系统使用了hexo，部署在Github上，因此下载Google的验证文件">
@@ -448,7 +448,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  297字
+                  326字
                 </span>
               
 
@@ -490,7 +490,7 @@
 <p>另外，还要在<strong>站点配置文件</strong>中添加以下几行代码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># Sitemap Setting</div><div class="line">sitemap:</div><div class="line">  path: sitemap.xml</div><div class="line">baidusitemap:</div><div class="line">  path: baidusitemap.xml</div></pre></td></tr></table></figure>
 <p>注意，两个path前面<strong>至少有一个</strong>一定要加一个制表符！</p>
-<p>如果在Google提交站点地图时出现：“This URL is not allowed for a Sitemap at this location”，出现这个错误的原因通常在于：”error usually means that you have an URL pointing to a different Domain from yours.“，也就是说你的URL指向不对！<br>那么你要修改一下hexo-client（即<span class="inline-span blue">站点配置文件</span>）下的_config.yml文件中的“url“这一项（大约在第15行）为你的域名（可能是github.io域名，也可能是你的cn、com域名等等，得看你自己用的是哪个）。</p>
+<h1 id="注"><a href="#注" class="headerlink" title="注"></a>注</h1><p>如果在Google提交站点地图时出现：“This URL is not allowed for a Sitemap at this location”，出现这个错误的原因通常在于：”error usually means that you have an URL pointing to a different Domain from yours.“，也就是说你的URL指向不对！<br>那么你要修改一下hexo-client（即<span class="inline-span blue">站点配置文件</span>）下的_config.yml文件中的“url“这一项（大约在第15行）为你的域名（可能是github.io域名，也可能是你的cn、com域名等等，得看你自己用的是哪个）。<br>参考资料：<a href="https://answers.squarespace.com/questions/63470/this-url-is-not-allowed-for-a-sitemap-at-this-location-%E2%80%94-google-webmaster-tools.html" target="_blank" rel="external">https://answers.squarespace.com/questions/63470/this-url-is-not-allowed-for-a-sitemap-at-this-location-%E2%80%94-google-webmaster-tools.html</a></p>
 
       
     </div>
@@ -636,8 +636,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/pic_admin.png"
@@ -769,6 +778,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#注"><span class="nav-text">注</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
