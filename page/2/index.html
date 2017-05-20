@@ -337,6 +337,203 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://wanzhiyu.tk/2017/05/07/教程/MATLAB/MATLAB：如何生成一组某个区间内的服从正态分布的随机数/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="一萬个为什麽呀">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/pic_admin.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ce Frumoasa E Iubirea">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/07/教程/MATLAB/MATLAB：如何生成一组某个区间内的服从正态分布的随机数/" itemprop="url">
+                  MATLAB：如何生成一组某个区间内的服从正态分布的随机数
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-07T10:26:21+08:00">
+                2017-05-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/教程/" itemprop="url" rel="index">
+                    <span itemprop="name">教程</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/教程/MATLAB/" itemprop="url" rel="index">
+                    <span itemprop="name">MATLAB</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/05/07/教程/MATLAB/MATLAB：如何生成一组某个区间内的服从正态分布的随机数/" class="leancloud_visitors" data-flag-title="MATLAB：如何生成一组某个区间内的服从正态分布的随机数">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  175字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  1分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>例如问：如何使用MALTAB产生分布在区间 [0.2, 0.95] 服从正态分布$N(0.5, 0.4^2) $的1000个数据，以列向量表示。</p>
+<p>代码如下：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Soc_Normal = random(<span class="string">'Normal'</span>, <span class="number">0.5</span>, <span class="number">0.4</span>, [<span class="number">2000</span>,<span class="number">1</span>]); <span class="comment">% 首先生成足够多的满足整体分布大条件的随机数，这里用列向量</span></div><div class="line"><span class="comment">% 另一种写法：Soc_Normal = 0.5 + 0.4*randn(2000,1);</span></div><div class="line"></div><div class="line">Soc_Normal(Soc_Normal&lt;<span class="number">0.2</span> | Soc_Normal&gt;<span class="number">0.95</span>) =[]; <span class="comment">% 踢出区间 [0.2，0.95]外的行向量</span></div><div class="line"><span class="comment">%另一种写法：Soc_Normal=Soc_Normal((Soc_Normal&gt;=0.2 &amp; Soc_Normal&lt;=100)); % 保留区间 [0.2，0.95]内的行向量</span></div><div class="line"></div><div class="line">Soc_Normal = Soc_Normal(<span class="number">1</span>:<span class="number">1000</span>); <span class="comment">% 反正矩阵内元素也没有按照大小顺序排，取前1000个是可以满足“随机性”的</span></div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://wanzhiyu.tk/2017/05/07/笔记/毕业设计/毕业设计：论文大纲与内容指南/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1118,214 +1315,6 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/04/30/笔记/算法/蒙特卡洛方法/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://wanzhiyu.tk/2017/04/25/笔记/算法/遗传算法/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="一萬个为什麽呀">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/pic_admin.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ce Frumoasa E Iubirea">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/25/笔记/算法/遗传算法/" itemprop="url">
-                  遗传算法
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-25T13:54:33+08:00">
-                2017-04-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">笔记</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/笔记/算法/" itemprop="url" rel="index">
-                    <span itemprop="name">算法</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/04/25/笔记/算法/遗传算法/" class="leancloud_visitors" data-flag-title="遗传算法">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计</span>
-                
-                <span title="字数统计">
-                  3,138字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长</span>
-                
-                <span title="阅读时长">
-                  15分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="1-引文"><a href="#1-引文" class="headerlink" title="1 引文"></a>1 引文</h1><p>遗传算法（英语：genetic algorithm (GA) ）是计算数学中用于解决最佳化的搜索算法，是进化算法的一种。进化算法最初是借鉴了进化生物学中的一些现象而发展起来的，这些现象包括遗传、突变、自然选择以及杂交等。</p>
-<p>遗传算法通常实现方式为一种计算机模拟。对于一个最优化问题，一定数量的候选解（称为个体）可抽象表示为染色体，使种群向更好的解进化。传统上，解用二进制表示（即0和1的串），但也可以用其他表示方法。进化从完全随机个体的种群开始，之后一代一代发生。在每一代中评价整个种群的适应度，从当前种群中随机地选择多个个体（基于它们的适应度），通过自然选择和突变产生新的生命种群，该种群在算法的下一次迭代中成为当前种群。</p>
-<ul>
-<li>首先不妨先去<a href="https://zh.wikipedia.org/wiki/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95">遗传算法的维基百科</a><strong>大致了解</strong>一下遗传算法是怎么一回事，并不求能看懂，然后看下面的内容。</li>
-<li>这篇文章（<a href="http://yanshengjia.com/2016/10/30/Genetic-Algorithm-for-Functional-Maximum-Problem/">Genetic Algorithm for Functional Maximum Problem</a>）以一个方程在一个区间内的最大值问题说明了遗传算法的应用原理与方法，带MATLAB源码，该源码我已经从作者的仓库里fork过来了，存储在：<a href="https://github.com/wanzhiyu/artificial-intelligence/tree/master/genetic-algorithm-for-functional-maximum-problem">这里</a>。</li>
-<li>如果你想通俗理解遗传算法的基本含义，请看知乎各路大神的解答，大多不涉及公式，都很生动形象：<a href="https://www.zhihu.com/question/23293449">如何通俗易懂地解释遗传算法？有什么例子？</a></li>
-<li>如果你想了解MATLAB中Global Optimization Toolbox（全局优化工具箱，<strong>包括遗传算法工具箱</strong>等）的功能都有哪些，请看mathworks的官方文档：<a href="https://cn.mathworks.com/products/global-optimization/features.html">Global Optimization Toolbox</a></li>
-<li>如果你想看java版本的遗传算法的简单实例，请看：<a href="http://breezedust.com/2013/10/05/zi-hua-yi-chuan-suan-fa-dai-shi-li/">自话遗传算法（带实例）</a></li>
-</ul>
-<h1 id="2-在MATLAB中使用GA"><a href="#2-在MATLAB中使用GA" class="headerlink" title="2 在MATLAB中使用GA"></a>2 在MATLAB中使用GA</h1><p>后来我知道MATLAB里面自带GA，但是网上很少有文章耐心翻译MATLAB关于ga函数的这段help的，我在这里做一些简单的翻译工作，看得就没那么累。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/04/25/笔记/算法/遗传算法/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
