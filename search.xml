@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Hexo-编辑：在Next主题中插入表格的正确方法]]></title>
     <url>%2F2017%2F05%2F20%2F%E6%95%99%E7%A8%8B%2FHexo%2FHexo-%E7%BC%96%E8%BE%91%EF%BC%9A%E5%9C%A8Next%E4%B8%BB%E9%A2%98%E4%B8%AD%E6%8F%92%E5%85%A5%E8%A1%A8%E6%A0%BC%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%96%B9%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[每次按照markdown语法规范插入表格的时候都容易不起作用，应该是Next主题本身的解析有问题吧，插入表格有一定的技巧，有几个注意事项，将在本文中说明。下面先把正确的示例代码贴出：123456（必须是空行或者标题（就是带#的标题））|Tables|Are | Cool ||:-:|:-:|:-:|| col 3 is | right-aligned | 1600||col2is|centered|12 || zebra stripes | are neat | $1 | 有以下几个注意事项： 第一行必须有一行是空行或者标题！！！ 第二行每个项目的前后空格可要可不要 第三行的冒号是用来指明左对齐还是右对齐的，示例中的是居中对齐。如果想要左对齐，冒号就放在左边；右对齐亦然。效果如下： Tables Are Cool col 3 is right-aligned 1600 col2is centered 12 zebra stripes are neat $1]]></content>
+    <content type="text"><![CDATA[每次按照markdown语法规范插入表格的时候都容易不起作用，应该是Next主题本身的解析有问题吧，插入表格有一定的技巧，有几个注意事项，将在本文中说明。下面先把正确的示例代码贴出：123456（必须是空行或者标题（就是带#的标题））|Tables|Are | Cool ||:-:|:-:|:-:|| col 3 is | right-aligned | 1600||col2is|centered|12 || zebra stripes | are neat | $1 | 有以下几个注意事项： 第一行必须有一行是空行或者标题！！！ 第二行每个项目的前后空格可要可不要 第三行的冒号是用来指明左对齐还是右对齐的，示例中的是居中对齐。如果想要左对齐，冒号就放在左边；右对齐亦然。 效果如下： Tables Are Cool col 3 is right-aligned 1600 col2is centered 12 zebra stripes are neat $1]]></content>
       <categories>
         <category>教程</category>
         <category>Hexo</category>
@@ -722,9 +722,9 @@
         <category>随笔</category>
       </categories>
       <tags>
-        <tag>随笔</tag>
         <tag>日志</tag>
         <tag>博客</tag>
+        <tag>随笔</tag>
       </tags>
   </entry>
 </search>
