@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[日志模板]]></title>
+    <url>%2F2017%2F06%2F09%2F%E6%95%99%E7%A8%8B%2FGFW%2F%E7%A7%9F%E7%94%A8Vultr%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85ss%E5%B9%B6%E5%AE%89%E8%A3%85%E9%94%90%E9%80%9F%E4%B8%8EBBR%E5%8A%A0%E9%80%9F%2F</url>
+    <content type="text"><![CDATA[购买VPS全世界好多好多家VPS商，我和好友刘百川选的是Vultr。 安装一个CentOS系统。 请注意：如果你后期想安装的是锐速加速，那么请安装CentOS 6；如果你后期想安装的是谷歌BBR加速，那么请安装CentOS 7； 安装Putty for windows这个软件的是使用方法见链接：http://jingyan.baidu.com/article/e73e26c0eb063324adb6a737.html 安装服务器端shadowsocks参考链接：https://shadowsocks.be/11.html 使用root用户登录，运行以下命令： 123wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.shchmod +x shadowsocks-all.sh./shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log 安装完成后，脚本提示如下 Congratulations, your_shadowsocks_version install completed!Your Server IP :your_server_ipYour Server Port :your_server_portYour Password :your_passwordYour Encryption Method:aes-256-cfb Welcome to visit:https://teddysun.com/486.htmlEnjoy it! 卸载方法 若已安装多个版本，则卸载时也需多次运行（每次卸载一种） 使用root用户登录，运行以下命令： 1./shadowsocks-all.sh uninstall 启动脚本 启动脚本后面的参数含义，从左至右依次为：启动，停止，重启，查看状态。 Shadowsocks-Python 版：/etc/init.d/shadowsocks-python start | stop | restart | statusShadowsocksR 版 ：/etc/init.d/shadowsocks-r start | stop | restart | statusShadowsocks-Go 版 ：/etc/init.d/shadowsocks-go start | stop | restart | statusShadowsocks-libev 版 ：/etc/init.d/shadowsocks-libev start | stop | restart | status 各版本默认配置文件 Shadowsocks-Python 版：/etc/shadowsocks-python/config.jsonShadowsocksR 版 ：/etc/shadowsocks-r/config.jsonShadowsocks-Go 版 ：/etc/shadowsocks-go/config.jsonShadowsocks-libev 版 ：/etc/shadowsocks-libev/config.json 安装锐速（推荐与CentOS 6搭配使用） 教程：CentOS更换内核，提供锐速可用的内核下载 锐速破解版linux一键自动安装包（5月28日更新） 我是依次执行以下命令： 1234rpm -ivh http://soft.91yun.org/ISO/Linux/CentOS/kernel/kernel-firmware-2.6.32-504.3.3.el6.noarch.rpmrpm -ivh http://soft.91yun.org/ISO/Linux/CentOS/kernel/kernel-2.6.32-504.3.3.el6.x86_64.rpm --forcerpm -qa | grep kernelreboot 然后关掉终端，重新登陆。 12uname -rwget -N --no-check-certificate https://github.com/91yun/serverspeeder/raw/master/serverspeeder.sh &amp;&amp; bash serverspeeder.sh 可以通过下面这行命令查看锐速运行状态。 1/serverspeeder/bin/serverSpeeder.sh status 安装谷歌BBR（推荐与CentOS 7搭配使用）参考链接见：https://www.vultr.com/docs/how-to-deploy-google-bbr-on-centos-7]]></content>
+      <categories>
+        <category>教程</category>
+        <category>GFW</category>
+      </categories>
+      <tags>
+        <tag>GFW</tag>
+        <tag>锐速</tag>
+        <tag>BBR</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[【软件分享】批量更改你的文件或者文件夹名称]]></title>
     <url>%2F2017%2F06%2F03%2F%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB%2F%E3%80%90%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB%E3%80%91%E6%89%B9%E9%87%8F%E6%9B%B4%E6%94%B9%E4%BD%A0%E7%9A%84%E6%96%87%E4%BB%B6%E6%88%96%E8%80%85%E6%96%87%E4%BB%B6%E5%A4%B9%E5%90%8D%E7%A7%B0%2F</url>
     <content type="text"><![CDATA[近期整理大学以来的文件夹，过程中需要一款能批量按照自己意愿来修改文件夹名称的软件，下面这款软件就十分符合要求。 《菲菲更名宝贝 之 得意非凡 v3.0 正式版》 假如你认为这个软件和别的批量更名软件差不多，那么，你错了……假如你认为这个软件只是批量更名用的，那么，你又错了……哈哈……你是收藏控、整理控吗？有没有大量的文件或文件夹需要处理、归类？有没有使用别的批量更名软件解决不了的问题呢？你是音乐爱好者吗？你有大量的MP3、APE、OGG、FLAC等的音乐文件并需要对音乐标签、封面图片或歌词进行批量处理吗？你是摄影爱好者吗？你有大量的照片文件并需要对Exif信息进行批量处理吗？你办公使用微软Office文档、使用PDF文件吗？也许你会对这些文件的文件名批量更改或其特有属性的批量处理有需要呢？ 总之，这是一款近乎完美的更名软件，内容功能涵盖之广，只有你想不到，没有它做不到。在此分享给大家。]]></content>
@@ -24,9 +38,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Gitbook：如何插入锚以实现页内跳转与页间跳转]]></title>
-    <url>%2F2017%2F05%2F23%2F%E6%95%99%E7%A8%8B%2FGitbook%2FGitbook%EF%BC%9A%E5%A6%82%E4%BD%95%E6%8F%92%E5%85%A5%E9%94%9A%E4%BB%A5%E5%AE%9E%E7%8E%B0%E9%A1%B5%E5%86%85%E8%B7%B3%E8%BD%AC%E4%B8%8E%E9%A1%B5%E9%97%B4%E8%B7%B3%E8%BD%AC%2F</url>
-    <content type="text"><![CDATA[在做毕设，待续。 参考链接： http://blog.csdn.net/u010784236/article/details/44462903 http://www.jianshu.com/p/debd64e591a0 http://www.cnblogs.com/JohnTsai/p/4027229.html]]></content>
+    <title><![CDATA[GitBook：如何插入锚以实现页内跳转与页间跳转]]></title>
+    <url>%2F2017%2F05%2F23%2F%E6%95%99%E7%A8%8B%2FGitBook%2FGitBook%EF%BC%9A%E5%A6%82%E4%BD%95%E6%8F%92%E5%85%A5%E9%94%9A%E4%BB%A5%E5%AE%9E%E7%8E%B0%E9%A1%B5%E5%86%85%E8%B7%B3%E8%BD%AC%E4%B8%8E%E9%A1%B5%E9%97%B4%E8%B7%B3%E8%BD%AC%2F</url>
+    <content type="text"><![CDATA[建立一个跳转的连接： 1[说明文字](#jump) 标记要跳转到什么位置： 1&lt;span id="jump"&gt;跳转到这里：&lt;/span&gt; 参考链接： http://blog.csdn.net/u010784236/article/details/44462903 http://www.jianshu.com/p/debd64e591a0 http://www.cnblogs.com/JohnTsai/p/4027229.html]]></content>
       <categories>
         <category>教程</category>
         <category>Gitbook</category>

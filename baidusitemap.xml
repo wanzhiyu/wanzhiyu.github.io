@@ -4,6 +4,58 @@
 
     
   <url>
+    <loc>http://wanzhiyu.tk/2017/06/09/%E6%95%99%E7%A8%8B/GFW/%E7%A7%9F%E7%94%A8Vultr%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85ss%E5%B9%B6%E5%AE%89%E8%A3%85%E9%94%90%E9%80%9F%E4%B8%8EBBR%E5%8A%A0%E9%80%9F/</loc>
+    <lastmod>2017-06-09T08:12:24.353Z</lastmod>
+    <data>
+        <display>
+        <title>日志模板</title>
+        <pubTime>2017-06-09T07:23:33.000Z</pubTime>
+        
+        <tag>GFW</tag>
+         
+        <tag>锐速</tag>
+         
+        <tag>BBR</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程" url="http://wanzhiyu.tk/categories/%E6%95%99%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="GFW" url="http://wanzhiyu.tk/categories/%E6%95%99%E7%A8%8B/GFW/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://wanzhiyu.tk/2017/05/23/%E6%95%99%E7%A8%8B/GitBook/GitBook%EF%BC%9A%E5%A6%82%E4%BD%95%E6%8F%92%E5%85%A5%E9%94%9A%E4%BB%A5%E5%AE%9E%E7%8E%B0%E9%A1%B5%E5%86%85%E8%B7%B3%E8%BD%AC%E4%B8%8E%E9%A1%B5%E9%97%B4%E8%B7%B3%E8%BD%AC/</loc>
+    <lastmod>2017-06-03T08:43:47.336Z</lastmod>
+    <data>
+        <display>
+        <title>GitBook：如何插入锚以实现页内跳转与页间跳转</title>
+        <pubTime>2017-05-23T02:49:05.000Z</pubTime>
+        
+        <tag>教程</tag>
+         
+        <tag>Gitbook</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程" url="http://wanzhiyu.tk/categories/%E6%95%99%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="Gitbook" url="http://wanzhiyu.tk/categories/%E6%95%99%E7%A8%8B/Gitbook/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://wanzhiyu.tk/2017/06/03/%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB/%E3%80%90%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB%E3%80%91%E6%89%B9%E9%87%8F%E6%9B%B4%E6%94%B9%E4%BD%A0%E7%9A%84%E6%96%87%E4%BB%B6%E6%88%96%E8%80%85%E6%96%87%E4%BB%B6%E5%A4%B9%E5%90%8D%E7%A7%B0/</loc>
     <lastmod>2017-06-03T02:56:13.057Z</lastmod>
     <data>
@@ -100,31 +152,6 @@
           
              
               <breadCrumb title="毕业设计" url="http://wanzhiyu.tk/categories/%E7%AC%94%E8%AE%B0/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://wanzhiyu.tk/2017/05/23/%E6%95%99%E7%A8%8B/Gitbook/Gitbook%EF%BC%9A%E5%A6%82%E4%BD%95%E6%8F%92%E5%85%A5%E9%94%9A%E4%BB%A5%E5%AE%9E%E7%8E%B0%E9%A1%B5%E5%86%85%E8%B7%B3%E8%BD%AC%E4%B8%8E%E9%A1%B5%E9%97%B4%E8%B7%B3%E8%BD%AC/</loc>
-    <lastmod>2017-05-23T02:50:34.785Z</lastmod>
-    <data>
-        <display>
-        <title>Gitbook：如何插入锚以实现页内跳转与页间跳转</title>
-        <pubTime>2017-05-23T02:49:05.000Z</pubTime>
-        
-        <tag>教程</tag>
-         
-        <tag>Gitbook</tag>
-         
-         
-           
-             
-              <breadCrumb title="教程" url="http://wanzhiyu.tk/categories/%E6%95%99%E7%A8%8B/"/>
-          
-             
-              <breadCrumb title="Gitbook" url="http://wanzhiyu.tk/categories/%E6%95%99%E7%A8%8B/Gitbook/"/>
           
         </display>
     </data>
