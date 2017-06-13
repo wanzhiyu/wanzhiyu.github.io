@@ -337,7 +337,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://wanzhiyu.tk/2017/06/09/教程/GFW/租用Vultr服务器安装ss并安装锐速与BBR加速/">
+    <link itemprop="mainEntityOfPage" href="http://wanzhiyu.tk/2017/06/11/教程/GFW/租用Vultr服务器安装SSR并安装BBR加速（不使用一键安装脚本）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="一萬个为什麽呀">
@@ -359,8 +359,220 @@
             
               
                 
-                <a class="post-title-link" href="/2017/06/09/教程/GFW/租用Vultr服务器安装ss并安装锐速与BBR加速/" itemprop="url">
-                  租用Vultr服务器安装SSR并安装锐速与BBR加速
+                <a class="post-title-link" href="/2017/06/11/教程/GFW/租用Vultr服务器安装SSR并安装BBR加速（不使用一键安装脚本）/" itemprop="url">
+                  租用Vultr服务器安装SSR并安装BBR加速（不使用一键安装脚本）
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-11T08:33:33+08:00">
+                2017-06-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/教程/" itemprop="url" rel="index">
+                    <span itemprop="name">教程</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/教程/GFW/" itemprop="url" rel="index">
+                    <span itemprop="name">GFW</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/06/11/教程/GFW/租用Vultr服务器安装SSR并安装BBR加速（不使用一键安装脚本）/" class="leancloud_visitors" data-flag-title="租用Vultr服务器安装SSR并安装BBR加速（不使用一键安装脚本）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  394字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  2分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>为了安全性与后期可自定义，此教程不再使用一键安装脚本，而是自己动手设置。</p>
+<p><strong>这是单用户版安装教程！</strong></p>
+<p><strong>我是个人以及几个好友使用，不需要限制流量，所以只选择单用户版安装！</strong></p>
+<p><strong>所有源代码来源于SSR的原作者：breakwa11</strong></p>
+<h1 id="购买VPS"><a href="#购买VPS" class="headerlink" title="购买VPS"></a>购买VPS</h1><p>全世界好多好多家VPS商，我和好友<a href="http://liubaichuan.tk" target="_blank" rel="external">刘百川</a>选的是Vultr。</p>
+<p>安装一个CentOS系统。</p>
+<p>请注意：如果你后期想安装的是锐速加速，那么请安装CentOS 6；如果你后期想安装的是谷歌BBR加速，那么请安装CentOS 7；</p>
+<h1 id="安装Putty-for-windows"><a href="#安装Putty-for-windows" class="headerlink" title="安装Putty for windows"></a>安装Putty for windows</h1><p>这个软件的是使用方法见链接：<a href="http://jingyan.baidu.com/article/e73e26c0eb063324adb6a737.html" target="_blank" rel="external">http://jingyan.baidu.com/article/e73e26c0eb063324adb6a737.html</a></p>
+<h1 id="安装服务器端shadowsocksR"><a href="#安装服务器端shadowsocksR" class="headerlink" title="安装服务器端shadowsocksR"></a>安装服务器端shadowsocksR</h1><p>参考链接：<a href="https://shadowsocks.be/11.html" target="_blank" rel="external">https://shadowsocks.be/11.html</a></p>
+<h1 id="安装锐速（推荐与CentOS-6搭配使用）"><a href="#安装锐速（推荐与CentOS-6搭配使用）" class="headerlink" title="安装锐速（推荐与CentOS 6搭配使用）"></a>安装锐速（推荐与CentOS 6搭配使用）</h1><p> <a href="https://www.91yun.org/archives/795" target="_blank" rel="external">教程：CentOS更换内核，提供锐速可用的内核下载</a></p>
+<p> <a href="https://www.91yun.org/archives/683" target="_blank" rel="external">锐速破解版linux一键自动安装包（5月28日更新）</a></p>
+<p>我是依次执行以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">rpm -ivh http://soft.91yun.org/ISO/Linux/CentOS/kernel/kernel-firmware-2.6.32-504.3.3.el6.noarch.rpm</div><div class="line">rpm -ivh http://soft.91yun.org/ISO/Linux/CentOS/kernel/kernel-2.6.32-504.3.3.el6.x86_64.rpm --force</div><div class="line">rpm -qa | grep kernel</div><div class="line">reboot</div></pre></td></tr></table></figure>
+<p>然后关掉终端，重新登陆。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">uname -r</div><div class="line">wget -N --no-check-certificate https://github.com/91yun/serverspeeder/raw/master/serverspeeder.sh &amp;&amp; bash serverspeeder.sh</div></pre></td></tr></table></figure>
+<p>可以通过下面这行命令查看锐速运行状态。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/serverspeeder/bin/serverSpeeder.sh status</div></pre></td></tr></table></figure>
+<h1 id="安装谷歌BBR（推荐与CentOS-7搭配使用）"><a href="#安装谷歌BBR（推荐与CentOS-7搭配使用）" class="headerlink" title="安装谷歌BBR（推荐与CentOS 7搭配使用）"></a>安装谷歌BBR（推荐与CentOS 7搭配使用）</h1><p>参考链接见：<a href="https://www.vultr.com/docs/how-to-deploy-google-bbr-on-centos-7" target="_blank" rel="external">https://www.vultr.com/docs/how-to-deploy-google-bbr-on-centos-7</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://wanzhiyu.tk/2017/06/09/教程/GFW/租用Vultr服务器安装SSR并安装锐速与BBR加速（使用一键安装脚本）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="一萬个为什麽呀">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/pic_admin.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ce Frumoasa E Iubirea">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/06/09/教程/GFW/租用Vultr服务器安装SSR并安装锐速与BBR加速（使用一键安装脚本）/" itemprop="url">
+                  租用Vultr服务器安装SSR并安装锐速与BBR加速（使用一键安装脚本）
                 </a>
               
             
@@ -427,7 +639,7 @@
 
           
           
-             <span id="/2017/06/09/教程/GFW/租用Vultr服务器安装ss并安装锐速与BBR加速/" class="leancloud_visitors" data-flag-title="租用Vultr服务器安装SSR并安装锐速与BBR加速">
+             <span id="/2017/06/09/教程/GFW/租用Vultr服务器安装SSR并安装锐速与BBR加速（使用一键安装脚本）/" class="leancloud_visitors" data-flag-title="租用Vultr服务器安装SSR并安装锐速与BBR加速（使用一键安装脚本）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -451,7 +663,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  555字
+                  560字
                 </span>
               
 
@@ -489,13 +701,14 @@
         
           <h1 id="购买VPS"><a href="#购买VPS" class="headerlink" title="购买VPS"></a>购买VPS</h1><p>全世界好多好多家VPS商，我和好友<a href="http://liubaichuan.tk" target="_blank" rel="external">刘百川</a>选的是Vultr。</p>
 <p>安装一个CentOS系统。</p>
-<p>请注意：如果你后期想安装的是锐速加速，那么请安装CentOS 6；如果你后期想安装的是谷歌BBR加速，那么请安装CentOS 7；</p>
+<p>请注意：如果你后期想安装的是锐速加速，那么请安装CentOS 6；如果你后期想安装的是谷歌BBR加速，那么请安装CentOS 7。</p>
+<p>（看了好多文章，觉得BBR更好一些）。</p>
 <h1 id="安装Putty-for-windows"><a href="#安装Putty-for-windows" class="headerlink" title="安装Putty for windows"></a>安装Putty for windows</h1><p>这个软件的是使用方法见链接：<a href="http://jingyan.baidu.com/article/e73e26c0eb063324adb6a737.html" target="_blank" rel="external">http://jingyan.baidu.com/article/e73e26c0eb063324adb6a737.html</a></p>
-<h1 id="安装服务器端shadowsocksR"><a href="#安装服务器端shadowsocksR" class="headerlink" title="安装服务器端shadowsocksR"></a>安装服务器端shadowsocksR</h1><p>参考链接：<a href="https://shadowsocks.be/11.html" target="_blank" rel="external">https://shadowsocks.be/11.html</a></p>
+<h1 id="安装服务器端shadowsocksR"><a href="#安装服务器端shadowsocksR" class="headerlink" title="安装服务器端shadowsocksR"></a>安装服务器端shadowsocksR</h1><p>参考链接：<a href="https://shadowsocks.be/9.html" target="_blank" rel="external">https://shadowsocks.be/9.html</a></p>
 <p>使用root用户登录，运行以下命令：
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/06/09/教程/GFW/租用Vultr服务器安装ss并安装锐速与BBR加速/#more" rel="contents">
+            <a class="btn" href="/2017/06/09/教程/GFW/租用Vultr服务器安装SSR并安装锐速与BBR加速（使用一键安装脚本）/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1133,215 +1346,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://wanzhiyu.tk/2017/05/20/教程/Hexo/Hexo-编辑：在Next主题中插入表格的正确方法/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="一萬个为什麽呀">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/pic_admin.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ce Frumoasa E Iubirea">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/05/20/教程/Hexo/Hexo-编辑：在Next主题中插入表格的正确方法/" itemprop="url">
-                  Hexo-编辑：在Next主题中插入表格的正确方法
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-20T14:36:50+08:00">
-                2017-05-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/教程/" itemprop="url" rel="index">
-                    <span itemprop="name">教程</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/教程/Hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/05/20/教程/Hexo/Hexo-编辑：在Next主题中插入表格的正确方法/" class="leancloud_visitors" data-flag-title="Hexo-编辑：在Next主题中插入表格的正确方法">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计</span>
-                
-                <span title="字数统计">
-                  246字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长</span>
-                
-                <span title="阅读时长">
-                  1分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>每次按照markdown语法规范插入表格的时候都容易不起作用，应该是Next主题本身的解析有问题吧，插入表格有一定的技巧，有几个注意事项，将在本文中说明。</p>
-<p>下面先把正确的示例代码贴出：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">（必须是空行或者标题（就是带#的标题））</div><div class="line">|Tables|Are | Cool |</div><div class="line">|:-:|:-:|:-:|</div><div class="line">| col 3 is | right-aligned | 1600|</div><div class="line">|col2is|centered|12 |</div><div class="line">| zebra stripes | are neat | $1 |</div></pre></td></tr></table></figure>
-<p>有以下几个注意事项：</p>
-<ul>
-<li><strong>第一行必须有一行是空行或者标题！！！</strong></li>
-<li>第二行每个项目的前后空格可要可不要</li>
-<li>第三行的冒号是用来指明左对齐还是右对齐的，示例中的是居中对齐。如果想要左对齐，冒号就放在左边；右对齐亦然。</li>
-<li>推荐使用VS Code来编辑markdown表格，如果使用Typora，由于其具有自动预览的功能，导致编辑起来会很麻烦。</li>
-</ul>
-<p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/05/20/教程/Hexo/Hexo-编辑：在Next主题中插入表格的正确方法/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1391,7 +1395,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">58</span>
+                <span class="site-state-item-count">59</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1413,7 +1417,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-count">30</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

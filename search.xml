@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[租用Vultr服务器安装SSR并安装锐速与BBR加速]]></title>
-    <url>%2F2017%2F06%2F09%2F%E6%95%99%E7%A8%8B%2FGFW%2F%E7%A7%9F%E7%94%A8Vultr%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85ss%E5%B9%B6%E5%AE%89%E8%A3%85%E9%94%90%E9%80%9F%E4%B8%8EBBR%E5%8A%A0%E9%80%9F%2F</url>
-    <content type="text"><![CDATA[购买VPS全世界好多好多家VPS商，我和好友刘百川选的是Vultr。 安装一个CentOS系统。 请注意：如果你后期想安装的是锐速加速，那么请安装CentOS 6；如果你后期想安装的是谷歌BBR加速，那么请安装CentOS 7； 安装Putty for windows这个软件的是使用方法见链接：http://jingyan.baidu.com/article/e73e26c0eb063324adb6a737.html 安装服务器端shadowsocksR参考链接：https://shadowsocks.be/11.html 使用root用户登录，运行以下命令： 123wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.shchmod +x shadowsocks-all.sh./shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log 安装完成后，脚本提示如下 Congratulations, your_shadowsocks_version install completed!Your Server IP :your_server_ipYour Server Port :your_server_portYour Password :your_passwordYour Encryption Method:aes-256-cfb Welcome to visit:https://teddysun.com/486.htmlEnjoy it! 卸载方法 若已安装多个版本，则卸载时也需多次运行（每次卸载一种） 使用root用户登录，运行以下命令： 1./shadowsocks-all.sh uninstall 启动脚本 启动脚本后面的参数含义，从左至右依次为：启动，停止，重启，查看状态。 Shadowsocks-Python 版：/etc/init.d/shadowsocks-python start | stop | restart | statusShadowsocksR 版 ：/etc/init.d/shadowsocks-r start | stop | restart | statusShadowsocks-Go 版 ：/etc/init.d/shadowsocks-go start | stop | restart | statusShadowsocks-libev 版 ：/etc/init.d/shadowsocks-libev start | stop | restart | status 各版本默认配置文件 Shadowsocks-Python 版：/etc/shadowsocks-python/config.jsonShadowsocksR 版 ：/etc/shadowsocks-r/config.jsonShadowsocks-Go 版 ：/etc/shadowsocks-go/config.jsonShadowsocks-libev 版 ：/etc/shadowsocks-libev/config.json 安装锐速（推荐与CentOS 6搭配使用） 教程：CentOS更换内核，提供锐速可用的内核下载 锐速破解版linux一键自动安装包（5月28日更新） 我是依次执行以下命令： 1234rpm -ivh http://soft.91yun.org/ISO/Linux/CentOS/kernel/kernel-firmware-2.6.32-504.3.3.el6.noarch.rpmrpm -ivh http://soft.91yun.org/ISO/Linux/CentOS/kernel/kernel-2.6.32-504.3.3.el6.x86_64.rpm --forcerpm -qa | grep kernelreboot 然后关掉终端，重新登陆。 12uname -rwget -N --no-check-certificate https://github.com/91yun/serverspeeder/raw/master/serverspeeder.sh &amp;&amp; bash serverspeeder.sh 可以通过下面这行命令查看锐速运行状态。 1/serverspeeder/bin/serverSpeeder.sh status 安装谷歌BBR（推荐与CentOS 7搭配使用）参考链接见：https://www.vultr.com/docs/how-to-deploy-google-bbr-on-centos-7]]></content>
+    <title><![CDATA[租用Vultr服务器安装SSR并安装BBR加速（不使用一键安装脚本）]]></title>
+    <url>%2F2017%2F06%2F11%2F%E6%95%99%E7%A8%8B%2FGFW%2F%E7%A7%9F%E7%94%A8Vultr%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85SSR%E5%B9%B6%E5%AE%89%E8%A3%85BBR%E5%8A%A0%E9%80%9F%EF%BC%88%E4%B8%8D%E4%BD%BF%E7%94%A8%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[为了安全性与后期可自定义，此教程不再使用一键安装脚本，而是自己动手设置。 这是单用户版安装教程！ 我是个人以及几个好友使用，不需要限制流量，所以只选择单用户版安装！ 所有源代码来源于SSR的原作者：breakwa11 购买VPS全世界好多好多家VPS商，我和好友刘百川选的是Vultr。 安装一个CentOS系统。 请注意：如果你后期想安装的是锐速加速，那么请安装CentOS 6；如果你后期想安装的是谷歌BBR加速，那么请安装CentOS 7； 安装Putty for windows这个软件的是使用方法见链接：http://jingyan.baidu.com/article/e73e26c0eb063324adb6a737.html 安装服务器端shadowsocksR参考链接：https://shadowsocks.be/11.html 安装锐速（推荐与CentOS 6搭配使用） 教程：CentOS更换内核，提供锐速可用的内核下载 锐速破解版linux一键自动安装包（5月28日更新） 我是依次执行以下命令： 1234rpm -ivh http://soft.91yun.org/ISO/Linux/CentOS/kernel/kernel-firmware-2.6.32-504.3.3.el6.noarch.rpmrpm -ivh http://soft.91yun.org/ISO/Linux/CentOS/kernel/kernel-2.6.32-504.3.3.el6.x86_64.rpm --forcerpm -qa | grep kernelreboot 然后关掉终端，重新登陆。 12uname -rwget -N --no-check-certificate https://github.com/91yun/serverspeeder/raw/master/serverspeeder.sh &amp;&amp; bash serverspeeder.sh 可以通过下面这行命令查看锐速运行状态。 1/serverspeeder/bin/serverSpeeder.sh status 安装谷歌BBR（推荐与CentOS 7搭配使用）参考链接见：https://www.vultr.com/docs/how-to-deploy-google-bbr-on-centos-7]]></content>
+      <categories>
+        <category>教程</category>
+        <category>GFW</category>
+      </categories>
+      <tags>
+        <tag>GFW</tag>
+        <tag>BBR</tag>
+        <tag>Vultr</tag>
+        <tag>SSR</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[租用Vultr服务器安装SSR并安装锐速与BBR加速（使用一键安装脚本）]]></title>
+    <url>%2F2017%2F06%2F09%2F%E6%95%99%E7%A8%8B%2FGFW%2F%E7%A7%9F%E7%94%A8Vultr%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85SSR%E5%B9%B6%E5%AE%89%E8%A3%85%E9%94%90%E9%80%9F%E4%B8%8EBBR%E5%8A%A0%E9%80%9F%EF%BC%88%E4%BD%BF%E7%94%A8%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[购买VPS全世界好多好多家VPS商，我和好友刘百川选的是Vultr。 安装一个CentOS系统。 请注意：如果你后期想安装的是锐速加速，那么请安装CentOS 6；如果你后期想安装的是谷歌BBR加速，那么请安装CentOS 7。 （看了好多文章，觉得BBR更好一些）。 安装Putty for windows这个软件的是使用方法见链接：http://jingyan.baidu.com/article/e73e26c0eb063324adb6a737.html 安装服务器端shadowsocksR参考链接：https://shadowsocks.be/9.html 使用root用户登录，运行以下命令： 123wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocksR.shchmod +x shadowsocksR.sh./shadowsocksR.sh 2&gt;&amp;1 | tee shadowsocksR.log 安装完成后，脚本提示如下 Congratulations, ShadowsocksR install completed!Server IP:your_server_ipServer Port:your_server_portPassword:your_passwordLocal IP:127.0.0.1Local Port:1080Protocol:originobfs:plainEncryption Method:aes-256-cfb Welcome to visit:https://shadowsocks.be/9.htmlIf you want to change protocol &amp; obfs, reference URL:https://github.com/breakwa11/shadowsocks-rss/wiki/Server-SetupEnjoy it! 卸载方法 使用 root 用户登录，运行以下命令： 1./shadowsocksR.sh uninstall 安装完成后即已后台启动 ShadowsocksR ，运行： 1/etc/init.d/shadowsocks status 可以查看 ShadowsocksR 进程是否已经启动。本脚本安装完成后，已将 ShadowsocksR 自动加入开机自启动。 使用命令：启动：/etc/init.d/shadowsocks start停止：/etc/init.d/shadowsocks stop重启：/etc/init.d/shadowsocks restart状态：/etc/init.d/shadowsocks status 配置文件路径：/etc/shadowsocks.json日志文件路径：/var/log/shadowsocks.log代码安装目录：/usr/local/shadowsocks 安装锐速（推荐与CentOS 6搭配使用） 教程：CentOS更换内核，提供锐速可用的内核下载 锐速破解版linux一键自动安装包（5月28日更新） 我是依次执行以下命令： 1234rpm -ivh http://soft.91yun.org/ISO/Linux/CentOS/kernel/kernel-firmware-2.6.32-504.3.3.el6.noarch.rpmrpm -ivh http://soft.91yun.org/ISO/Linux/CentOS/kernel/kernel-2.6.32-504.3.3.el6.x86_64.rpm --forcerpm -qa | grep kernelreboot 然后关掉终端，重新登陆。 12uname -rwget -N --no-check-certificate https://github.com/91yun/serverspeeder/raw/master/serverspeeder.sh &amp;&amp; bash serverspeeder.sh 可以通过下面这行命令查看锐速运行状态。 1/serverspeeder/bin/serverSpeeder.sh status 安装谷歌BBR（推荐与CentOS 7搭配使用）参考链接见：https://www.vultr.com/docs/how-to-deploy-google-bbr-on-centos-7]]></content>
       <categories>
         <category>教程</category>
         <category>GFW</category>
@@ -770,9 +785,9 @@
         <category>随笔</category>
       </categories>
       <tags>
+        <tag>随笔</tag>
         <tag>日志</tag>
         <tag>博客</tag>
-        <tag>随笔</tag>
       </tags>
   </entry>
 </search>
